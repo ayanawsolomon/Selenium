@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="method" thread-count="10">
+ <parameter name="browserName" value="IE"/>
+  <test name="Test Case 1 ">
+     <parameter name="browserName" value="Chrome"/>
+     <parameter name="userName" value="Solomon A"/>
+    <classes>
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest">
+         <methods>
+             <include name="loginTestWithCorrectCredencials" />
+          </methods>
+                
+       </class>         
+      <class name="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn"/>
+      <class name="TestersGroupID.TestNGArtifactID.PassingParameter"/>
+      
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test name="Test Case 2 ">
+  
+     <classes>
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest"/>
+       <class name="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn"/>
+       <class name="TestersGroupID.TestNGArtifactID.PassingParameter"/>
+       
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name="Test Case 3 ">
+       <parameter name="userName" value="Solomon A"/>
+  
+     <classes>
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest"/>
+       <class name="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn"/>
+       <class name="TestersGroupID.TestNGArtifactID.PassingParameter"/>
+       
+    </classes>
+  </test> <!-- Test -->
+  
+  
+  <test name="Test Case 4 ">
+     <classes>
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest"/>
+       <class name="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn"/>
+    </classes>
+  </test> <!-- Test -->
+  
+   <test name="Test Case 5 ">
+   	<groups>
+ 			<run>
+ 				<include name="database" />
+ 				
+ 			</run>
+ 		</groups>
+     <classes>
+      <class name="grouping.TestGroup"/>
+       <class name="grouping.TestSelenium"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

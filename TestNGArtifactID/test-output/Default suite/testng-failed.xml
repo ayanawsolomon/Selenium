@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="emailTest2"/>
+          <include name="phoneTest4"/>
+          <include name="emailTest3"/>
+          <include name="emailTest1"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.PriorityAndDependsOn -->
+      <class name="TestersGroupID.TestNGArtifactID.PassingParameter">
+        <methods>
+          <include name="SelectBrowser"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.PassingParameter -->
+      <class name="TestersGroupID.TestNGArtifactID.LoginTestWithDataProvider">
+        <methods>
+          <include name="defineMyVariables"/>
+          <include name="thisIsBeforeTest"/>
+          <include name="beforeClass"/>
+          <include name="thisIsAfterTest"/>
+          <include name="afterClass"/>
+          <include name="clearMyVariables"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.LoginTestWithDataProvider -->
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest">
+        <methods>
+          <include name="setVariables"/>
+          <include name="beforeClass"/>
+          <include name="afterSuite"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="clearChookies"/>
+          <include name="beforeSuite"/>
+          <include name="afterClass"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.LoginTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

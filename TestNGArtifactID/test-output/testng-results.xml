@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="12" failed="4" total="44" passed="28">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="347" started-at="2017-07-11T06:15:31Z" finished-at="2017-07-11T06:15:31Z">
+    <groups>
+      <group name="database">
+        <method signature="TestGroup.testConnectMsSQL()[pri:0, instance:grouping.TestGroup@1ce92674]" name="testConnectMsSQL" class="grouping.TestGroup"/>
+        <method signature="TestGroup.testConnectOracle()[pri:0, instance:grouping.TestGroup@1ce92674]" name="testConnectOracle" class="grouping.TestGroup"/>
+      </group> <!-- database -->
+    </groups>
+    <test name="Test Case 1 " duration-ms="53" started-at="2017-07-11T06:15:31Z" finished-at="2017-07-11T06:15:31Z">
+      <class name="TestersGroupID.TestNGArtifactID.PassingParameter">
+        <test-method status="PASS" signature="myTestCase()[pri:0, instance:TestersGroupID.TestNGArtifactID.PassingParameter@14acaea5]" name="myTestCase" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myTestCase -->
+      </class> <!-- TestersGroupID.TestNGArtifactID.PassingParameter -->
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@6f7fd0e6]" name="beforeTest" is-config="true" duration-ms="2" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="SelectBrowser(java.lang.String, java.lang.String)[pri:0, instance:TestersGroupID.TestNGArtifactID.PassingParameter@14acaea5]" name="SelectBrowser" is-config="true" duration-ms="4" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Solomon A]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectBrowser -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@6f7fd0e6]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="setVariables()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@6f7fd0e6]" name="setVariables" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setVariables -->
+        <test-method status="PASS" signature="loginTestWithCorrectCredencials()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@6f7fd0e6]" name="loginTestWithCorrectCredencials" duration-ms="6" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithCorrectCredencials -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@6f7fd0e6]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="clearChookies()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@6f7fd0e6]" name="clearChookies" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearChookies -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@6f7fd0e6]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- TestersGroupID.TestNGArtifactID.LoginTest -->
+      <class name="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn">
+        <test-method status="PASS" signature="phoneTest2()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@27efef64]" name="phoneTest2" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest2 -->
+        <test-method status="PASS" signature="emailTest4()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@27efef64]" name="emailTest4" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest4 -->
+        <test-method status="FAIL" signature="emailTest2()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@27efef64]" name="emailTest2" duration-ms="4" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [John] but found [Solomon]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [John] but found [Solomon]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2(PriorityAndDependsOn.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest2 -->
+        <test-method status="PASS" signature="phoneTest3()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@27efef64]" name="phoneTest3" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest3 -->
+        <test-method status="PASS" signature="phoneTest1()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@27efef64]" name="phoneTest1" duration-ms="4" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest1 -->
+        <test-method status="SKIP" signature="phoneTest4()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@27efef64]" name="phoneTest4" duration-ms="1" started-at="2017-07-11T02:15:31Z" depends-on-methods="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest4 -->
+        <test-method status="SKIP" signature="emailTest3()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@27efef64]" name="emailTest3" duration-ms="0" started-at="2017-07-11T02:15:31Z" depends-on-methods="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest3 -->
+        <test-method status="SKIP" signature="emailTest1()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@27efef64]" name="emailTest1" duration-ms="0" started-at="2017-07-11T02:15:31Z" depends-on-methods="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest1 -->
+      </class> <!-- TestersGroupID.TestNGArtifactID.PriorityAndDependsOn -->
+    </test> <!-- Test Case 1  -->
+    <test name="Test Case 2 " duration-ms="30" started-at="2017-07-11T06:15:31Z" finished-at="2017-07-11T06:15:31Z">
+      <class name="TestersGroupID.TestNGArtifactID.PassingParameter">
+        <test-method status="PASS" signature="myTestCase()[pri:0, instance:TestersGroupID.TestNGArtifactID.PassingParameter@1a968a59]" name="myTestCase" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myTestCase -->
+      </class> <!-- TestersGroupID.TestNGArtifactID.PassingParameter -->
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@77cd7a0]" name="beforeTest" is-config="true" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="SelectBrowser(java.lang.String, java.lang.String)[pri:0, instance:TestersGroupID.TestNGArtifactID.PassingParameter@1a968a59]" name="SelectBrowser" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Alex]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectBrowser -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@77cd7a0]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="setVariables()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@77cd7a0]" name="setVariables" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setVariables -->
+        <test-method status="PASS" signature="loginTestWithCorrectCredencials()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@77cd7a0]" name="loginTestWithCorrectCredencials" duration-ms="3" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithCorrectCredencials -->
+        <test-method status="PASS" signature="clearChookies()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@77cd7a0]" name="clearChookies" is-config="true" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearChookies -->
+        <test-method status="PASS" signature="setVariables()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@77cd7a0]" name="setVariables" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setVariables -->
+        <test-method status="PASS" signature="loginTestWithWrongCredencials()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@77cd7a0]" name="loginTestWithWrongCredencials" duration-ms="3" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithWrongCredencials -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@77cd7a0]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="clearChookies()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@77cd7a0]" name="clearChookies" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearChookies -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@77cd7a0]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- TestersGroupID.TestNGArtifactID.LoginTest -->
+      <class name="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn">
+        <test-method status="PASS" signature="phoneTest2()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@4667ae56]" name="phoneTest2" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest2 -->
+        <test-method status="PASS" signature="emailTest4()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@4667ae56]" name="emailTest4" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest4 -->
+        <test-method status="FAIL" signature="emailTest2()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@4667ae56]" name="emailTest2" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [John] but found [Solomon]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [John] but found [Solomon]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2(PriorityAndDependsOn.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest2 -->
+        <test-method status="PASS" signature="phoneTest3()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@4667ae56]" name="phoneTest3" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest3 -->
+        <test-method status="PASS" signature="phoneTest1()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@4667ae56]" name="phoneTest1" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest1 -->
+        <test-method status="SKIP" signature="phoneTest4()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@4667ae56]" name="phoneTest4" duration-ms="0" started-at="2017-07-11T02:15:31Z" depends-on-methods="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest4 -->
+        <test-method status="SKIP" signature="emailTest3()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@4667ae56]" name="emailTest3" duration-ms="0" started-at="2017-07-11T02:15:31Z" depends-on-methods="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest3 -->
+        <test-method status="SKIP" signature="emailTest1()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@4667ae56]" name="emailTest1" duration-ms="0" started-at="2017-07-11T02:15:31Z" depends-on-methods="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest1 -->
+      </class> <!-- TestersGroupID.TestNGArtifactID.PriorityAndDependsOn -->
+    </test> <!-- Test Case 2  -->
+    <test name="Test Case 3 " duration-ms="76" started-at="2017-07-11T06:15:31Z" finished-at="2017-07-11T06:15:31Z">
+      <class name="TestersGroupID.TestNGArtifactID.PassingParameter">
+        <test-method status="PASS" signature="myTestCase()[pri:0, instance:TestersGroupID.TestNGArtifactID.PassingParameter@f6c48ac]" name="myTestCase" duration-ms="2" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- myTestCase -->
+      </class> <!-- TestersGroupID.TestNGArtifactID.PassingParameter -->
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@239963d8]" name="beforeTest" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="SelectBrowser(java.lang.String, java.lang.String)[pri:0, instance:TestersGroupID.TestNGArtifactID.PassingParameter@f6c48ac]" name="SelectBrowser" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[IE]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Solomon A]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SelectBrowser -->
+        <test-method status="PASS" signature="setVariables()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@239963d8]" name="setVariables" is-config="true" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setVariables -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@239963d8]" name="beforeClass" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="loginTestWithCorrectCredencials()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@239963d8]" name="loginTestWithCorrectCredencials" duration-ms="2" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithCorrectCredencials -->
+        <test-method status="PASS" signature="clearChookies()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@239963d8]" name="clearChookies" is-config="true" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearChookies -->
+        <test-method status="PASS" signature="setVariables()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@239963d8]" name="setVariables" is-config="true" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setVariables -->
+        <test-method status="PASS" signature="loginTestWithWrongCredencials()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@239963d8]" name="loginTestWithWrongCredencials" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithWrongCredencials -->
+        <test-method status="PASS" signature="clearChookies()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@239963d8]" name="clearChookies" is-config="true" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearChookies -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@239963d8]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@239963d8]" name="afterTest" is-config="true" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- TestersGroupID.TestNGArtifactID.LoginTest -->
+      <class name="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn">
+        <test-method status="PASS" signature="phoneTest2()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@13deb50e]" name="phoneTest2" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest2 -->
+        <test-method status="PASS" signature="emailTest4()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@13deb50e]" name="emailTest4" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest4 -->
+        <test-method status="FAIL" signature="emailTest2()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@13deb50e]" name="emailTest2" duration-ms="4" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [John] but found [Solomon]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [John] but found [Solomon]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2(PriorityAndDependsOn.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest2 -->
+        <test-method status="PASS" signature="phoneTest3()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@13deb50e]" name="phoneTest3" duration-ms="2" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest3 -->
+        <test-method status="PASS" signature="phoneTest1()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@13deb50e]" name="phoneTest1" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest1 -->
+        <test-method status="SKIP" signature="phoneTest4()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@13deb50e]" name="phoneTest4" duration-ms="0" started-at="2017-07-11T02:15:31Z" depends-on-methods="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest4 -->
+        <test-method status="SKIP" signature="emailTest3()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@13deb50e]" name="emailTest3" duration-ms="0" started-at="2017-07-11T02:15:31Z" depends-on-methods="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest3 -->
+        <test-method status="SKIP" signature="emailTest1()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@13deb50e]" name="emailTest1" duration-ms="0" started-at="2017-07-11T02:15:31Z" depends-on-methods="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest1 -->
+      </class> <!-- TestersGroupID.TestNGArtifactID.PriorityAndDependsOn -->
+    </test> <!-- Test Case 3  -->
+    <test name="Test Case 4 " duration-ms="76" started-at="2017-07-11T06:15:31Z" finished-at="2017-07-11T06:15:31Z">
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@4f7d0008]" name="beforeTest" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@4f7d0008]" name="beforeClass" is-config="true" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="setVariables()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@4f7d0008]" name="setVariables" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setVariables -->
+        <test-method status="PASS" signature="loginTestWithCorrectCredencials()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@4f7d0008]" name="loginTestWithCorrectCredencials" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithCorrectCredencials -->
+        <test-method status="PASS" signature="loginTestWithWrongCredencials()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@4f7d0008]" name="loginTestWithWrongCredencials" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTestWithWrongCredencials -->
+        <test-method status="PASS" signature="clearChookies()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@4f7d0008]" name="clearChookies" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearChookies -->
+        <test-method status="PASS" signature="setVariables()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@4f7d0008]" name="setVariables" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setVariables -->
+        <test-method status="PASS" signature="clearChookies()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@4f7d0008]" name="clearChookies" is-config="true" duration-ms="3" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clearChookies -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@4f7d0008]" name="afterClass" is-config="true" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@4f7d0008]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- TestersGroupID.TestNGArtifactID.LoginTest -->
+      <class name="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn">
+        <test-method status="PASS" signature="phoneTest2()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@553f17c]" name="phoneTest2" duration-ms="2" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest2 -->
+        <test-method status="PASS" signature="emailTest4()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@553f17c]" name="emailTest4" duration-ms="2" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest4 -->
+        <test-method status="FAIL" signature="emailTest2()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@553f17c]" name="emailTest2" duration-ms="5" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [John] but found [Solomon]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [John] but found [Solomon]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:494)
+	at org.testng.Assert.assertEquals(Assert.java:123)
+	at org.testng.Assert.assertEquals(Assert.java:176)
+	at org.testng.Assert.assertEquals(Assert.java:186)
+	at TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2(PriorityAndDependsOn.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest2 -->
+        <test-method status="PASS" signature="phoneTest3()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@553f17c]" name="phoneTest3" duration-ms="1" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest3 -->
+        <test-method status="PASS" signature="phoneTest1()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@553f17c]" name="phoneTest1" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest1 -->
+        <test-method status="SKIP" signature="phoneTest4()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@553f17c]" name="phoneTest4" duration-ms="0" started-at="2017-07-11T02:15:31Z" depends-on-methods="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- phoneTest4 -->
+        <test-method status="SKIP" signature="emailTest3()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@553f17c]" name="emailTest3" duration-ms="0" started-at="2017-07-11T02:15:31Z" depends-on-methods="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest3 -->
+        <test-method status="SKIP" signature="emailTest1()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@553f17c]" name="emailTest1" duration-ms="0" started-at="2017-07-11T02:15:31Z" depends-on-methods="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailTest1 -->
+      </class> <!-- TestersGroupID.TestNGArtifactID.PriorityAndDependsOn -->
+    </test> <!-- Test Case 4  -->
+    <test name="Test Case 5 " duration-ms="7" started-at="2017-07-11T06:15:31Z" finished-at="2017-07-11T06:15:31Z">
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@4f7d0008]" name="beforeSuite" is-config="true" duration-ms="14" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@553f17c]" name="beforeSuite" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:TestersGroupID.TestNGArtifactID.PriorityAndDependsOn@553f17c]" name="afterSuite" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:TestersGroupID.TestNGArtifactID.LoginTest@4f7d0008]" name="afterSuite" is-config="true" duration-ms="0" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- TestersGroupID.TestNGArtifactID.LoginTest -->
+      <class name="grouping.TestGroup">
+        <test-method status="PASS" signature="testConnectMsSQL()[pri:0, instance:grouping.TestGroup@1ce92674]" name="testConnectMsSQL" duration-ms="2" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConnectMsSQL -->
+        <test-method status="PASS" signature="testConnectOracle()[pri:0, instance:grouping.TestGroup@1ce92674]" name="testConnectOracle" duration-ms="2" started-at="2017-07-11T02:15:31Z" finished-at="2017-07-11T02:15:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testConnectOracle -->
+      </class> <!-- grouping.TestGroup -->
+    </test> <!-- Test Case 5  -->
+  </suite> <!-- Suite -->
+</testng-results>

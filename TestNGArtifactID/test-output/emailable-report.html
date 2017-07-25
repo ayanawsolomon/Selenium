@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>TestNG:  Unit Test</title>
+<style type="text/css">
+table caption,table.info_table,table.result,table.passed,table.failed {margin-bottom:10px;border:1px solid #000099;border-collapse:collapse;empty-cells:show;}
+table.info_table td,table.info_table th,table.result td,table.result th,table.passed td,table.passed th,table.failed td,table.failed th {
+border:1px solid #000099;padding:.25em .5em .25em .5em
+}
+table.result th {vertical-align:bottom}
+tr.param th {padding-left:1em;padding-right:1em}
+tr.param td {padding-left:.5em;padding-right:2em}
+td.numi,th.numi,td.numi_attn {
+text-align:right
+}
+tr.total td {font-weight:bold}
+table caption {
+text-align:center;font-weight:bold;
+}
+table.passed tr.stripe td,table tr.passedodd td {background-color: #00AA00;}
+table.passed td,table tr.passedeven td {background-color: #33FF33;}
+table.passed tr.stripe td,table tr.skippedodd td {background-color: #cccccc;}
+table.passed td,table tr.skippedodd td {background-color: #dddddd;}
+table.failed tr.stripe td,table tr.failedodd td,table.result td.numi_attn {background-color: #FF3333;}
+table.failed td,table tr.failedeven td,table.result tr.stripe td.numi_attn {background-color: #DD0000;}
+tr.stripe td,tr.stripe th {background-color: #E6EBF9;}
+p.totop {font-size:85%;text-align:center;border-bottom:2px black solid}
+div.shootout {padding:2em;border:3px #4854A8 solid}
+</style>
+</head>
+<body>
+<table cellspacing="0" cellpadding="0" class="result">
+<tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
+<tr><td style="text-align:left;padding-right:2em">Test Case 1 </td><td class="numi">6</td><td class="numi">6</td><td class="numi_attn">3</td><td class="numi_attn">1</td><td class="numi">0.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">Test Case 2 </td><td class="numi">7</td><td class="numi">7</td><td class="numi_attn">3</td><td class="numi_attn">1</td><td class="numi">0.0 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Test Case 3 </td><td class="numi">7</td><td class="numi">7</td><td class="numi_attn">3</td><td class="numi_attn">1</td><td class="numi">0.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr class="stripe"><td style="text-align:left;padding-right:2em">Test Case 4 </td><td class="numi">6</td><td class="numi">6</td><td class="numi_attn">3</td><td class="numi_attn">1</td><td class="numi">0.1 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Test Case 5 </td><td class="numi">2</td><td class="numi">2</td><td class="numi">0</td><td class="numi">0</td><td class="numi">0.0 seconds</td><td class="numi">database </td><td class="numi"></td></tr>
+<tr class="total"><td>Total</td>
+<td class="numi">28</td><td class="numi">28</td><td class="numi_attn">12</td><td class="numi_attn">4</td><td class="numi">0.3 seconds</td><td colspan="2">&nbsp;</td></tr>
+</table>
+<table cellspacing="0" cellpadding="0" class="passed" id="summary">
+<tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
+<tr><th colspan="4">Test Case 1  &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn</td><td><a href="#m1"><b>emailTest2</b>  </a></td><td class="numi">1</td><td>1499753731570</td><td class="numi">4</td></tr>
+<tr><th colspan="4">Test Case 1  &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="3">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn</td><td><a href="#m2"><b>phoneTest4</b>  </a></td><td class="numi">1</td><td>1499753731585</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m3"><b>emailTest3</b>  </a></td><td class="numi">1</td><td>1499753731587</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m4"><b>emailTest1</b>  </a></td><td class="numi">1</td><td>1499753731588</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Test Case 1  &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="1">TestersGroupID.TestNGArtifactID.LoginTest</td><td><a href="#m5"><b>loginTestWithCorrectCredencials</b>  </a></td><td class="numi">1</td><td>1499753731557</td><td class="numi">6</td></tr>
+<tr class="passedeven"><td rowspan="4">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn</td><td><a href="#m6"><b>phoneTest2</b>  </a></td><td class="numi">1</td><td>1499753731566</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m7"><b>emailTest4</b>  </a></td><td class="numi">1</td><td>1499753731568</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m8"><b>phoneTest3</b>  </a></td><td class="numi">1</td><td>1499753731577</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m9"><b>phoneTest1</b>  </a></td><td class="numi">1</td><td>1499753731579</td><td class="numi">4</td></tr>
+<tr class="passedodd"><td rowspan="1">TestersGroupID.TestNGArtifactID.PassingParameter</td><td><a href="#m10"><b>myTestCase</b>  </a></td><td class="numi">1</td><td>1499753731589</td><td class="numi">1</td></tr>
+<tr><th colspan="4">Test Case 2  &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn</td><td><a href="#m11"><b>emailTest2</b>  </a></td><td class="numi">1</td><td>1499753731673</td><td class="numi">1</td></tr>
+<tr><th colspan="4">Test Case 2  &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="3">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn</td><td><a href="#m12"><b>phoneTest4</b>  </a></td><td class="numi">1</td><td>1499753731679</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m13"><b>emailTest1</b>  </a></td><td class="numi">1</td><td>1499753731682</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m14"><b>emailTest3</b>  </a></td><td class="numi">1</td><td>1499753731681</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Test Case 2  &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">TestersGroupID.TestNGArtifactID.LoginTest</td><td><a href="#m15"><b>loginTestWithCorrectCredencials</b>  </a></td><td class="numi">1</td><td>1499753731659</td><td class="numi">3</td></tr><tr class="passedodd"><td><a href="#m16"><b>loginTestWithWrongCredencials</b>  </a></td><td class="numi">1</td><td>1499753731663</td><td class="numi">3</td></tr>
+<tr class="passedeven"><td rowspan="4">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn</td><td><a href="#m17"><b>phoneTest2</b>  </a></td><td class="numi">1</td><td>1499753731670</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m18"><b>emailTest4</b>  </a></td><td class="numi">1</td><td>1499753731671</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m19"><b>phoneTest3</b>  </a></td><td class="numi">1</td><td>1499753731676</td><td class="numi">0</td></tr><tr class="passedeven"><td><a href="#m20"><b>phoneTest1</b>  </a></td><td class="numi">1</td><td>1499753731677</td><td class="numi">1</td></tr>
+<tr class="passedodd"><td rowspan="1">TestersGroupID.TestNGArtifactID.PassingParameter</td><td><a href="#m21"><b>myTestCase</b>  </a></td><td class="numi">1</td><td>1499753731683</td><td class="numi">1</td></tr>
+<tr><th colspan="4">Test Case 3  &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn</td><td><a href="#m22"><b>emailTest2</b>  </a></td><td class="numi">1</td><td>1499753731709</td><td class="numi">4</td></tr>
+<tr><th colspan="4">Test Case 3  &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="3">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn</td><td><a href="#m23"><b>emailTest3</b>  </a></td><td class="numi">1</td><td>1499753731723</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m24"><b>emailTest1</b>  </a></td><td class="numi">1</td><td>1499753731766</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m25"><b>phoneTest4</b>  </a></td><td class="numi">1</td><td>1499753731722</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Test Case 3  &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">TestersGroupID.TestNGArtifactID.LoginTest</td><td><a href="#m26"><b>loginTestWithCorrectCredencials</b>  </a></td><td class="numi">1</td><td>1499753731697</td><td class="numi">2</td></tr><tr class="passedodd"><td><a href="#m27"><b>loginTestWithWrongCredencials</b>  </a></td><td class="numi">1</td><td>1499753731702</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="4">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn</td><td><a href="#m28"><b>phoneTest2</b>  </a></td><td class="numi">1</td><td>1499753731706</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m29"><b>emailTest4</b>  </a></td><td class="numi">1</td><td>1499753731708</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m30"><b>phoneTest3</b>  </a></td><td class="numi">1</td><td>1499753731717</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m31"><b>phoneTest1</b>  </a></td><td class="numi">1</td><td>1499753731720</td><td class="numi">1</td></tr>
+<tr class="passedodd"><td rowspan="1">TestersGroupID.TestNGArtifactID.PassingParameter</td><td><a href="#m32"><b>myTestCase</b>  </a></td><td class="numi">1</td><td>1499753731767</td><td class="numi">2</td></tr>
+<tr><th colspan="4">Test Case 4  &#8212; failed</th></tr>
+<tr class="failedodd"><td rowspan="1">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn</td><td><a href="#m33"><b>emailTest2</b>  </a></td><td class="numi">1</td><td>1499753731844</td><td class="numi">5</td></tr>
+<tr><th colspan="4">Test Case 4  &#8212; skipped</th></tr>
+<tr class="skippedodd"><td rowspan="3">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn</td><td><a href="#m34"><b>phoneTest4</b>  </a></td><td class="numi">1</td><td>1499753731855</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m35"><b>emailTest3</b>  </a></td><td class="numi">1</td><td>1499753731859</td><td class="numi">0</td></tr><tr class="skippedodd"><td><a href="#m36"><b>emailTest1</b>  </a></td><td class="numi">1</td><td>1499753731860</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Test Case 4  &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">TestersGroupID.TestNGArtifactID.LoginTest</td><td><a href="#m37"><b>loginTestWithCorrectCredencials</b>  </a></td><td class="numi">1</td><td>1499753731787</td><td class="numi">1</td></tr><tr class="passedodd"><td><a href="#m38"><b>loginTestWithWrongCredencials</b>  </a></td><td class="numi">1</td><td>1499753731789</td><td class="numi">1</td></tr>
+<tr class="passedeven"><td rowspan="4">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn</td><td><a href="#m39"><b>phoneTest2</b>  </a></td><td class="numi">1</td><td>1499753731796</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m40"><b>emailTest4</b>  </a></td><td class="numi">1</td><td>1499753731841</td><td class="numi">2</td></tr><tr class="passedeven"><td><a href="#m41"><b>phoneTest3</b>  </a></td><td class="numi">1</td><td>1499753731851</td><td class="numi">1</td></tr><tr class="passedeven"><td><a href="#m42"><b>phoneTest1</b>  </a></td><td class="numi">1</td><td>1499753731853</td><td class="numi">0</td></tr>
+<tr><th colspan="4">Test Case 5  &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="2">grouping.TestGroup</td><td><a href="#m43"><b>testConnectMsSQL</b> (database) </a></td><td class="numi">1</td><td>1499753731879</td><td class="numi">2</td></tr><tr class="passedodd"><td><a href="#m44"><b>testConnectOracle</b> (database) </a></td><td class="numi">1</td><td>1499753731882</td><td class="numi">2</td></tr>
+</table>
+<h1>Test Case 1 </h1>
+<h2 id="m1">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest2</h2>
+<div style="padding-left:3em">
+<p>expected [John] but found [Solomon]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at org.testng.Assert.assertEquals(Assert.java:186)
+<br/>at TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2(PriorityAndDependsOn.java:51)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m2">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest4</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m3">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest3</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m4">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest1</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m5">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest1</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m6">TestersGroupID.TestNGArtifactID.PassingParameter:myTestCase</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m7">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest2</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m8">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest4</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m9">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest3</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">TestersGroupID.TestNGArtifactID.LoginTest:loginTestWithCorrectCredencials</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Test Case 2 </h1>
+<h2 id="m11">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest2</h2>
+<div style="padding-left:3em">
+<p>expected [John] but found [Solomon]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at org.testng.Assert.assertEquals(Assert.java:186)
+<br/>at TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2(PriorityAndDependsOn.java:51)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest4</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m13">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest1</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m14">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest3</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m15">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest3</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m16">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest4</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m17">TestersGroupID.TestNGArtifactID.LoginTest:loginTestWithCorrectCredencials</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m18">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest2</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m19">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest1</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m20">TestersGroupID.TestNGArtifactID.LoginTest:loginTestWithWrongCredencials</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m21">TestersGroupID.TestNGArtifactID.PassingParameter:myTestCase</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Test Case 3 </h1>
+<h2 id="m22">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest2</h2>
+<div style="padding-left:3em">
+<p>expected [John] but found [Solomon]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at org.testng.Assert.assertEquals(Assert.java:186)
+<br/>at TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2(PriorityAndDependsOn.java:51)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m23">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest3</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m24">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest1</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m25">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest4</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m26">TestersGroupID.TestNGArtifactID.LoginTest:loginTestWithCorrectCredencials</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m27">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest1</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m28">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest4</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m29">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest3</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m30">TestersGroupID.TestNGArtifactID.LoginTest:loginTestWithWrongCredencials</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m31">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest2</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m32">TestersGroupID.TestNGArtifactID.PassingParameter:myTestCase</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Test Case 4 </h1>
+<h2 id="m33">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest2</h2>
+<div style="padding-left:3em">
+<p>expected [John] but found [Solomon]</p>
+org.testng.Assert.fail(Assert.java:94)
+<br/>at org.testng.Assert.failNotEquals(Assert.java:494)
+<br/>at org.testng.Assert.assertEquals(Assert.java:123)
+<br/>at org.testng.Assert.assertEquals(Assert.java:176)
+<br/>at org.testng.Assert.assertEquals(Assert.java:186)
+<br/>at TestersGroupID.TestNGArtifactID.PriorityAndDependsOn.emailTest2(PriorityAndDependsOn.java:51)
+<br/>25 lines not shown
+</div>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m34">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest4</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m35">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest3</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m36">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest1</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m37">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest3</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m38">TestersGroupID.TestNGArtifactID.LoginTest:loginTestWithWrongCredencials</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m39">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest2</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m40">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:phoneTest1</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m41">TestersGroupID.TestNGArtifactID.PriorityAndDependsOn:emailTest4</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m42">TestersGroupID.TestNGArtifactID.LoginTest:loginTestWithCorrectCredencials</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h1>Test Case 5 </h1>
+<h2 id="m43">grouping.TestGroup:testConnectOracle</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m44">grouping.TestGroup:testConnectMsSQL</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+</body></html>
