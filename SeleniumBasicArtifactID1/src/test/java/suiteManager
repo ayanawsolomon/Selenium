@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="method">
+  <test name="Newtours TestNG test">
+    <classes>
+      <class name="testNG.TestNGAnnotations"/>
+        <class name="testNG.loginLogoutDataDriveTesintUsingTestNG"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

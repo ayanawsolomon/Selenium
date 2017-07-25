@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="Newtours TestNG test(failed)">
+    <classes>
+      <class name="testNG.loginLogoutDataDriveTesintUsingTestNG">
+        <methods>
+          <include name="loginLogoutTestWtihIncorrectCredencials" invocation-numbers="2"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- testNG.loginLogoutDataDriveTesintUsingTestNG -->
+      <class name="testNG.TestNGAnnotations">
+        <methods>
+          <include name="defineMyVariables"/>
+          <include name="thisIsAfterTest"/>
+          <include name="clearMyVariables"/>
+          <include name="afterClass"/>
+          <include name="thisIsBeforeTest"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- testNG.TestNGAnnotations -->
+    </classes>
+  </test> <!-- Newtours TestNG test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
