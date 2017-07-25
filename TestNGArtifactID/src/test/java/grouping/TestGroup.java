@@ -13,7 +13,8 @@ public class TestGroup {
 	@AfterGroups("database")
 	public void cleanDB() {
 		System.out.println("Code to cleanDB()");
-	}
+
+}
 
 	@Test(groups= "selenium-test")
 	public void runSelenium() {
