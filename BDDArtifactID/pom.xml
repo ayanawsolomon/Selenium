@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 <parent>
     <groupId>com.test</groupId>
-    <artifactId>myApplicaon</artifactId>
+    <artifactId>CommonPOM</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
@@ -22,41 +22,7 @@
 
 
 
-  <dependency>
-  	<groupId>info.cukes</groupId>
-  	<artifactId>cucumber-core</artifactId>
-  	<version>1.2.0</version>
-  </dependency>
-  <dependency>
-  	<groupId>info.cukes</groupId>
-  	<artifactId>cucumber-html</artifactId>
-  	<version>0.2.3</version>
-  </dependency>
-  <dependency>
-  	<groupId>info.cukes</groupId>
-  	<artifactId>cucumber-java</artifactId>
-  	<version>1.2.0</version>
-  </dependency>
-  <dependency>
-  	<groupId>info.cukes</groupId>
-  	<artifactId>cucumber-junit</artifactId>
-  	<version>1.2.0</version>
-  </dependency>
-  <dependency>
-  	<groupId>info.cukes</groupId>
-  	<artifactId>cucumber-jvm-deps</artifactId>
-  	<version>1.0.5</version>
-  </dependency>
-  <dependency>
-  	<groupId>info.cukes</groupId>
-  	<artifactId>cucumber-testng</artifactId>
-  	<version>1.2.0</version>
-  </dependency>
-  <dependency>
-  	<groupId>net.masterthought</groupId>
-  	<artifactId>cucumber-reporting</artifactId>
-  	<version>1.0.0</version>
-  </dependency>
+ 
   </dependencies>
   
   
