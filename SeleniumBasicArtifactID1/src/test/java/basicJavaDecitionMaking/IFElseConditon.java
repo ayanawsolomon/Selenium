@@ -8,7 +8,7 @@ public class IFElseConditon {
 		// 80 > x >= 70 , then score B
 		// 70 > x >= 60 , then score C
 		// 60 > x > 50 , then core D
-		// 50> x >=0, then score F
+		// 50> x >=0, then score F.
 		int grade =100;//81==>A,65==>c, 76==>B, 54==> D, 45==> F, 101==>out, 99==>A+ -4
 		if(grade > 100){
 			System.out.println("result is out of range");
