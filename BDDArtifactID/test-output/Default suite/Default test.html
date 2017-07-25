@@ -1,0 +1,160 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Sun May 07 12:50:17 EDT 2017</td>
+</tr>
+<tr><td>Total time:</td><td>0 seconds (453 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='BDDGroupIID.BDDArtifactID.TestRunnerTestNG.run_cukes()'><b>run_cukes</b><br>Test class: BDDGroupIID.BDDArtifactID.TestRunnerTestNG<br>Test method: Runs Cucumber Features<br/>
+<a href="#Output-1259174396" onClick='toggleBox("Output-1259174396", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1259174396" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1259174396">
+<div "featureFile">Feature File: loginTestofNewtours.feature</div><br/>
+<div "feature">Feature: Loing test for newtorus web</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "scenario">Scenario: Login Success with user name a and password a</div><br/>
+<div "result">When  I insert user name=&quot;a&quot; and password=&quot;a&quot; (skipped)</div><br/>
+<div "result">And  I press Login button (skipped)</div><br/>
+<div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "scenario">Scenario: login not success with username abced and pass ab</div><br/>
+<div "result">When  I insert user name &quot;abcd&quot; and password &quot;ab&quot; (undefined)</div><br/>
+<div "result">And  i press login (undefined)</div><br/>
+<div "result">Then  &quot;SIGN-ON&quot; link shoudl be seen (undefined)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "scenario">Scenario: test gmail page</div><br/>
+<div "result">When  I insert Username =&quot;xxxxx@gmail.com&quot; (undefined)</div><br/>
+<div "result">And  I insert password =&quot;xxxxx&quot; (undefined)</div><br/>
+<div "result">And  Press loing button (undefined)</div><br/>
+<div "result">Then  I should get login success (undefined)</div><br/>
+<div "scenarioOutline">Scenario Outline: Login test with different credencials</div><br/>
+<div "result">When  I insert user name=&quot;&lt;userName&gt;&quot; and password=&quot;&lt;password&gt;&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Login test with different credencials</div><br/>
+<div "result">And  I press Login button (skipped)</div><br/>
+<div "result">Then  &quot;&lt;link&gt;&quot; link should be seen on the top menue (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "result">When  I insert user name=&quot;a&quot; and password=&quot;5&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Login test with different credencials</div><br/>
+<div "result">And  I press Login button (skipped)</div><br/>
+<div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "result">When  I insert user name=&quot;b&quot; and password=&quot;b&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Login test with different credencials</div><br/>
+<div "result">And  I press Login button (skipped)</div><br/>
+<div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "result">When  I insert user name=&quot;abc&quot; and password=&quot;def&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Login test with different credencials</div><br/>
+<div "result">And  I press Login button (skipped)</div><br/>
+<div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "result">When  I insert user name=&quot;lmk&quot; and password=&quot;7&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Login test with different credencials</div><br/>
+<div "result">And  I press Login button (skipped)</div><br/>
+<div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "result">When  I insert user name=&quot;c&quot; and password=&quot;c&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Login test with different credencials</div><br/>
+<div "result">And  I press Login button (skipped)</div><br/>
+<div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "featureFile">Feature File: registraion.feature</div><br/>
+<div "feature">Feature: Testing registriaon page with different values</div><br/>
+<div "scenarioOutline">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
+<div "result">When  I insert user name=&quot;d&quot; and password=&quot;d&quot; (skipped)</div><br/>
+<div "result">And  I press Login button (skipped)</div><br/>
+<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
+<div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div><br/>
+<div "result">When  I insert password &quot;&lt;password&gt;&quot; and confirm password  &quot;&lt;confirm&gt;&quot; (skipped)</div><br/>
+<div "result">And  I click submit (skipped)</div><br/>
+<div "result">Then  &quot;&lt;url&gt;&quot; page should be seen (skipped)</div><br/>
+<div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
+<div "result">And  Add correct data to registration form (skipped)</div><br/>
+<div "result">When  I insert password &quot;abcd&quot; and confirm password  &quot;abcd&quot; (skipped)</div><br/>
+<div "result">And  I click submit (skipped)</div><br/>
+<div "result">Then  &quot;create_account_success.php&quot; page should be seen (skipped)</div><br/>
+<div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
+<div "result">And  Add correct data to registration form (skipped)</div><br/>
+<div "result">When  I insert password &quot;abcdefghijk&quot; and confirm password  &quot;abc&quot; (skipped)</div><br/>
+<div "result">And  I click submit (skipped)</div><br/>
+</div>
+</td>
+<td></td>
+<td>0</td>
+<td>BDDGroupIID.BDDArtifactID.TestRunnerTestNG@4cf777e8</td></tr>
+</table><p>
+</body>
+</html>

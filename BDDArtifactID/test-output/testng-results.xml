@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[<div "featureFile">Feature File: loginTestofNewtours.feature</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "feature">Feature: Loing test for newtorus web</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenario">Scenario: Login Success with user name a and password a</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I insert user name=&quot;a&quot; and password=&quot;a&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenario">Scenario: login not success with username abced and pass ab</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I insert user name &quot;abcd&quot; and password &quot;ab&quot; (undefined)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  i press login (undefined)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  &quot;SIGN-ON&quot; link shoudl be seen (undefined)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenario">Scenario: test gmail page</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I insert Username =&quot;xxxxx@gmail.com&quot; (undefined)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  I insert password =&quot;xxxxx&quot; (undefined)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  Press loing button (undefined)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  I should get login success (undefined)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenarioOutline">Scenario Outline: Login test with different credencials</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I insert user name=&quot;&lt;userName&gt;&quot; and password=&quot;&lt;password&gt;&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenario">Scenario Outline: Login test with different credencials</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  &quot;&lt;link&gt;&quot; link should be seen on the top menue (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I insert user name=&quot;a&quot; and password=&quot;5&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenario">Scenario Outline: Login test with different credencials</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I insert user name=&quot;b&quot; and password=&quot;b&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenario">Scenario Outline: Login test with different credencials</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I insert user name=&quot;abc&quot; and password=&quot;def&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenario">Scenario Outline: Login test with different credencials</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I insert user name=&quot;lmk&quot; and password=&quot;7&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenario">Scenario Outline: Login test with different credencials</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I insert user name=&quot;c&quot; and password=&quot;c&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenario">Scenario Outline: Login test with different credencials</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "featureFile">Feature File: registraion.feature</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "feature">Feature: Testing registriaon page with different values</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenarioOutline">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I insert user name=&quot;d&quot; and password=&quot;d&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I insert password &quot;&lt;password&gt;&quot; and confirm password  &quot;&lt;confirm&gt;&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  I click submit (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  &quot;&lt;url&gt;&quot; page should be seen (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  Add correct data to registration form (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I insert password &quot;abcd&quot; and confirm password  &quot;abcd&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  I click submit (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  &quot;create_account_success.php&quot; page should be seen (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  Add correct data to registration form (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I insert password &quot;abcdefghijk&quot; and confirm password  &quot;abc&quot; (skipped)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">And  I click submit (skipped)</div>]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="453" started-at="2017-05-07T16:50:17Z" finished-at="2017-05-07T16:50:17Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.run_cukes()[pri:0, instance:BDDGroupIID.BDDArtifactID.TestRunnerTestNG@4cf777e8]" name="run_cukes" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="453" started-at="2017-05-07T16:50:17Z" finished-at="2017-05-07T16:50:17Z">
+      <class name="BDDGroupIID.BDDArtifactID.TestRunnerTestNG">
+        <test-method status="PASS" signature="run_cukes()[pri:0, instance:BDDGroupIID.BDDArtifactID.TestRunnerTestNG@4cf777e8]" name="run_cukes" duration-ms="438" started-at="2017-05-07T12:50:17Z" description="Runs Cucumber Features" finished-at="2017-05-07T12:50:17Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<div "featureFile">Feature File: loginTestofNewtours.feature</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "feature">Feature: Loing test for newtorus web</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenario">Scenario: Login Success with user name a and password a</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I insert user name=&quot;a&quot; and password=&quot;a&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenario">Scenario: login not success with username abced and pass ab</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I insert user name &quot;abcd&quot; and password &quot;ab&quot; (undefined)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  i press login (undefined)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  &quot;SIGN-ON&quot; link shoudl be seen (undefined)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenario">Scenario: test gmail page</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I insert Username =&quot;xxxxx@gmail.com&quot; (undefined)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  I insert password =&quot;xxxxx&quot; (undefined)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  Press loing button (undefined)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  I should get login success (undefined)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenarioOutline">Scenario Outline: Login test with different credencials</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I insert user name=&quot;&lt;userName&gt;&quot; and password=&quot;&lt;password&gt;&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenario">Scenario Outline: Login test with different credencials</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  &quot;&lt;link&gt;&quot; link should be seen on the top menue (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I insert user name=&quot;a&quot; and password=&quot;5&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenario">Scenario Outline: Login test with different credencials</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I insert user name=&quot;b&quot; and password=&quot;b&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenario">Scenario Outline: Login test with different credencials</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I insert user name=&quot;abc&quot; and password=&quot;def&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenario">Scenario Outline: Login test with different credencials</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I insert user name=&quot;lmk&quot; and password=&quot;7&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenario">Scenario Outline: Login test with different credencials</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I insert user name=&quot;c&quot; and password=&quot;c&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenario">Scenario Outline: Login test with different credencials</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "featureFile">Feature File: registraion.feature</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "feature">Feature: Testing registriaon page with different values</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenarioOutline">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I insert user name=&quot;d&quot; and password=&quot;d&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  I press Login button (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I insert password &quot;&lt;password&gt;&quot; and confirm password  &quot;&lt;confirm&gt;&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  I click submit (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  &quot;&lt;url&gt;&quot; page should be seen (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  Add correct data to registration form (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I insert password &quot;abcd&quot; and confirm password  &quot;abcd&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  I click submit (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  &quot;create_account_success.php&quot; page should be seen (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  Add correct data to registration form (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I insert password &quot;abcdefghijk&quot; and confirm password  &quot;abc&quot; (skipped)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">And  I click submit (skipped)</div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run_cukes -->
+      </class> <!-- BDDGroupIID.BDDArtifactID.TestRunnerTestNG -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
