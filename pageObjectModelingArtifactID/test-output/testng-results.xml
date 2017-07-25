@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="8" total="8" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="7613" started-at="2017-07-18T20:13:29Z" finished-at="2017-07-18T20:13:37Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="7613" started-at="2017-07-18T20:13:29Z" finished-at="2017-07-18T20:13:37Z">
+      <class name="testCases.LoginLogoutTest">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="beforeTest" is-config="true" duration-ms="6912" started-at="2017-07-18T16:13:29Z" finished-at="2017-07-18T16:13:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="FAIL" signature="testingWithCorrectCredencials(java.lang.String, java.lang.String)[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="testingWithCorrectCredencials" duration-ms="621" started-at="2017-07-18T16:13:36Z" data-provider="correctCredencials" finished-at="2017-07-18T16:13:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[a]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[a]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.WebDriverException">
+            <message>
+              <![CDATA[Failed to decode response from marionette
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:272)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:82)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at objectRepository.HomePage.signOn(HomePage.java:32)
+	at testCases.LoginLogoutTest.testingWithCorrectCredencials(LoginLogoutTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingWithCorrectCredencials -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="afterTest" is-config="true" duration-ms="1" started-at="2017-07-18T16:13:36Z" finished-at="2017-07-18T16:13:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="FAIL" signature="testingWithCorrectCredencials(java.lang.String, java.lang.String)[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="testingWithCorrectCredencials" duration-ms="7" started-at="2017-07-18T16:13:36Z" data-provider="correctCredencials" finished-at="2017-07-18T16:13:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[b]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[b]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+*** Element info: {Using=link text, value=SIGN-ON}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+*** Element info: {Using=link text, value=SIGN-ON}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:461)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at objectRepository.HomePage.signOn(HomePage.java:32)
+	at testCases.LoginLogoutTest.testingWithCorrectCredencials(LoginLogoutTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingWithCorrectCredencials -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-07-18T16:13:36Z" finished-at="2017-07-18T16:13:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="FAIL" signature="testingWithCorrectCredencials(java.lang.String, java.lang.String)[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="testingWithCorrectCredencials" duration-ms="9" started-at="2017-07-18T16:13:36Z" data-provider="correctCredencials" finished-at="2017-07-18T16:13:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abc]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[csdfew]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+*** Element info: {Using=link text, value=SIGN-ON}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+*** Element info: {Using=link text, value=SIGN-ON}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:461)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at objectRepository.HomePage.signOn(HomePage.java:32)
+	at testCases.LoginLogoutTest.testingWithCorrectCredencials(LoginLogoutTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingWithCorrectCredencials -->
+        <test-method status="FAIL" signature="testingWithCorrectCredencials(java.lang.String, java.lang.String)[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="testingWithCorrectCredencials" duration-ms="5" started-at="2017-07-18T16:13:37Z" data-provider="correctCredencials" finished-at="2017-07-18T16:13:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[d]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[d]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+*** Element info: {Using=link text, value=SIGN-ON}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+*** Element info: {Using=link text, value=SIGN-ON}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:461)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at objectRepository.HomePage.signOn(HomePage.java:32)
+	at testCases.LoginLogoutTest.testingWithCorrectCredencials(LoginLogoutTest.java:58)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingWithCorrectCredencials -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-07-18T16:13:37Z" finished-at="2017-07-18T16:13:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-07-18T16:13:37Z" finished-at="2017-07-18T16:13:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="FAIL" signature="testingWithWrongCredencials(java.lang.String, java.lang.String)[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="testingWithWrongCredencials" duration-ms="6" started-at="2017-07-18T16:13:37Z" data-provider="wrongCredencials" finished-at="2017-07-18T16:13:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[11111]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[111111]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+*** Element info: {Using=link text, value=SIGN-ON}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+*** Element info: {Using=link text, value=SIGN-ON}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:461)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at objectRepository.HomePage.signOn(HomePage.java:32)
+	at testCases.LoginLogoutTest.testingWithWrongCredencials(LoginLogoutTest.java:87)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingWithWrongCredencials -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-07-18T16:13:37Z" finished-at="2017-07-18T16:13:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="FAIL" signature="testingWithWrongCredencials(java.lang.String, java.lang.String)[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="testingWithWrongCredencials" duration-ms="6" started-at="2017-07-18T16:13:37Z" data-provider="wrongCredencials" finished-at="2017-07-18T16:13:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[#######]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[######]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+*** Element info: {Using=link text, value=SIGN-ON}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+*** Element info: {Using=link text, value=SIGN-ON}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:461)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at objectRepository.HomePage.signOn(HomePage.java:32)
+	at testCases.LoginLogoutTest.testingWithWrongCredencials(LoginLogoutTest.java:87)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingWithWrongCredencials -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-07-18T16:13:37Z" finished-at="2017-07-18T16:13:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="FAIL" signature="testingWithWrongCredencials(java.lang.String, java.lang.String)[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="testingWithWrongCredencials" duration-ms="6" started-at="2017-07-18T16:13:37Z" data-provider="wrongCredencials" finished-at="2017-07-18T16:13:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[a]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[a]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+*** Element info: {Using=link text, value=SIGN-ON}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+*** Element info: {Using=link text, value=SIGN-ON}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:461)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at objectRepository.HomePage.signOn(HomePage.java:32)
+	at testCases.LoginLogoutTest.testingWithWrongCredencials(LoginLogoutTest.java:87)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingWithWrongCredencials -->
+        <test-method status="FAIL" signature="testingWithWrongCredencials(java.lang.String, java.lang.String)[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="testingWithWrongCredencials" duration-ms="4" started-at="2017-07-18T16:13:37Z" data-provider="wrongCredencials" finished-at="2017-07-18T16:13:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LLLLLL]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[LLLLLL]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+*** Element info: {Using=link text, value=SIGN-ON}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+*** Element info: {Using=link text, value=SIGN-ON}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:410)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByLinkText(RemoteWebDriver.java:461)
+	at org.openqa.selenium.By$ByLinkText.findElement(By.java:246)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:402)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.click(Unknown Source)
+	at objectRepository.HomePage.signOn(HomePage.java:32)
+	at testCases.LoginLogoutTest.testingWithWrongCredencials(LoginLogoutTest.java:87)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testingWithWrongCredencials -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-07-18T16:13:37Z" finished-at="2017-07-18T16:13:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="afterTest" is-config="true" duration-ms="0" started-at="2017-07-18T16:13:37Z" finished-at="2017-07-18T16:13:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="FAIL" signature="afterClass()[pri:0, instance:testCases.LoginLogoutTest@8bd1b6a]" name="afterClass" is-config="true" duration-ms="0" started-at="2017-07-18T16:13:37Z" finished-at="2017-07-18T16:13:37Z">
+          <exception class="org.openqa.selenium.SessionNotCreatedException">
+            <message>
+              <![CDATA[Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Tried to run command without establishing a connection
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'LAPTOP-RO5NS03S', ip: '192.168.12.200', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\solomon\AppData\Local\Temp\rust_mozprofile.8VHg4lrpc1oa, rotatable=false, timeouts={implicit=0.0, pageLoad=300000.0, script=30000.0}, pageLoadStrategy=normal, platform=ANY, specificationLevel=0.0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=54.0.1, platformVersion=10.0, moz:processID=11716.0, browserName=firefox, javascriptEnabled=true, platformName=windows_nt}]
+Session ID: adff0f0a-a516-4caa-a619-10a3f953bec4
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:150)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:115)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:45)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:637)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:694)
+	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:523)
+	at testCases.LoginLogoutTest.afterClass(LoginLogoutTest.java:46)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:138)
+	at org.testng.internal.TestMethodWorker.invokeAfterClassMethods(TestMethodWorker.java:225)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:114)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- testCases.LoginLogoutTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
