@@ -6,7 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Browser {
 	public static WebDriver driver;
-	
+	// this is comment 
 	public  Browser(String browserName){
 		if(browserName=="Chrome"){
 			System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");
