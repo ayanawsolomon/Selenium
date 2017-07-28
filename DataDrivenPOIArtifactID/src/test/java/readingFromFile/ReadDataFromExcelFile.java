@@ -34,7 +34,8 @@ public class ReadDataFromExcelFile {
 	public static void main(String[] args) throws IOException{
 		// THIS PROGRAM IS USED FOR READING DATA FROM EXCEL FILE 
 		ReadDataFromExcelFile readExcelObject = new ReadDataFromExcelFile();
-		String filePaht="C:\\Users\\solomon\\workspace\\DataDrivenPOIArtifactID\\src\\test\\java\\testData\\ExportExcel.xlsx";
+		String currentDir = System.getProperty("user.dir");
+		String filePaht=currentDir + "\\src\\test\\java\\testData\\ExportExcel.xlsx";
 		String[][] data =readExcelObject.readExcel(filePaht, "ExcelDemo");
 		for(int j = 1 ; j< data.length; j++){
 			System.out.println(data[j][0] + "----" + data[j][1]);

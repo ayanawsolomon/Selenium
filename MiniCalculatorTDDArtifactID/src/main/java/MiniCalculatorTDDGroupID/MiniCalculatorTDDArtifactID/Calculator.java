@@ -1,6 +1,7 @@
 package MiniCalculatorTDDGroupID.MiniCalculatorTDDArtifactID;
 
 public class Calculator {
+	// take two numbers and  do + , -. * , /, % result 
 int rslt;
 	public int addition(int i, int j) {
 		// TODO Auto-generated method to add number
@@ -24,7 +25,7 @@ int rslt;
 	
 	public int multipilication(int i, int j) {
 		// Method to multiply tow numbers and return you result
- 		rslt= i * j +1;
+ 		rslt= i * j;
 		return rslt;
 	}
 

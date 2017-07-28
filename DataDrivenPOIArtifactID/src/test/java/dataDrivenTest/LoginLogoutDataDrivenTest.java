@@ -56,8 +56,9 @@ public class LoginLogoutDataDrivenTest {
 	  // call a method to read from excel file
 	  // store the record to tow dimensional array
 	  // return that array
+	  String currentDir = System.getProperty("user.dir");
 		ReadDataFromExcelFile readExcelObject = new ReadDataFromExcelFile();
-		String filePaht="C:\\Users\\solomon\\workspace\\DataDrivenPOIArtifactID\\src\\test\\java\\testData\\ExportExcel.xlsx";
+		String filePaht=currentDir + "\\src\\test\\java\\testData\\ExportExcel.xlsx";
 		String[][] data =readExcelObject.readExcel(filePaht, "ExcelDemo");
 	  return data;
     

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 <parent>
     <groupId>com.test</groupId>
-    <artifactId>myApplication</artifactId>
+    <artifactId>CommonPOM</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
 
