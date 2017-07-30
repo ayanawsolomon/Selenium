@@ -21,7 +21,7 @@ public class LoginTest {
 		driver = new ChromeDriver();
 		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try
-			
+		// we should optimize this code 	
 	}
 
 	@When("^I insert user name=\"(.*?)\" and password=\"(.*?)\"$")
