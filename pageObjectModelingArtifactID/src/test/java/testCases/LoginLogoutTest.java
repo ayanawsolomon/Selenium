@@ -40,6 +40,7 @@ public class LoginLogoutTest {
 		Assert.assertEquals(homePage.getTitle(driver),"Welcome: Mercury Tours");
 		menuPage = new MenuPage(driver);
 		
+		
 	}
 	@AfterClass 
 	public void afterClass(){
@@ -72,8 +73,7 @@ public class LoginLogoutTest {
     return new Object[][] {
       new Object[] { "a", "a" },
       new Object[] { "b", "b" },
-       new Object[] { "abc", "csdfew" },
-       new Object[] { "d", "d" },
+    
     };
    
     
@@ -87,7 +87,7 @@ public class LoginLogoutTest {
 	 signOnPage=homePage.signOn();
 	  flightFinderPage=signOnPage.login(name, password);
 	  try{
-		  menuPage.singIn.click();
+		  menuPage.signIn.click();
 		  Assert.assertTrue(true);
 	  }catch(Exception e){
 		  menuPage.signOff.click();
@@ -100,10 +100,9 @@ public class LoginLogoutTest {
  public Object[][] wrongCredencials() {
 	 
    return new Object[][] {
-     new Object[] { "11111", "111111" },
-     new Object[] { "#######", "######" },
-      new Object[] { "a", "a" },
-      new Object[] { "LLLLLL", "LLLLLL" },
+     new Object[] { "1111166", "111111" },
+     new Object[] { "####", "######" },
+    
    };
   
    

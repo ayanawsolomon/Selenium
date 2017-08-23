@@ -1,0 +1,7 @@
+stepDefinitions\Hooks.class
+BDDGroupIID\BDDArtifactID\TestRunnerTestNG.class
+stepDefinitions\Registration.class
+BDDGroupIID\BDDArtifactID\TestRunner.class
+stepDefinitions\Test.class
+stepDefinitions\Counter.class
+stepDefinitions\LoginTest.class

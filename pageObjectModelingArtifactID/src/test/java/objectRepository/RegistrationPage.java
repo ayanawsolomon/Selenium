@@ -20,6 +20,21 @@ public class RegistrationPage {
 	@FindBy(name="phone") public WebElement phone;
 	@FindBy(id="userName") public WebElement email;
 	@FindBy(name="register") public WebElement register;
+	@FindBy(name="address1") public WebElement address;
+	@FindBy(name="city") public WebElement city;
+	@FindBy(id="email") public WebElement uName;
+	@FindBy(name="password") public WebElement password;
+	@FindBy(name="confirmPassword") public WebElement cPassword;
+	@FindBy(name="register") public WebElement submit;
+	public void autoFill(String firstName, String lastName, String eml ){
+		driver.get(registraionPageURL);
+		fName.sendKeys(firstName);
+		lName.sendKeys(lastName);
+		email.sendKeys(eml);
+		submit.click();
+		
+	}
+	
 	// takes your driver and returns you the current title of the page
 	public String getTitle(WebDriver driver){
 		return driver.getTitle();

@@ -11,7 +11,7 @@ public class MenuPage {
 		this.driver= driver;
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(linkText="SIGN-ON") public WebElement singIn;
+	@FindBy(linkText="SIGN-ON") public WebElement signIn;
 	@FindBy(linkText="REGISTER") public WebElement register;
 	@FindBy(linkText="SIGN-OFF") public WebElement signOff;
 

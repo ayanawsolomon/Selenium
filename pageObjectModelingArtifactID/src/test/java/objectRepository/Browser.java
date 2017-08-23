@@ -6,6 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Browser {
 	public static WebDriver driver;
+	
 	// this is comment 
 	// additonal comment 
 	// neges 

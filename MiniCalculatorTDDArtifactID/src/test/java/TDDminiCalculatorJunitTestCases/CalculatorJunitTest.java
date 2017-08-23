@@ -16,7 +16,7 @@ public class CalculatorJunitTest {
 	@Test
 	public void add(){
 	//System.out.print("Starting test " + new Object(){}.getClass().getEnclosingMethod().getName());
-	 	assertEquals(0, cal.addition(-20, 20));
+	 	assertEquals(0, cal.addition(-20, 25));
 	System.out.println("------Ending test " + new Object(){}.getClass().getEnclosingMethod().getName());
 	}
 	

@@ -6,6 +6,8 @@ import cucumber.api.java.Before;
 
 public class Hooks {
 	// initialization 
-	
+	public static void main(String[] Args){
+		System.out.println("HHHHHHHHHHHHHHHHHHHHHHOOOOOOOOKKKKKKKK");
+	}
 
 }

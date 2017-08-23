@@ -35,43 +35,115 @@ public class TestNGAnnotaionsWithLoginLogoutExample {
 	 
 		driver.findElement(By.name("userName")).sendKeys("a");
 		driver.findElement(By.name("password")).sendKeys("a");
-	
-	  
-  }
-  
-  @Test
-  public void logonLogoutTestFor4() {
-	 
-		driver.findElement(By.name("userName")).sendKeys("b");
-		driver.findElement(By.name("password")).sendKeys("b");
-	
+		driver.findElement(By.name("login")).click();
+		try{
+			
+			driver.findElement(By.linkText("SIGN-OFF")).click();
+			Assert.assertTrue(1==1);
+			
+
+			}catch(Exception e){
+				Assert.fail();
+			}
 	  
   }
   
   @Test
   public void logonLogoutTestFor2() {
 	 
-		driver.findElement(By.name("userName")).sendKeys("c");
-		driver.findElement(By.name("password")).sendKeys("c");
-	
+		driver.findElement(By.name("userName")).sendKeys("b");
+		driver.findElement(By.name("password")).sendKeys("b");
+		driver.findElement(By.name("login")).click();
+		try{
+			
+			driver.findElement(By.linkText("SIGN-OFF")).click();
+			Assert.assertTrue(1==1);
+			
+
+			}catch(Exception e){
+				Assert.fail();
+			}
 	  
   }
   
   @Test
   public void logonLogoutTestFor3() {
 	 
+		driver.findElement(By.name("userName")).sendKeys("k");
+		driver.findElement(By.name("password")).sendKeys("k");
+		driver.findElement(By.name("login")).click();
+		try{
+			
+			driver.findElement(By.linkText("SIGN-OFF")).click();
+			Assert.assertTrue(1==1);
+			
+
+			}catch(Exception e){
+				Assert.fail();
+			}
+	  
+  }
+  
+  @Test
+  public void logonLogoutTestFor4() {
+	 
+		driver.findElement(By.name("userName")).sendKeys("gfhfghcc");
+		driver.findElement(By.name("password")).sendKeys("c");
+		driver.findElement(By.name("login")).click();
+		try{
+			
+			driver.findElement(By.linkText("SIGN-OFF")).click();
+			Assert.assertTrue(1==1);
+			
+
+			}catch(Exception e){
+				Assert.fail();
+			}
+	  
+  }
+  
+  
+  @Test
+  public void logonLogoutTestFor5() {
+	 
+		driver.findElement(By.name("userName")).sendKeys("c");
+		driver.findElement(By.name("password")).sendKeys("c");
+		driver.findElement(By.name("login")).click();
+		try{
+			
+			driver.findElement(By.linkText("SIGN-OFF")).click();
+			Assert.assertTrue(1==1);
+			
+
+			}catch(Exception e){
+				Assert.fail();
+			}
+	  
+  }
+  
+  @Test
+  public void logonLogoutTestFor6() {
+	 
 		driver.findElement(By.name("userName")).sendKeys("d");
 		driver.findElement(By.name("password")).sendKeys("d");
-	
+		driver.findElement(By.name("login")).click();
+		try{
+			
+			driver.findElement(By.linkText("SIGN-OFF")).click();
+			Assert.assertTrue(1==1);
+			
+
+			}catch(Exception e){
+				Assert.fail();
+			}
 	  
   }
   
   @AfterMethod
   public void runAfterEachMethod(){
-		driver.findElement(By.name("login")).click();
-		Assert.assertTrue(driver.findElement(By.linkText("SIGN-OFF")).isDisplayed());
-		driver.findElement(By.linkText("SIGN-OFF")).click();
-	
+		//Assert.assertTrue(driver.findElement(By.linkText("SIGN-OFF")).isDisplayed());
+		//driver.findElement(By.linkText("SIGN-OFF")).click();
+	System.out.println("test case completed ------------------------------------");
   }
   
   

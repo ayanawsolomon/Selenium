@@ -4,6 +4,8 @@ import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
@@ -23,6 +25,16 @@ public void beforeClass(){
 	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	driver.get("http://newtours.demoaut.com/");
 }
+
+@BeforeMethod
+public void beforeTest(){
+//	  try {
+//		  driver.findElement(By.linkText("SIGN-ON")).click();  
+//	  }catch(Exception e){
+//		  driver.findElement(By.linkText("SIGN-OFF")).click();
+//	  }
+	  
+}
 // the following test it to check loing is working with correct user name and pass
 @Test(dataProvider ="dpCorrectPassword", enabled =true)
 public void loginLogoutTestWithCorrectCredencials(String name, String password){
@@ -34,8 +46,12 @@ public void loginLogoutTestWithCorrectCredencials(String name, String password){
 	// click loign
 	driver.findElement(By.name("login")).click();
 	title = driver.getTitle();
-	Assert.assertTrue(driver.findElement(By.linkText("SIGN-OFF")).isEnabled());
-	driver.findElement(By.linkText("SIGN-OFF")).click();
+	try{
+		driver.findElement(By.linkText("SIGN-OFF")).click();
+		Assert.assertTrue(1==1);
+	}catch(Exception e){
+		Assert.fail();
+	}
 
 	// assert
 }	
@@ -63,16 +79,13 @@ public void loginLogoutTestWtihIncorrectCredencials(String name, String password
 	// Assignment how to log out then a test case get login.
 	// assert
 	try{
-		// write your code here
-		Assert.assertTrue(driver.findElement(By.linkText("SIGN-ON")).isEnabled());
-		
+	driver.findElement(By.linkText("SIGN-OFF")).click();
+	Assert.fail();
 	}catch(Exception e){
-		// write your code here to run when try code fails
-		driver.findElement(By.linkText("SIGN-OFF")).click();
-		Assert.fail();
-		
-		
+		Assert.assertTrue(1==1);
 	}
+		
+
 }	
 @DataProvider
   public Object[][] dpIncorrectCredencials() {

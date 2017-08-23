@@ -7,7 +7,6 @@ import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
@@ -15,9 +14,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 
-import BDDGroupIID.BDDArtifactID.Drivers;
-import BDDGroupIID.BDDArtifactID.TestRunner;
+import BDDGroupIID.BDDArtifactID.TestRunnerTest;
+import BDDGroupIID.BDDArtifactID.TestRunnerTestNG;
 import cucumber.api.DataTable;
 import cucumber.api.PendingException;
 import cucumber.api.java.After;
@@ -28,10 +28,13 @@ import cucumber.api.java.en.When;
 
 public class Registration {
 	public static int i;
-	WebDriver driver = TestRunner.getDriver();
+	
+	WebDriver driver= TestRunnerTestNG.getDriver();
 	@Given("^your are in registraion page \"(.*?)\"$")
 	public void your_are_in_registraion_page(String url) throws Throwable {
-			driver.findElement(By.linkText("REGISTER")).click();;
+		// System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");
+		driver.get(url);	
+		//driver.findElement(By.linkText("REGISTER")).click();
 				
 	}
 
