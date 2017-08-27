@@ -48,7 +48,7 @@ public class LoginLogoutTest {
 	}
 	@AfterMethod
 	public void afterTest(){
-		System.out.println("running --------------");
+		System.out.println("running -^^^^^^^^66-------------");
 	
 	}
 	

@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.873 s <<< FAILURE! - in TestSuite
-feature(BDDGroupIID.BDDArtifactID.TestRunnerTestNG)  Time elapsed: 0.233 s  <<< FAILURE!
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.26 s <<< FAILURE! - in TestSuite
+feature(BDDGroupIID.BDDArtifactID.TestRunnerTestNG)  Time elapsed: 0.528 s  <<< FAILURE!
 cucumber.runtime.CucumberException: java.lang.NullPointerException
 Caused by: java.lang.NullPointerException
 
-feature(BDDGroupIID.BDDArtifactID.TestRunnerTestNG)  Time elapsed: 0.029 s  <<< FAILURE!
+feature(BDDGroupIID.BDDArtifactID.TestRunnerTestNG)  Time elapsed: 0.031 s  <<< FAILURE!
 cucumber.runtime.CucumberException: java.lang.NullPointerException
 Caused by: java.lang.NullPointerException
 
