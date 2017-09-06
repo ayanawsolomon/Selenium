@@ -4,19 +4,20 @@
   <artifactId>parentProject</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <distributionManagement>
-    <repository>
-        <id>internal.repo</id>
-        <name>Temporary Staging Repository</name>
-        <url>file://${project.build.directory}/mvn-repo/</url>
-    </repository>
-</distributionManagement>
-  
-  
-  <properties>
+<properties>
     <!-- github server corresponds to entry in ~/.m2/settings.xml -->
     <github.global.server>github</github.global.server>
 </properties>
+
+<distributionManagement>
+    <repository>
+        <id>internal.repo</id>
+        <name>Temporary Staging Repository</name>
+        <url>file://${project.build.directory}/mvn-repo</url>
+    </repository>
+</distributionManagement>
+ 
+ 
    <dependencies>
   
   
@@ -119,8 +120,7 @@
 
 
 
-
-  </dependencies>
+</dependencies>
   
   
   
@@ -131,47 +131,73 @@
  <build>
     <pluginManagement>
       <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.6.2</version>
-          <configuration>
-            <!-- put your configurations here -->
-          </configuration>
-        </plugin>
+       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.20</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>src\test\java\suiteMaster.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+     
         
-         <!-- plugin>
+        
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.20</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>src\test\java\suiteMaster.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+          
+       <plugin>
         <artifactId>maven-deploy-plugin</artifactId>
         <version>2.8.1</version>
         <configuration>
-               <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo/</altDeploymentRepository>
+            <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
         </configuration>
-    </plugin-->
-        
-       <plugin>
-            <groupId>com.github.github</groupId>
-            <artifactId>site-maven-plugin</artifactId>
-            <version>0.11</version>
-            <configuration>
-                <message>Maven artifacts for ${project.version}</message>  <!-- git commit message -->
-                <noJekyll>true</noJekyll>                                  <!-- disable webpage processing -->
-                <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory> <!-- matches distribution management repository url above -->
-                <branch>refs/heads/master</branch>                       <!-- remote branch name -->
-                <includes><include>**/*</include></includes>
-                <repositoryName>mvn-repo</repositoryName>      <!-- github repo name -->
-                <repositoryOwner>ayanawsolomon</repositoryOwner>    <!-- github username  -->
-            </configuration>
-            <executions>
-              <!-- run site-maven-plugin's 'site' target as part of the build's normal 'deploy' phase -->
+    </plugin>  
+     
+     <plugin>
+         <groupId>com.github.github</groupId>
+         <artifactId>site-maven-plugin</artifactId>
+         <version>0.11</version>
+         <configuration>
+              <!-- git commit message -->
+              <message>Maven artifacts for ${project.version}</message>
+              <!-- disable webpage processing -->
+              <noJekyll>true</noJekyll>
+              <!-- matches distribution management repository url above -->
+              <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+              <!-- remote branch name -->
+              <branch>refs/heads/master</branch>
+              <!-- If you remove this then the old artifact will be removed and new 
+               one will replace. But with the merge tag you can just release by changing 
+                                                the version -->
+              <merge>true</merge>
+              <includes>
+                <include>**/*</include>
+                </includes>
+                <!-- github repo name -->
+                <repositoryName>mvn-repo</repositoryName>
+                <!-- github username -->
+                <repositoryOwner>ayanawsolomon</repositoryOwner>
+          </configuration>
+          <executions>
               <execution>
-                <goals>
-                  <goal>site</goal>
-                </goals>
-                <phase>deploy</phase>
+                    <goals>
+                         <goal>site</goal>
+                    </goals>
+                    <phase>deploy</phase>
               </execution>
-            </executions>
-        </plugin>  
-        
+          </executions>
+		</plugin>
+
       </plugins>
     </pluginManagement>
   </build>
