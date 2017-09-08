@@ -27,6 +27,7 @@ public class LoginLogoutTest {
 	SignOnPage signOnPage;
 	RegistrationPage registraionPage;
 	FlightFinderPage flightFinderPage;
+	// comment 
 
 	
 	@BeforeClass
