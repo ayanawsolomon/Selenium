@@ -1,4 +1,4 @@
-package SeleniumBasicGroupID.SeleniumBasicArtifactID;
+package SeleniumBasic;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

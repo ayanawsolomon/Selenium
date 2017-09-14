@@ -1,4 +1,4 @@
-package SeleniumBasicGroupID.SeleniumBasicArtifactID;
+package SeleniumBasic;
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,8 +14,8 @@ public class loginLogoutTest {
 		// open the firefox driver
 		// cup c = new tea();
 		
-		String[] userName ={"u1", "u2", "u3","u4"};
-		String[] password= {"p1","p2", "p3", "u4"};
+		String[] userName ={"u1", "u2","a", "u3","u4"};
+		String[] password= {"p1","p2", "a", "p3", "u4"};
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
@@ -30,17 +30,14 @@ public class loginLogoutTest {
 		
 		driver.findElement(By.name("login")).click();
 		try {
-			Thread.sleep(5000);
-		} catch (InterruptedException e) {
+			driver.findElement(By.linkText("SIGN-OFF")).click();
+			System.out.println("Login was  successfull using User Name='" + userName[abv] + "' and Password='" + password[abv] );
+
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("Login was  not successfull using User Name='" + userName[abv] + "' and Password='" + password[abv] );
 		}
-		if(driver.findElement(By.linkText("SIGN-OFF")).isDisplayed()){
-			System.out.println("Login was  successfull");
-		}else{
-			System.out.println("Logon was not successfull");
-		}
-	
+		
 		} 
 
 	}

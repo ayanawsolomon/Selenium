@@ -1,4 +1,4 @@
-package SeleniumBasicGroupID.SeleniumBasicArtifactID;
+package SeleniumBasic;
 
 import java.util.concurrent.TimeUnit;
 
