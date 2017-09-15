@@ -15,7 +15,7 @@
 #<> (placeholder)
 #""
 ## (Comments)
-#Sample Feature Definition Template
+#Sample Feature Definition Template sample text
 @tag1
 Feature: Loing test for newtorus web
   This is to test the newtorus login page functionality with different credencials
