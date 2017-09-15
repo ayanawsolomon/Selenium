@@ -2,32 +2,22 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="9259" started-at="2017-08-22T15:32:24Z" finished-at="2017-08-22T15:32:33Z">
+  <suite name="Default suite" duration-ms="10081" started-at="2017-09-15T14:55:01Z" finished-at="2017-09-15T14:55:11Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="9259" started-at="2017-08-22T15:32:24Z" finished-at="2017-08-22T15:32:33Z">
+    <test name="Default test" duration-ms="10081" started-at="2017-09-15T14:55:01Z" finished-at="2017-09-15T14:55:11Z">
       <class name="dataDrivenTest.LoginLogoutDataDrivenTest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:dataDrivenTest.LoginLogoutDataDrivenTest@73ad2d6]" name="beforeTest" is-config="true" duration-ms="7609" started-at="2017-08-22T11:32:24Z" finished-at="2017-08-22T11:32:31Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:dataDrivenTest.LoginLogoutDataDrivenTest@6fd02e5]" name="beforeTest" is-config="true" duration-ms="6650" started-at="2017-09-15T10:55:01Z" finished-at="2017-09-15T10:55:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="FAIL" signature="f(java.lang.String, java.lang.String)[pri:0, instance:dataDrivenTest.LoginLogoutDataDrivenTest@73ad2d6]" name="f" duration-ms="0" started-at="2017-08-22T11:32:31Z" data-provider="dp" finished-at="2017-08-22T11:32:31Z">
+        <test-method status="FAIL" signature="f(java.lang.String, java.lang.String)[pri:0, instance:dataDrivenTest.LoginLogoutDataDrivenTest@6fd02e5]" name="f" duration-ms="0" started-at="2017-09-15T10:55:10Z" data-provider="dp" finished-at="2017-09-15T10:55:10Z">
           <exception class="java.lang.RuntimeException">
             <message>
-              <![CDATA[java.lang.Error: Unresolved compilation problems: 
-	Workbook cannot be resolved to a type
-	XSSFWorkbook cannot be resolved to a type
-	Sheet cannot be resolved to a type
-	Row cannot be resolved to a type
-]]>
+              <![CDATA[java.lang.NullPointerException]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.RuntimeException: java.lang.Error: Unresolved compilation problems: 
-	Workbook cannot be resolved to a type
-	XSSFWorkbook cannot be resolved to a type
-	Sheet cannot be resolved to a type
-	Row cannot be resolved to a type
-
+              <![CDATA[java.lang.RuntimeException: java.lang.NullPointerException
 	at org.testng.internal.MethodInvocationHelper.invokeDataProvider(MethodInvocationHelper.java:143)
 	at org.testng.internal.Parameters.handleParameters(Parameters.java:426)
 	at org.testng.internal.Invoker.handleParameters(Invoker.java:1383)
@@ -46,16 +36,11 @@
 	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
 	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
 	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-Caused by: java.lang.Error: Unresolved compilation problems: 
-	Workbook cannot be resolved to a type
-	XSSFWorkbook cannot be resolved to a type
-	Sheet cannot be resolved to a type
-	Row cannot be resolved to a type
-
-	at readingFromFile.ReadDataFromExcelFile.readExcel(ReadDataFromExcelFile.java:17)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NullPointerException
+	at readingFromFile.ReadDataFromExcelFile.readExcel(ReadDataFromExcelFile.java:23)
 	at dataDrivenTest.LoginLogoutDataDrivenTest.dp(LoginLogoutDataDrivenTest.java:62)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -70,11 +55,11 @@ Caused by: java.lang.Error: Unresolved compilation problems:
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:dataDrivenTest.LoginLogoutDataDrivenTest@73ad2d6]" name="afterTest" is-config="true" duration-ms="1624" started-at="2017-08-22T11:32:31Z" finished-at="2017-08-22T11:32:33Z">
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:dataDrivenTest.LoginLogoutDataDrivenTest@6fd02e5]" name="afterTest" is-config="true" duration-ms="975" started-at="2017-09-15T10:55:10Z" finished-at="2017-09-15T10:55:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterTest -->
       </class> <!-- dataDrivenTest.LoginLogoutDataDrivenTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

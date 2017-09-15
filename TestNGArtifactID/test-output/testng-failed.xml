@@ -1,14 +1,369 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite thread-count="10" name="Failed suite [Suite]">
+  <parameter name="browserName" value="Chrome"/>
+  <parameter name="userName" value="Solomon A"/>
+  <test name="Test Case 1 (failed)">
+    <parameter name="browserName" value="Chrome"/>
+    <parameter name="userName" value="Solomon A"/>
     <classes>
-      <class name="testNG.RegistrationToBackendIntegerationTestUsingTestNG">
+      <class name="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="emailTest2"/>
+          <include name="phoneTest4"/>
+          <include name="emailTest3"/>
+          <include name="emailTest1"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.PriorityAndDependsOn -->
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest">
         <methods>
           <include name="beforeClass"/>
-          <include name="chekcRegistrationPageIsWorkingWithBackend"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterSuite"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.LoginTest -->
+      <class name="TestersGroupID.TestNGArtifactID.PassingParameter">
+        <methods>
+          <include name="SelectBrowser"/>
+          <include name="SelectBrowser"/>
+          <include name="SelectBrowser"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.PassingParameter -->
+      <class name="testNG.TestNGAnnotaionsWithLoginLogoutExample">
+        <methods>
+          <include name="steChrome"/>
+          <include name="runAfterEachMethod"/>
+          <include name="thisIsAfterClass"/>
+          <include name="thisIsBeforeMethod"/>
+        </methods>
+      </class> <!-- testNG.TestNGAnnotaionsWithLoginLogoutExample -->
+      <class name="testNG.loginLogoutDataDriveTesintUsingTestNG">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- testNG.loginLogoutDataDriveTesintUsingTestNG -->
+      <class name="testNG.RegistrationToBackendIntegerationTestUsingTestNG">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
         </methods>
       </class> <!-- testNG.RegistrationToBackendIntegerationTestUsingTestNG -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test Case 1 (failed) -->
+  <test name="Test Case 2 (failed)">
+    <classes>
+      <class name="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="emailTest2"/>
+          <include name="phoneTest4"/>
+          <include name="emailTest3"/>
+          <include name="emailTest1"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.PriorityAndDependsOn -->
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterSuite"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.LoginTest -->
+      <class name="TestersGroupID.TestNGArtifactID.PassingParameter">
+        <methods>
+          <include name="SelectBrowser"/>
+          <include name="SelectBrowser"/>
+          <include name="SelectBrowser"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.PassingParameter -->
+      <class name="testNG.TestNGAnnotaionsWithLoginLogoutExample">
+        <methods>
+          <include name="steChrome"/>
+          <include name="runAfterEachMethod"/>
+          <include name="thisIsAfterClass"/>
+          <include name="thisIsBeforeMethod"/>
+        </methods>
+      </class> <!-- testNG.TestNGAnnotaionsWithLoginLogoutExample -->
+      <class name="testNG.loginLogoutDataDriveTesintUsingTestNG">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- testNG.loginLogoutDataDriveTesintUsingTestNG -->
+      <class name="testNG.RegistrationToBackendIntegerationTestUsingTestNG">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- testNG.RegistrationToBackendIntegerationTestUsingTestNG -->
+    </classes>
+  </test> <!-- Test Case 2 (failed) -->
+  <test name="Test Case 3 (failed)">
+    <parameter name="userName" value="Solomon A"/>
+    <classes>
+      <class name="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="emailTest2"/>
+          <include name="phoneTest4"/>
+          <include name="emailTest3"/>
+          <include name="emailTest1"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.PriorityAndDependsOn -->
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterSuite"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.LoginTest -->
+      <class name="TestersGroupID.TestNGArtifactID.PassingParameter">
+        <methods>
+          <include name="SelectBrowser"/>
+          <include name="SelectBrowser"/>
+          <include name="SelectBrowser"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.PassingParameter -->
+      <class name="testNG.TestNGAnnotaionsWithLoginLogoutExample">
+        <methods>
+          <include name="steChrome"/>
+          <include name="runAfterEachMethod"/>
+          <include name="thisIsAfterClass"/>
+          <include name="thisIsBeforeMethod"/>
+        </methods>
+      </class> <!-- testNG.TestNGAnnotaionsWithLoginLogoutExample -->
+      <class name="testNG.loginLogoutDataDriveTesintUsingTestNG">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- testNG.loginLogoutDataDriveTesintUsingTestNG -->
+      <class name="testNG.RegistrationToBackendIntegerationTestUsingTestNG">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- testNG.RegistrationToBackendIntegerationTestUsingTestNG -->
+    </classes>
+  </test> <!-- Test Case 3 (failed) -->
+  <test name="Test Case 4 (failed)">
+    <classes>
+      <class name="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="emailTest2"/>
+          <include name="phoneTest4"/>
+          <include name="emailTest3"/>
+          <include name="emailTest1"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.PriorityAndDependsOn -->
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterSuite"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.LoginTest -->
+      <class name="TestersGroupID.TestNGArtifactID.PassingParameter">
+        <methods>
+          <include name="SelectBrowser"/>
+          <include name="SelectBrowser"/>
+          <include name="SelectBrowser"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.PassingParameter -->
+      <class name="testNG.TestNGAnnotaionsWithLoginLogoutExample">
+        <methods>
+          <include name="steChrome"/>
+          <include name="runAfterEachMethod"/>
+          <include name="thisIsAfterClass"/>
+          <include name="thisIsBeforeMethod"/>
+        </methods>
+      </class> <!-- testNG.TestNGAnnotaionsWithLoginLogoutExample -->
+      <class name="testNG.loginLogoutDataDriveTesintUsingTestNG">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- testNG.loginLogoutDataDriveTesintUsingTestNG -->
+      <class name="testNG.RegistrationToBackendIntegerationTestUsingTestNG">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- testNG.RegistrationToBackendIntegerationTestUsingTestNG -->
+    </classes>
+  </test> <!-- Test Case 4 (failed) -->
+  <test name="Test Case 6 (failed)">
+    <classes>
+      <class name="TestersGroupID.TestNGArtifactID.PriorityAndDependsOn">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.PriorityAndDependsOn -->
+      <class name="TestersGroupID.TestNGArtifactID.LoginTest">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterClass"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterTest"/>
+          <include name="afterSuite"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="setVariables"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="clearChookies"/>
+          <include name="beforeSuite"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.LoginTest -->
+      <class name="testNG.TestNGAnnotaionsWithLoginLogoutExample">
+        <methods>
+          <include name="steChrome"/>
+          <include name="runAfterEachMethod"/>
+          <include name="logonLogoutTestFor4"/>
+          <include name="logonLogoutTestFor3"/>
+          <include name="thisIsAfterClass"/>
+          <include name="thisIsBeforeMethod"/>
+        </methods>
+      </class> <!-- testNG.TestNGAnnotaionsWithLoginLogoutExample -->
+      <class name="TestersGroupID.TestNGArtifactID.PassingParameter">
+        <methods>
+          <include name="SelectBrowser"/>
+          <include name="SelectBrowser"/>
+          <include name="SelectBrowser"/>
+        </methods>
+      </class> <!-- TestersGroupID.TestNGArtifactID.PassingParameter -->
+      <class name="testNG.loginLogoutDataDriveTesintUsingTestNG">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="loginLogoutTestWtihIncorrectCredencials" invocation-numbers="2"/>
+          <include name="afterClass"/>
+          <include name="loginLogoutTestWithCorrectCredencials" invocation-numbers="3 5"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- testNG.loginLogoutDataDriveTesintUsingTestNG -->
+      <class name="testNG.RegistrationToBackendIntegerationTestUsingTestNG">
+        <methods>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- testNG.RegistrationToBackendIntegerationTestUsingTestNG -->
+    </classes>
+  </test> <!-- Test Case 6 (failed) -->
+</suite> <!-- Failed suite [Suite] -->

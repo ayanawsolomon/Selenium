@@ -13,7 +13,7 @@ public class loginLogoutTest {
 		// our first selenium class
 		// open the firefox driver
 		// cup c = new tea();
-		
+		/// appium commands to connect to your mobile 
 		String[] userName ={"u1", "u2","a", "u3","u4"};
 		String[] password= {"p1","p2", "a", "p3", "u4"};
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");

@@ -7,7 +7,7 @@
         <methods>
           <include name="afterTest"/>
           <include name="beforeTest"/>
-          <include name="f" invocation-numbers="0 3 4 5"/>
+          <include name="f"/>
         </methods>
       </class> <!-- dataDrivenTest.LoginLogoutDataDrivenTest -->
     </classes>
