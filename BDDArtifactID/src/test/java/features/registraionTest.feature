@@ -32,3 +32,10 @@ Feature: Testing registriaon page with different values
       |                        |                        | mercuryregister.php        |
       | solomon A1#            | solomon A1#            | mercuryregister.php        |
       | hjggyyh)(              | dfggfgyuiu             | mercuryregister.php        |
+      | hjggyyh)(              | dfggfgyuiu             | mercuryregister.php        |
+            | hjggyyhWWTX)(              | dfggfgyuiu             | mercuryregister.php        |
+            | hjggyyh)(              | dfggfgyuiu             | mercuryregister.php        |
+            | hjggyyh)(              | dfggfgyuiu             | mercuryregister.php        |
+            | hjggyyh)(              | dfggfgyuiu             | mercuryregister.php        |
+            | hjggyyh)(              | dfggfgyuiu             | mercuryregister.php        |
+      
