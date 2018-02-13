@@ -18,15 +18,7 @@ public class LoginTest {
 	public void i_am_in_newtours_home_page(String url) throws Throwable {
 		
 		driver.get(url);
-		// we should optimize this code 
-//		try{
-//			driver.findElement(By.linkText("SIGN-ON")).click();
-//	
-//		}catch(Exception e){
-//			driver.findElement(By.linkText("SIGN-OFF")).click();
-//
-//		}
-
+		// tghis is comment 
 	}
 	@When("^I insert user name=\"(.*?)\" and password=\"(.*?)\"$")
 	public void i_insert_user_name_and_password(String userName, String password) throws Throwable {
@@ -44,6 +36,23 @@ public class LoginTest {
 	public void link_should_be_seen_on_the_top_menue(String singLink) throws Throwable {
 		Assert.assertTrue(driver.findElement(By.linkText(singLink)).isDisplayed());
 	}
+	
+	
+	@Then("^\"([^\"]*)\" link shoudl be seen$")
+	public void link_should_be_seen(String arg1){
+	    // Write code here that turns the phrase above into concrete actions
+	    //throw new PendingException();
+		try{
+			driver.findElement(By.linkText(arg1)).isDisplayed();
+			Assert.assertTrue(1==1);
+		}catch(Exception e){
+			Assert.fail();
+		}
+		
+	}
+	
+
+	
 	
 	
 

@@ -11,7 +11,7 @@ Feature: Testing registriaon page with different values
       # transfering data using data table
       | firstName | lastName | phone      | email                   | address   | city    | state | postalCode | userName |
       | Solomon   | Habut    | 3017929864 | ayanwsolomon1@gmail.com | Locust st | Herndon | VA    |      20171 | sol      |
-
+    
   Scenario Outline: Check registraion with correct and incorrect password and confirm password field
     When I insert password "<password>" and confirm password  "<confirm>"
     And I click submit
@@ -25,17 +25,10 @@ Feature: Testing registriaon page with different values
       | solomonA1              | solomonA1              | mercuryregister.php        |
       | solomonA#              | solomonA#              | mercuryregister.php        |
       | solomon1#              | solomon1#              | mercuryregister.php        |
-      | solom                  | solom                  | mercuryregister.php        |
+      | so1A#                  | so1A#                  | mercuryregister.php        |
       | solomonA1#             | selemenA1#             | mercuryregister.php        |
       |                        | solomonA1#             | mercuryregister.php        |
       | solomonA1#             |                        | mercuryregister.php        |
       |                        |                        | mercuryregister.php        |
       | solomon A1#            | solomon A1#            | mercuryregister.php        |
-      | hjggyyh)(              | dfggfgyuiu             | mercuryregister.php        |
-      | hjggyyh)(              | dfggfgyuiu             | mercuryregister.php        |
-            | hjggyyhWWTX)(              | dfggfgyuiu             | mercuryregister.php        |
-            | hjggyyh)(              | dfggfgyuiu             | mercuryregister.php        |
-            | hjggyyh)(              | dfggfgyuiu             | mercuryregister.php        |
-            | hjggyyh)(              | dfggfgyuiu             | mercuryregister.php        |
-            | hjggyyh)(              | dfggfgyuiu             | mercuryregister.php        |
       

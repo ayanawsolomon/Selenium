@@ -15,17 +15,18 @@
 #<> (placeholder)
 #""
 ## (Comments)
-#Sample Feature Definition Template sample text
+#Sample Feature Definition Template sample text# this page
 @tag1
-Feature: Loing test for newtorus web
+Feature: Loing test for newtorus web 
   This is to test the newtorus login page functionality with different credencials
 
   Background: 
     #Transfering data without keywords use ""
     Given I am in newtours home page "http://newtours.demoaut.com/"
 
-  @tag2
-  Scenario: Login Success with user name a and password a
+  @tag2 @systest
+  Scenario: Login Success with user name a and password a 
+    Given I am in newtours home page "http://newtours.demoaut.com/"
     When I insert user name="a" and password="a"
     And I press Login button
     Then "SIGN-OFF" link should be seen on the top menue
@@ -37,14 +38,14 @@ Feature: Loing test for newtorus web
     Then "SIGN-ON" link shoudl be seen
 
   Scenario: test gmail page
-    Givne I am on gemail home page "http://www.newtours.demoaut.com"
+    Givne I am on gmail home page "http://www.gmail.com"
 
     When I insert Username ="xxxxx@gmail.com"
     And I insert password ="xxxxx"
     And Press loing button
     Then I should get login success
 
-  @tag1
+  @tag1 @systest
   Scenario Outline: Login test with different credencials
     When I insert user name="<userName>" and password="<password>"
     And I press Login button
@@ -60,3 +61,4 @@ Feature: Loing test for newtorus web
       |          | a        | SIGN-ON  |
       | a        |          | SIGN-ON  |
       |          |          | SIGN-ON  |
+      

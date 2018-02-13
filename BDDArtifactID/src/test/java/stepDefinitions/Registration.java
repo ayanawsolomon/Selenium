@@ -87,7 +87,7 @@ public class Registration {
 		}catch(Exception e){
 			//driver.quit();
 
-			//Assert.fail();
+			Assert.fail();
 		}
 		
 	    

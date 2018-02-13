@@ -35,6 +35,7 @@ public class TestRunnerTest {
 	// singlton method to instantiate the driver just one time only
     private static boolean initialized = false;
     private static WebDriver driver;
+    
 
   //  @Before
     public void initialize(){
