@@ -4,7 +4,7 @@ public class Calculator {
 	// take two numbers and  do + , -. * , /, % result 
 int rslt;
 	public int addition(int i, int j) {
-		// adding two nubmers and reutnr the resut. have added coment
+		// adding two numbers 
 		rslt = i + j  ;
 		return rslt;
 		
