@@ -4,9 +4,9 @@ public class Calculator {
 	// take two numbers and  do + , -. * , /, % result 
 int rslt;
 	public int addition(int i, int j) {
-		// adding two nubmers and reutnr the resut
-		int sum = i + j  ;
-		return sum;
+		// adding two nubmers and reutnr the resut. have added coment
+		rslt = i + j  ;
+		return rslt;
 		
 	}
 	public void printUpTo10(){
