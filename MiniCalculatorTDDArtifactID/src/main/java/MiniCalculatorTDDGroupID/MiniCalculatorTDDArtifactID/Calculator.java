@@ -5,7 +5,7 @@ public class Calculator {
 int rslt;
 	public int addition(int i, int j) {
 		// adding two nubmers and reutnr the resut
-		int sum = i + j ;
+		int sum = i + j  ;
 		return sum;
 		
 	}
@@ -33,11 +33,12 @@ int rslt;
 		// TODO Auto-generated method divide numbers
 		// you need two test case for statement coverage 
 		// to cover the branch you need to have two test case
+		int result =0;
 			if(j==0 || i==1.5){
 				return "Error!!"; 
 			}else{
-				rslt= i/j;
-				return rslt;
+				result= i/j;
+				return result;
 			}
 		
 		
