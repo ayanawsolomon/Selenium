@@ -6,11 +6,11 @@ import org.junit.Test;
 
 import MiniCalculatorTDDGroupID.MiniCalculatorTDDArtifactID.Calculator;
 
-public class CalculatorJunitTest {
+public class CalculatorJunitIT {
 
 		Calculator cal;
 
-	public CalculatorJunitTest(){
+	public CalculatorJunitIT(){
 		cal = new Calculator();
 	}
 	@Test
@@ -20,7 +20,19 @@ public class CalculatorJunitTest {
 	System.out.println("------Ending test " + new Object(){}.getClass().getEnclosingMethod().getName());
 	}
 	
+	@Test
+	public void add2(){
+	//System.out.print("Starting test " + new Object(){}.getClass().getEnclosingMethod().getName());
+	 	assertEquals(55, cal.addition(30, 25));
+	System.out.println("------Ending test " + new Object(){}.getClass().getEnclosingMethod().getName());
+	}
 	
+	@Test
+	public void add3(){
+	//System.out.print("Starting test " + new Object(){}.getClass().getEnclosingMethod().getName());
+	 	assertEquals(-200, cal.addition(-100, -100));
+	System.out.println("------Ending test " + new Object(){}.getClass().getEnclosingMethod().getName());
+	}
 	@Test
 	public void sub()
 	{

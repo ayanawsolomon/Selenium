@@ -4,10 +4,10 @@ public class Calculator {
 	// take two numbers and  do + , -. * , /, % result 
 int rslt;
 	public int addition(int i, int j) {
-		// TODO Auto-generated method to add number
-		rslt = i + j;
+		// adding two nubmers and reutnr the resut
+		int sum = i + j ;
+		return sum;
 		
-		return rslt;
 	}
 	public void printUpTo10(){
 	for(int m=0; m<=10; m++)

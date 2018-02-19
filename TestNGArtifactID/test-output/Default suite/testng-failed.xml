@@ -5,6 +5,7 @@
     <classes>
       <class name="testNG.RegistrationToBackendIntegerationTestUsingTestNG">
         <methods>
+          <include name="afterClass"/>
           <include name="beforeClass"/>
           <include name="chekcRegistrationPageIsWorkingWithBackend"/>
         </methods>

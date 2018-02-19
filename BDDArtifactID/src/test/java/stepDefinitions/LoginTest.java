@@ -33,8 +33,22 @@ public class LoginTest {
 	}
 
 	@Then("^\"(.*?)\" link should be seen on the top menue$")
-	public void link_should_be_seen_on_the_top_menue(String singLink) throws Throwable {
-		Assert.assertTrue(driver.findElement(By.linkText(singLink)).isDisplayed());
+	public void link_should_be_seen_on_the_top_menue(String signLink) throws Throwable {
+		try {
+			driver.findElement(By.linkText(signLink)).click();
+			Assert.assertTrue(1==1);
+
+			
+		}catch(Exception e) {
+			if(signLink.contains("OFF")) {
+				driver.findElement(By.linkText("SIGN-ON")).click();
+			}else {
+				driver.findElement(By.linkText("SIGN-OFF")).click();
+
+			}
+			Assert.fail();
+		}
+		
 	}
 	
 	
