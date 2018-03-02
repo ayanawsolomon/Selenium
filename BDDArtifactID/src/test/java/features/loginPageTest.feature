@@ -60,3 +60,4 @@ Feature: Loing test for newtorus web, for exercise
       |          | a        | SIGN-ON  |
       | a        |          | SIGN-ON  |
       |          |          | SIGN-ON  |
+      
