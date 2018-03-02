@@ -17,7 +17,7 @@
 ## (Comments)
 #Sample Feature Definition Template sample text# this page
 @tag1
-Feature: Loing test for newtorus web 
+Feature: Loing test for newtorus web, for exercise 
   This is to test the newtorus login page functionality with different credencials
 
   Background: 
@@ -26,17 +26,16 @@ Feature: Loing test for newtorus web
 
   @tag2 @systest
   Scenario: Login Success with user name a and password a 
-    Given I am in newtours home page "http://newtours.demoaut.com/"
     When I insert user name="a" and password="a"
     And I press Login button
     Then "SIGN-OFF" link should be seen on the top menue
 
   @tag1 @tag2
-  Scenario: login not success with username abced and pass ab
+  Scenario: login not success with incorrect username abced and pass ab
     When I insert user name "abcd" and password "ab"
     And i press login
     Then "SIGN-ON" link shoudl be seen
-
+@systemTest
   Scenario: test gmail page
     Givne I am on gmail home page "http://www.gmail.com"
 
@@ -61,4 +60,3 @@ Feature: Loing test for newtorus web
       |          | a        | SIGN-ON  |
       | a        |          | SIGN-ON  |
       |          |          | SIGN-ON  |
-      

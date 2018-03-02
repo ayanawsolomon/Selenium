@@ -1,6 +1,5 @@
 Feature: Testing registriaon page with different values
-  As acompany our customers should register only if they put
-  password and confirm password correclty
+   password and confirm password correclty
   The requirement says password must be > 6 char,
   and at least 1 upperl, 1 number, 1 sepecial character and no space
   so that we can refer them easi, password and confirm password

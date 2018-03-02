@@ -70,9 +70,9 @@
               <!-- disable webpage processing -->
               <noJekyll>true</noJekyll>
               <!-- matches distribution management repository url above -->
-              <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
+              <outputDirectory>${project.basedir}</outputDirectory>
               <!-- remote branch name -->
-              <branch>refs/heads/ayanawsolomon-pathc-1</branch>
+              <branch>refs/heads/master</branch>
               <!-- If you remove this then the old artifact will be removed and new 
                one will replace. But with the merge tag you can just release by changing 
                                                 the version -->
@@ -81,7 +81,7 @@
                 <include>**/*</include>
                 </includes>
                 <!-- github repo name -->
-                <repositoryName>systemJars</repositoryName>
+                <repositoryName>Selenium</repositoryName>
                 <!-- github username -->
                 <repositoryOwner>ayanawsolomon</repositoryOwner>
           </configuration>

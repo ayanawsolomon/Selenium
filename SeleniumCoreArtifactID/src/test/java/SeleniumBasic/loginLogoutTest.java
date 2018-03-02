@@ -14,6 +14,7 @@ public class loginLogoutTest {
 		// open the firefox driver
 		// cup c = new tea();
 		/// appium commands to connect to your mobile 
+		//name and passwored for testing is stored as follows 
 		String[] userName ={"u1", "u2","a", "u3","u4"};
 		String[] password= {"p1","p2", "a", "p3", "u4"};
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");
@@ -21,8 +22,9 @@ public class loginLogoutTest {
 		WebDriver driver = new ChromeDriver();
 		// write the code to type http://newtours.demoaut.com/
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		
+		// opening the newtorus website
 		driver.get("http://newtours.demoaut.com/");
+		// go through each user name and password, type on newtours page and assert if loign is successfull or not
 		for(int abv = 0; abv <=3; abv++){
 			driver.get("http://newtours.demoaut.com/");
 		driver.findElement(By.name("userName")).sendKeys(userName[abv]);

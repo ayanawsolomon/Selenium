@@ -11,7 +11,7 @@ int rslt;
 	}
 	public void printUpTo10(){
 	for(int m=0; m<=10; m++)
-		System.out.println(m);
+		System.out.println("currnet number is " + m);
 	}	
 	public void thisIShacekersCode(){
 		// bad code
@@ -52,6 +52,7 @@ int rslt;
 	public void vairus(){
 		for(int m=0; m<=10; m++){
 			// write your code here to make fun
+			// this is a virus 
 		}
 	}
 	

@@ -24,6 +24,7 @@ public class LoginTest {
 	public void i_insert_user_name_and_password(String userName, String password) throws Throwable {
 		driver.findElement(By.name("userName")).sendKeys(userName);
 		driver.findElement(By.name("password")).sendKeys(password);
+		
 	}
 
 	
@@ -63,11 +64,10 @@ public class LoginTest {
 			Assert.fail();
 		}
 		
+	
+		
 	}
 	
 
 	
-	
-	
-
 }
