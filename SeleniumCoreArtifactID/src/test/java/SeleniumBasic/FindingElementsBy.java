@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -18,7 +19,6 @@ public class FindingElementsBy {
 		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try
 		driver.get("http://localhost/test/testPage.php"); // opening a website
 		driver.findElement(By.name("CustomerID")).sendKeys("11234");
-
 		driver.findElement(By.id("eml")).sendKeys("ayanawsolomon1@gmail.com");
 		driver.findElement(By.name("name")).sendKeys("Solomon");
 		driver.findElement(By.xpath("html/body/form[1]/input[3]")).sendKeys("testme.com");// absolute xpaht starts from the html
@@ -31,6 +31,8 @@ public class FindingElementsBy {
 		driver.navigate().back();
 		driver.findElement(By.partialLinkText("and I will open you")).click();// find link by part of the link tex
 		driver.navigate().back();
+		
+		
 		
       
 	}

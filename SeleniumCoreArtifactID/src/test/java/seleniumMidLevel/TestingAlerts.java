@@ -18,8 +18,16 @@ public class TestingAlerts {
 		driver.get("http://localhost/test/testpage.php"); // opening a website
 		// accessing alerts
 		driver.findElement(By.id("alert")).click();
+		
+
 		String alertText = driver.switchTo().alert().getText();
 		System.out.println(alertText);
+		if(alertText.contains("Solomon")) {
+			System.out.println("pass");
+		}else {
+			System.out.println("fail");
+		}
+		
 		driver.switchTo().alert().accept();
 		
 

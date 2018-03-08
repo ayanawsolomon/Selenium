@@ -20,7 +20,7 @@ public class RobotToDownlaodAFile {
 		// write the code to type http://newtours.demoaut.com/
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
-		driver.get("http://localhost/test/testPage2.php");
+		driver.get("http://localhost:8888/test/testPage2.php");
 		driver.findElement(By.partialLinkText("click to download")).click();
 		Robot robot = new Robot();
 		robot.delay(4000);

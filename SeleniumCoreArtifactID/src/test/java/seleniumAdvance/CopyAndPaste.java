@@ -20,7 +20,7 @@ System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\My
 		// write the code to type http://newtours.demoaut.com/
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
-		driver.get("http://localhost/test/testPage.php");
+		driver.get("http://localhost:8888/test/testPage.php");
 		WebElement nameElement = driver.findElement(By.name("name"));
 		WebElement commentElement = driver.findElement(By.name("comment"));
 		// using action libray copy text from nameElement
@@ -30,8 +30,6 @@ System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\My
 		action.click(commentElement).keyDown(Keys.CONTROL).sendKeys("v").
 		keyUp(Keys.CONTROL).build().perform();
 		action.keyDown(Keys.SHIFT).sendKeys("hello").keyUp(Keys.SHIFT).build().perform();
-		
-		
 
 	}
 

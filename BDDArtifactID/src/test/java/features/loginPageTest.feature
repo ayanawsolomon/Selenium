@@ -35,7 +35,7 @@ Feature: Loing test for newtorus web, for exercise
     When I insert user name "abcd" and password "ab"
     And i press login
     Then "SIGN-ON" link shoudl be seen
-@systemTest
+@systemTest @inteTest
   Scenario: test gmail page
     Givne I am on gmail home page "http://www.gmail.com"
 
@@ -44,7 +44,7 @@ Feature: Loing test for newtorus web, for exercise
     And Press loing button
     Then I should get login success
 
-  @tag1 @systest
+  @tag1 @systest @inteTest
   Scenario Outline: Login test with different credencials
     When I insert user name="<userName>" and password="<password>"
     And I press Login button

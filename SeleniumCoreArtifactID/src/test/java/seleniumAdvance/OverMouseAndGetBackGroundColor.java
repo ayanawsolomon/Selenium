@@ -26,7 +26,6 @@ System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\My
 		action.moveToElement(googleLink).build().perform();
 		bgColor = googleLink.getCssValue("background-color");
 		System.out.print("background color after over mouse is =" + bgColor);
-		
 
 	}
 

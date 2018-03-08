@@ -6,7 +6,7 @@
       <class name="testNG.loginLogoutDataDriveTesintUsingTestNG">
         <methods>
           <include name="beforeTest"/>
-          <include name="loginLogoutTestWtihIncorrectCredencials" invocation-numbers="1 2 3 4 5"/>
+          <include name="loginLogoutTestWtihIncorrectCredencials" invocation-numbers="2"/>
           <include name="afterClass"/>
           <include name="loginLogoutTestWithCorrectCredencials" invocation-numbers="3 5"/>
           <include name="beforeClass"/>

@@ -10,7 +10,7 @@ import org.testng.Assert;
 public class SeleniumAssertByTitle {
 
 	public static void main(String[] args) {
-		// Selenium getTitle() command and assertion 
+		
 		
 		System.setProperty("webdriver.gecko.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\geckodriver.exe");
 		WebDriver driver = new FirefoxDriver();

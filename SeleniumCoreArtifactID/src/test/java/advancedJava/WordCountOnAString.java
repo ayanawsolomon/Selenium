@@ -7,7 +7,13 @@ public class WordCountOnAString {
 
 	public static void main(String[] args) {
 		// to count how many times each word is duplicated in java
-		String parageraph="is a is not a is no is a is a is";
+		String parageraph="In 2004, Kohsuke Kawaguchi was a Java developer"
+				+ " at Sun. Kawaguchi became tired of breaking builds in his"
+				+ " development work and wanted to find a way to know, before"
+				+ " committing code to the repository, whether the code was going"
+				+ " to work. So Kawaguchi built an automation server in and for "
+				+ "Java to make that possible, called Hudson. Hudson became popular"
+				+ " at Sun, and spread to other companies as open source";
 		String words[]=parageraph.split("\\s+");
 		HashMap<String, Integer> hs = new HashMap<String, Integer>();
 		for(int i=0; i <words.length; i++) {

@@ -29,7 +29,6 @@ System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\My
 		action.clickAndHold(from).moveToElement(to).release(to).build().perform();
 		action.clickAndHold(from).moveToElement(to).release(to).build().perform();
 		action.clickAndHold(from).moveToElement(to).release(to).build().perform();
-		
 	}
 
 }

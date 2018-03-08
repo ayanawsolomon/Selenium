@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+
 public class loginLogoutTest {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -18,7 +19,6 @@ public class loginLogoutTest {
 		String[] userName ={"u1", "u2","a", "u3","u4"};
 		String[] password= {"p1","p2", "a", "p3", "u4"};
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");
-		
 		WebDriver driver = new ChromeDriver();
 		// write the code to type http://newtours.demoaut.com/
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

@@ -42,6 +42,7 @@ public class LoginLogoutTest {
 		menuPage = new MenuPage(driver);
 		
 		
+		
 	}
 	@AfterClass 
 	public void afterClass(){
