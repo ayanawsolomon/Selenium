@@ -6,10 +6,9 @@ public class ReverseString {
 	// Using Array Iterator for loop
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		System.out.println("reverse of solomon is " + stringBufferReverser("solomon"));
-		System.out.println("reverse of solomon is " + stringBuilderReverser("solomon"));
-		System.out.println("reverse of solomon is " + ReverseUsingArryayIterator("solomon"));
+		
+		System.out.println(stringBufferReverser("Alex"));
+		stringBufferReverser("Fekerte");
 		
 	}
 	public static String stringBufferReverser(String s) {

@@ -17,7 +17,7 @@ public class CheckBox {
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try
  
-		driver.get("http://localhost/test/testpage.php"); // opening a website
+		driver.get("http://localhost:8888/test/testpage.php"); // opening a website
         List<WebElement> checkBoxs = driver.findElements(By.cssSelector("input[type='checkbox']"));
         // uncheck all check boxes
         for(WebElement checkBox : checkBoxs){

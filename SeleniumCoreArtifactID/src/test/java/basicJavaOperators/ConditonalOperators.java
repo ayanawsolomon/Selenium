@@ -13,6 +13,7 @@ public class ConditonalOperators {
 		 boolean t2 = (one <ten); // true
 		 System.out.println((one > seven)) ;
 		 System.out.println((one + 10 > seven* 2)? "that is true" : "that is false");
+		
 	}
 
 }
