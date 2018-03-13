@@ -8,7 +8,8 @@
           <include name="afterTest"/>
           <include name="afterClass"/>
           <include name="beforeTest"/>
-          <include name="testingWithWrongCredencials" invocation-numbers="1"/>
+          <include name="testingWithWrongCredencials" invocation-numbers="0 1"/>
+          <include name="testingWithCorrectCredencials" invocation-numbers="0 1"/>
         </methods>
       </class> <!-- testCases.LoginLogoutTest -->
     </classes>

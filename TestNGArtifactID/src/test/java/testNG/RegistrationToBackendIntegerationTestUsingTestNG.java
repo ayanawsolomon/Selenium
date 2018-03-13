@@ -44,7 +44,7 @@ public class RegistrationToBackendIntegerationTestUsingTestNG {
   @BeforeClass
   public void beforeClass() throws ClassNotFoundException, SQLException {
 		// This code is to check whether registration page is working or not with the backedn database
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try
 		driver.get("http://localhost/test/register.html"); // opening a website

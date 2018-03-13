@@ -16,7 +16,7 @@ public class HandlyingCookies
 
     public static void main(String[] args)					
     {		
-System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");
+System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
 		
 		WebDriver driver = new ChromeDriver();
 		// write the code to type http://newtours.demoaut.com/

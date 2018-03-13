@@ -2,15 +2,12 @@ package dataDrivenTest;
 
 import org.testng.annotations.Test;
 
-import readingFromFile.ReadDataFromExcelFile;
-
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -21,7 +18,7 @@ public class LoginLogoutDataDrivenTest {
 	@BeforeTest
 	public void beforeTest(){
 		// opening new tours webpage  
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",utility.PathList.chromeDriver);
 			driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try
 			driver.get("http://newtours.demoaut.com"); // opening a website
@@ -56,10 +53,7 @@ public class LoginLogoutDataDrivenTest {
 	  // call a method to read from excel file
 	  // store the record to tow dimensional array
 	  // return that array
-	  String currentDir = System.getProperty("user.dir");
-		ReadDataFromExcelFile readExcelObject = new ReadDataFromExcelFile();
-		String filePaht=currentDir + "\\src\\test\\java\\testData\\ExportExcel.xlsx";
-		String[][] data =readExcelObject.readExcel(filePaht, "ExcelDemo");
+		String data[][] = utility.ReadingFromExcel.readExcel(utility.PathList.excelPath, "dataForLogin", 3, 10, 1, 2);
 	  return data;
     
   }

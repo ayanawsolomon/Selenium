@@ -11,7 +11,7 @@ public class MultiPageHandle {
 
 	public static void main(String[] args) {
 		// This program is to show you how to handle a page
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", utility.PathList.firefoxDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try
  

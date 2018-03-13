@@ -14,7 +14,7 @@ public class CopyAndPaste {
 	public static void main(String[] args) {
 		// this program is to copy and paste text from a box to another box
 		// also to write uppercase text 
-System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");
+System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
 		
 		WebDriver driver = new ChromeDriver();
 		// write the code to type http://newtours.demoaut.com/

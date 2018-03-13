@@ -15,7 +15,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ApachePOIExcelRead {
 
-    private static final String FILE_NAME = "C:\\Users\\solomon\\workspace\\DataDrivenPOIArtifactID\\src\\test\\java\\testData\\ExportExcel.xlsx";
+    private static final String FILE_NAME = System.getProperty("user.dir") + "\\src\\test\\java\\advancedJava\\TestCase.xlsx";
 
     public static void main(String[] args) {
 

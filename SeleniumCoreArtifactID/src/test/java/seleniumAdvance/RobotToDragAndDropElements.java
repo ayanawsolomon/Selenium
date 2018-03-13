@@ -15,7 +15,7 @@ public class RobotToDragAndDropElements {
 
 	public static void main(String[] args) throws AWTException {
 		// This Selenium Java program is to drag and drop elements using Robot Java Class
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", utility.PathList.chromeDriver);
 		
 		WebDriver driver = new FirefoxDriver();
 		// write the code to type http://newtours.demoaut.com/

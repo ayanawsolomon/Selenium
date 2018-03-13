@@ -14,7 +14,7 @@ public class CalendarSelection {
 	public static void main(String[] args) {
 		// how to test calendar
 		
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
 		
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try

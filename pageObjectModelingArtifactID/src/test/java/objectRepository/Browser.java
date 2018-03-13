@@ -12,11 +12,11 @@ public class Browser {
 	// neges 
 	public  Browser(String browserName){
 		if(browserName=="Chrome"){
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
 			driver= new ChromeDriver();
 
 		}else if(browserName=="Firefox"){
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", utility.PathList.firefoxDriver);
 			driver= new FirefoxDriver();
 
 		} else{

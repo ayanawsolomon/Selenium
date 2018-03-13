@@ -20,7 +20,7 @@ public class loginLogoutDataDriveTesintUsingTestNG {
 	String title;
 @BeforeClass
 public void beforeClass(){
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
 	driver = new ChromeDriver();
 	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	driver.get("http://newtours.demoaut.com/");

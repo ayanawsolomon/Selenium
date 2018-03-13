@@ -61,7 +61,7 @@ public class loginlogout {
   }
   @BeforeClass
   public void beforeClass() {
-	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	  System.setProperty("webdriver.chrome.driver",utility.PathList.chromeDriver );
 		
 		// Create an object to open any browser
 		// WebDriver driver = new FirefoxDriver();

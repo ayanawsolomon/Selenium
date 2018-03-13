@@ -3,15 +3,19 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testNG.loginLogoutDataDriveTesintUsingTestNG">
+      <class name="TestersGroupID.TestNGArtifactID.UnderstandTestNGAnnotations">
         <methods>
-          <include name="beforeTest"/>
-          <include name="loginLogoutTestWtihIncorrectCredencials" invocation-numbers="2"/>
           <include name="afterClass"/>
-          <include name="loginLogoutTestWithCorrectCredencials" invocation-numbers="3 5"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="afterSuite"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
           <include name="beforeClass"/>
+          <include name="CheckLoginWithCorrectCredencials" invocation-numbers="0 1 2 3"/>
+          <include name="beforeMethod"/>
         </methods>
-      </class> <!-- testNG.loginLogoutDataDriveTesintUsingTestNG -->
+      </class> <!-- TestersGroupID.TestNGArtifactID.UnderstandTestNGAnnotations -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -26,6 +26,13 @@ public class RegistrationPage {
 	@FindBy(name="password") public WebElement password;
 	@FindBy(name="confirmPassword") public WebElement cPassword;
 	@FindBy(name="register") public WebElement submit;
+	public void autofill() {
+		fName.sendKeys("Solomon");
+		lName.sendKeys("Habut");
+		phone.sendKeys("5646541654");
+		email.sendKeys("Habut@gmial.com");
+		address.sendKeys("Copermine rd 20170");
+	}
 	public void autoFill(String firstName, String lastName, String eml ){
 		driver.get(registraionPageURL);
 		fName.sendKeys(firstName);

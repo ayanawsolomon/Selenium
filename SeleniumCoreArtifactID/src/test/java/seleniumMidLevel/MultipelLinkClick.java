@@ -14,7 +14,7 @@ public class MultipelLinkClick {
 	public static void main(String[] args) throws InterruptedException {
 		// Selenium commands
 
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", utility.PathList.firefoxDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); 
 		driver.get("http://newtours.demoaut.com/");

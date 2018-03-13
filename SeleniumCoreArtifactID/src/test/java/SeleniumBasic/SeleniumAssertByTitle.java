@@ -12,7 +12,7 @@ public class SeleniumAssertByTitle {
 	public static void main(String[] args) {
 		
 		
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", utility.PathList.chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try
  

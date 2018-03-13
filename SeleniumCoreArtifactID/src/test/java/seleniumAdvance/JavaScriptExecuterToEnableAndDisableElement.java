@@ -10,7 +10,7 @@ public class JavaScriptExecuterToEnableAndDisableElement {
 
 	public static void main(String[] args) throws InterruptedException {
 		// this java program uses javaScriptExecuter to Enable and disable an element
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\geckoDriver.exe");
+		System.setProperty("webdriver.gecko.driver", utility.PathList.chromeDriver);
 		WebDriver driver = new FirefoxDriver();
 		// write the code to type http://newtours.demoaut.com/
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);

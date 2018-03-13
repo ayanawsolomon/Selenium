@@ -26,11 +26,9 @@ import org.testng.annotations.BeforeTest;
 	 Properties objects;
 	 @BeforeTest
 	  public void beforeTest() throws IOException {
-		 String filePaht = System.getProperty("user.dir") + "\\src\\test\\java\\testData\\TestCase.xlsx";
-		 dataFromExcel = ReadingFromExcel.readExcel(filePaht, "testSteps", 3, 30, 1, 5);
-		String objectFilePath = System.getProperty("user.dir")+ "\\src\\test\\java\\testData\\object.properties";
-		objects = ReadObject.getObjectRepository(objectFilePath);
-		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");
+		 dataFromExcel = ReadingFromExcel.readExcel(utility.PathList.excelPath, "testSteps", 3, 30, 1, 5);
+		objects = ReadObject.getObjectRepository(utility.PathList.objectProperties);
+		 System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
 		 driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try
 

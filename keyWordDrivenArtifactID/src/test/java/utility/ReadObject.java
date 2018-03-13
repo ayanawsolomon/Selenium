@@ -15,7 +15,7 @@ public class ReadObject {
 		
 	}
 public static void main (String[] args) throws IOException{
-	Properties myP=ReadObject.getObjectRepository(System.getProperty("user.dir") +"\\src\\test\\java\\testData\\object.properties");
+	Properties myP=ReadObject.getObjectRepository(utility.PathList.objectProperties);
 	System.out.println(myP.getProperty("uName"));
 	
 }

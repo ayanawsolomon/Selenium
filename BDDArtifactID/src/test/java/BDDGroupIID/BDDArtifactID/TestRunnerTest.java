@@ -51,10 +51,10 @@ public class TestRunnerTest {
     		System.out.print("Type 1 to select chrome or 2 to select firefox Browser: ");
     		browser = sc.nextInt();
     		if(browser ==1){
-                System.setProperty("webdriver.chrome.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\chromedriver.exe");
+                System.setProperty("webdriver.chrome.driver", utility.DriverPath.chromeDriver);
             	driver = new ChromeDriver();
         	}else if(browser ==2){
-                System.setProperty("webdriver.gecko.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\geckodriver.exe");
+                System.setProperty("webdriver.gecko.driver", utility.DriverPath.firefoxDriver);
             	driver = new FirefoxDriver();
         	}else{
         		System.out.println("chrome|firfox drivers are only available");

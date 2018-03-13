@@ -16,7 +16,7 @@ public class TakeScreenShot {
 	public static void main(String[] args) {
 		// Taking screen shot that should run during test case failure
 		// This program is to download a file with the help of Robot Java class
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", utility.PathList.chromeDriver);
 		
 		WebDriver driver = new FirefoxDriver();
 		// write the code to type http://newtours.demoaut.com/

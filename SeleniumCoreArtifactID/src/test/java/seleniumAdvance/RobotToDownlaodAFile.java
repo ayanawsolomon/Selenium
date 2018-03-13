@@ -13,7 +13,7 @@ public class RobotToDownlaodAFile {
 
 	public static void main(String[] args) throws AWTException {
 		// This program is to download a file with the help of Robot Java class
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", utility.PathList.chromeDriver);
 				 
 		
 		WebDriver driver = new FirefoxDriver();
