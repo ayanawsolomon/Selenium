@@ -17,7 +17,7 @@ public class LoginLogoutDataDrivenTest {
 	WebDriver driver;
 	@BeforeTest
 	public void beforeTest(){
-		// opening new tours webpage  test
+		// opening new tours webpage  test test
 		System.setProperty("webdriver.chrome.driver",utility.PathList.chromeDriver);
 			driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try
