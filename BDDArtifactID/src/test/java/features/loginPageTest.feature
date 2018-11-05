@@ -22,10 +22,10 @@ Feature: Loing test for newtorus web, for exercise
 
   Background: 
     #Transfering data without keywords use ""
-    Given I am in newtours home page "http://newtours.demoaut.com/"
+    Given I am in newtours home page "http://www.newtours.demoaut.com/"
 
   @tag2 @systest
-  Scenario: Login Success with user name a and password a 
+  Scenario: Login test weith correct credencials 
     When I insert user name="a" and password="a"
     And I press Login button
     Then "SIGN-OFF" link should be seen on the top menue
@@ -60,4 +60,9 @@ Feature: Loing test for newtorus web, for exercise
       |          | a        | SIGN-ON  |
       | a        |          | SIGN-ON  |
       |          |          | SIGN-ON  |
-      
+  
+  Scenario: registraoin test 
+  * I am on newtours reg page
+  * I type corect info ofr userName="solomo" age29, address='dfsdfsfsd" 
+  * press submit button
+  * I should get reg success    

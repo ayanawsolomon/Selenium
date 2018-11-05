@@ -20,10 +20,11 @@ public class loginLogoutDataDriveTesintUsingTestNG {
 	String title;
 @BeforeClass
 public void beforeClass(){
-	System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
-	driver = new ChromeDriver();
+	  System.setProperty("webdriver.chrome.driver",utility.PathList.chromeDriver );
+	  driver = new ChromeDriver();
 	driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 	driver.get("http://newtours.demoaut.com/");
+	
 }
 
 @BeforeMethod
@@ -54,15 +55,15 @@ public void loginLogoutTestWithCorrectCredencials(String name, String password){
 	}
 
 	// assert
-}	
+}	//DATA DRIVEN TESTING
 @DataProvider
   public Object[][] dpCorrectPassword() {
     return new Object[][] {
-      new Object[] { "a", "a" },
-      new Object[] { "b", "b" },
-      new Object[] { "c", "c" },
-      new Object[] { "d", "ddsf" },
-      new Object[] { "e", "e" },
+    	  new Object[] { "a", "a" },
+          new Object[] { "b", "b" },
+          new Object[] { "c", "c" },
+          new Object[] { "d", "ddsf" },
+          new Object[] { "e", "e" },
       new Object[] { "f", "f" },
     };
   }
@@ -92,7 +93,8 @@ public void loginLogoutTestWtihIncorrectCredencials(String name, String password
     return new Object[][] {
       new Object[] { "awerew", "a" },
       new Object[] { " ", "b" },
-      new Object[] { "c", "c" },
+      new Object[] { "c", "  " },
+      new Object[] { " ", "  " },
       new Object[] { "d%^7rtyrty", "d" },
       new Object[] { "e13311", "e" },
       new Object[] { "f#$#$#", "f" },

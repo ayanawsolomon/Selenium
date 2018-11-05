@@ -20,7 +20,7 @@ public class DataDrivenTestingUsingExcel {
 	@BeforeTest
 	public void beforeClass(){
 		// open and set crhome driver
-	System.setProperty("webdriver.gecko.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", utility.DriverPath.firefoxDriver);
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try
 		driver.get("http://newtours.demoaut.com"); // opening a website
@@ -48,7 +48,7 @@ public class DataDrivenTestingUsingExcel {
   @DataProvider
   public Object[][] dp() throws IOException {
 	  //Prepare the path of excel file
-	  String filePath = System.getProperty("user.dir")+"\\src\\test\\java\\testData\\ExportExcel.xlsx";
+	  String filePath = System.getProperty("user.dir")+"\\src\\test\\java\\testData\\TestCase.xlsx";
 	  //Call read file method of the class to read data
 	  String[][] dataFromExcel = ReadingFromExcell.readExcel(filePath,"dataForLogin",2,5,1,2);
 	  return dataFromExcel;

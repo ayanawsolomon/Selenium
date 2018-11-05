@@ -34,14 +34,14 @@ public class KeyWordDrivenTest {
 		// this is jus a comment 
 		    //Prepare the path of excel file
 
-		    String filePath = System.getProperty("user.dir")+"\\src\\test\\java\\testData\\ExportExcel.xlsx";
+		    String filePath = System.getProperty("user.dir")+"\\src\\test\\java\\testData\\TestCase.xlsx";
 		    String objectFilepath = System.getProperty("user.dir")+"\\src\\test\\java\\testData\\object.properties";
 		    //reading keyword driven data from excel file
-		    dataFromExcel = ReadingFromExcell.readExcel(filePath,"testCasesWithTestSteps", 2, 11, 1, 5);
+		    dataFromExcel = ReadingFromExcell.readExcel(filePath,"testSteps", 2, 11, 1, 5);
 		    // reading object from repository file
 		    objects= ReadObject.getObjectRepository(objectFilepath);
 		   
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\solomon\\workspace\\MyDrivers\\geckodriver.exe");
+	        System.setProperty("webdriver.gecko.driver", utility.DriverPath.firefoxDriver);
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try
 	

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/1</td>
 </tr><tr>
-<td>Started on:</td><td>Sun May 07 12:50:17 EDT 2017</td>
+<td>Started on:</td><td>Sun Nov 04 17:32:55 EST 2018</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (453 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (606 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,8 +67,8 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
@@ -76,85 +76,207 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='BDDGroupIID.BDDArtifactID.TestRunnerTestNG.run_cukes()'><b>run_cukes</b><br>Test class: BDDGroupIID.BDDArtifactID.TestRunnerTestNG<br>Test method: Runs Cucumber Features<br/>
-<a href="#Output-1259174396" onClick='toggleBox("Output-1259174396", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-477533894" onClick='toggleBox("Output-477533894", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1259174396" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1259174396">
-<div "featureFile">Feature File: loginTestofNewtours.feature</div><br/>
-<div "feature">Feature: Loing test for newtorus web</div><br/>
-<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<a href="#Output-477533894" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-477533894">
+<div "featureFile">Feature File: loginPageTest.feature</div><br/>
+<div "feature">Feature: Loing test for newtorus web, for exercise</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;www.newtours.demoaut.com&#x2F;&quot; (failed : 0s)</div><br/>
 <div "scenario">Scenario: Login Success with user name a and password a</div><br/>
 <div "result">When  I insert user name=&quot;a&quot; and password=&quot;a&quot; (skipped)</div><br/>
 <div "result">And  I press Login button (skipped)</div><br/>
 <div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div><br/>
-<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
-<div "scenario">Scenario: login not success with username abced and pass ab</div><br/>
-<div "result">When  I insert user name &quot;abcd&quot; and password &quot;ab&quot; (undefined)</div><br/>
-<div "result">And  i press login (undefined)</div><br/>
-<div "result">Then  &quot;SIGN-ON&quot; link shoudl be seen (undefined)</div><br/>
-<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;www.newtours.demoaut.com&#x2F;&quot; (failed : 0s)</div><br/>
+<div "scenario">Scenario: login not success with incorrect username abced and pass ab</div><br/>
+<div "result">When  I insert user name &quot;abcd&quot; and password &quot;ab&quot; (skipped)</div><br/>
+<div "result">And  i press login (skipped)</div><br/>
+<div "result">Then  &quot;SIGN-ON&quot; link shoudl be seen (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;www.newtours.demoaut.com&#x2F;&quot; (failed : 0s)</div><br/>
 <div "scenario">Scenario: test gmail page</div><br/>
 <div "result">When  I insert Username =&quot;xxxxx@gmail.com&quot; (undefined)</div><br/>
 <div "result">And  I insert password =&quot;xxxxx&quot; (undefined)</div><br/>
 <div "result">And  Press loing button (undefined)</div><br/>
 <div "result">Then  I should get login success (undefined)</div><br/>
 <div "scenarioOutline">Scenario Outline: Login test with different credencials</div><br/>
-<div "result">When  I insert user name=&quot;&lt;userName&gt;&quot; and password=&quot;&lt;password&gt;&quot; (skipped)</div><br/>
+<div "result">When  I insert user name=&quot;&lt;userName&gt;&quot; and password=&quot;&lt;password&gt;&quot; (failed : 0s)</div><br/>
 <div "scenario">Scenario Outline: Login test with different credencials</div><br/>
 <div "result">And  I press Login button (skipped)</div><br/>
 <div "result">Then  &quot;&lt;link&gt;&quot; link should be seen on the top menue (skipped)</div><br/>
-<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
-<div "result">When  I insert user name=&quot;a&quot; and password=&quot;5&quot; (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;www.newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "result">When  I insert user name=&quot;a&quot; and password=&quot;a&quot; (failed : 0s)</div><br/>
 <div "scenario">Scenario Outline: Login test with different credencials</div><br/>
 <div "result">And  I press Login button (skipped)</div><br/>
 <div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div><br/>
-<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
-<div "result">When  I insert user name=&quot;b&quot; and password=&quot;b&quot; (skipped)</div><br/>
-<div "scenario">Scenario Outline: Login test with different credencials</div><br/>
-<div "result">And  I press Login button (skipped)</div><br/>
-<div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div><br/>
-<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
-<div "result">When  I insert user name=&quot;abc&quot; and password=&quot;def&quot; (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;www.newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "result">When  I insert user name=&quot;a&quot; and password=&quot;bbb&quot; (failed : 0s)</div><br/>
 <div "scenario">Scenario Outline: Login test with different credencials</div><br/>
 <div "result">And  I press Login button (skipped)</div><br/>
 <div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div><br/>
-<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
-<div "result">When  I insert user name=&quot;lmk&quot; and password=&quot;7&quot; (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;www.newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "result">When  I insert user name=&quot;bbb&quot; and password=&quot;a&quot; (failed : 0s)</div><br/>
 <div "scenario">Scenario Outline: Login test with different credencials</div><br/>
 <div "result">And  I press Login button (skipped)</div><br/>
 <div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div><br/>
-<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
-<div "result">When  I insert user name=&quot;c&quot; and password=&quot;c&quot; (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;www.newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "result">When  I insert user name=&quot;bbbc&quot; and password=&quot;bbbc&quot; (failed : 0s)</div><br/>
 <div "scenario">Scenario Outline: Login test with different credencials</div><br/>
 <div "result">And  I press Login button (skipped)</div><br/>
 <div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div><br/>
-<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
-<div "featureFile">Feature File: registraion.feature</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;www.newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "result">When  I insert user name=&quot;&quot; and password=&quot;a&quot; (failed : 0s)</div><br/>
+<div "scenario">Scenario Outline: Login test with different credencials</div><br/>
+<div "result">And  I press Login button (skipped)</div><br/>
+<div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;www.newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "result">When  I insert user name=&quot;a&quot; and password=&quot;&quot; (failed : 0s)</div><br/>
+<div "scenario">Scenario Outline: Login test with different credencials</div><br/>
+<div "result">And  I press Login button (skipped)</div><br/>
+<div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div><br/>
+<div "result">Given  I am in newtours home page &quot;http:&#x2F;&#x2F;www.newtours.demoaut.com&#x2F;&quot; (skipped)</div><br/>
+<div "featureFile">Feature File: registrationPageTest.feature</div><br/>
 <div "feature">Feature: Testing registriaon page with different values</div><br/>
 <div "scenarioOutline">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
-<div "result">When  I insert user name=&quot;d&quot; and password=&quot;d&quot; (skipped)</div><br/>
+<div "result">When  I insert user name=&quot;&quot; and password=&quot;&quot; (failed : 0s)</div><br/>
 <div "result">And  I press Login button (skipped)</div><br/>
 <div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
-<div "result">Then  &quot;SIGN-OFF&quot; link should be seen on the top menue (skipped)</div><br/>
+<div "result">Then  &quot;SIGN-ON&quot; link should be seen on the top menue (skipped)</div><br/>
 <div "result">When  I insert password &quot;&lt;password&gt;&quot; and confirm password  &quot;&lt;confirm&gt;&quot; (skipped)</div><br/>
 <div "result">And  I click submit (skipped)</div><br/>
-<div "result">Then  &quot;&lt;url&gt;&quot; page should be seen (skipped)</div><br/>
+<div "result">Then  &quot;&lt;url&gt;&quot; page should be seen (failed : 0s)</div><br/>
 <div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div><br/>
 <div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
-<div "result">And  Add correct data to registration form (skipped)</div><br/>
-<div "result">When  I insert password &quot;abcd&quot; and confirm password  &quot;abcd&quot; (skipped)</div><br/>
+<div "result">And  Add correct data to registration form 5 (skipped)</div><br/>
+<div "result">When  I insert password &quot;solomonA1#&quot; and confirm password  &quot;solomonA1#&quot; (skipped)</div><br/>
 <div "result">And  I click submit (skipped)</div><br/>
-<div "result">Then  &quot;create_account_success.php&quot; page should be seen (skipped)</div><br/>
+<div "result">Then  &quot;create_account_success.php&quot; page should be seen (failed : 0s)</div><br/>
 <div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div><br/>
 <div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
-<div "result">And  Add correct data to registration form (skipped)</div><br/>
-<div "result">When  I insert password &quot;abcdefghijk&quot; and confirm password  &quot;abc&quot; (skipped)</div><br/>
+<div "result">And  Add correct data to registration form 5 (skipped)</div><br/>
+<div "result">When  I insert password &quot;vwrwerwervwrwerQRTRE1$&quot; and confirm password  &quot;vwrwerwervwrwerQRTRE1$&quot; (skipped)</div><br/>
+<div "result">And  I click submit (skipped)</div><br/>
+<div "result">Then  &quot;create_account_success.php&quot; page should be seen (failed : 0s)</div><br/>
+<div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
+<div "result">And  Add correct data to registration form 5 (skipped)</div><br/>
+<div "result">When  I insert password &quot;solomonA1&quot; and confirm password  &quot;solomonA1&quot; (skipped)</div><br/>
+<div "result">And  I click submit (skipped)</div><br/>
+<div "result">Then  &quot;mercuryregister.php&quot; page should be seen (failed : 0s)</div><br/>
+<div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
+<div "result">And  Add correct data to registration form 5 (skipped)</div><br/>
+<div "result">When  I insert password &quot;solomonA#&quot; and confirm password  &quot;solomonA#&quot; (skipped)</div><br/>
+<div "result">And  I click submit (skipped)</div><br/>
+<div "result">Then  &quot;mercuryregister.php&quot; page should be seen (failed : 0s)</div><br/>
+<div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
+<div "result">And  Add correct data to registration form 5 (skipped)</div><br/>
+<div "result">When  I insert password &quot;solomon1#&quot; and confirm password  &quot;solomon1#&quot; (skipped)</div><br/>
+<div "result">And  I click submit (skipped)</div><br/>
+<div "result">Then  &quot;mercuryregister.php&quot; page should be seen (failed : 0s)</div><br/>
+<div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
+<div "result">And  Add correct data to registration form 5 (skipped)</div><br/>
+<div "result">When  I insert password &quot;so1A#&quot; and confirm password  &quot;so1A#&quot; (skipped)</div><br/>
+<div "result">And  I click submit (skipped)</div><br/>
+<div "result">Then  &quot;mercuryregister.php&quot; page should be seen (failed : 0s)</div><br/>
+<div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
+<div "result">And  Add correct data to registration form 5 (skipped)</div><br/>
+<div "result">When  I insert password &quot;solomonA1#&quot; and confirm password  &quot;selemenA1#&quot; (skipped)</div><br/>
+<div "result">And  I click submit (skipped)</div><br/>
+<div "result">Then  &quot;mercuryregister.php&quot; page should be seen (failed : 0s)</div><br/>
+<div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
+<div "result">And  Add correct data to registration form 5 (skipped)</div><br/>
+<div "result">When  I insert password &quot;&quot; and confirm password  &quot;solomonA1#&quot; (skipped)</div><br/>
+<div "result">And  I click submit (skipped)</div><br/>
+<div "result">Then  &quot;mercuryregister.php&quot; page should be seen (failed : 0s)</div><br/>
+<div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
+<div "result">And  Add correct data to registration form 5 (skipped)</div><br/>
+<div "result">When  I insert password &quot;solomonA1#&quot; and confirm password  &quot;&quot; (skipped)</div><br/>
+<div "result">And  I click submit (skipped)</div><br/>
+<div "result">Then  &quot;mercuryregister.php&quot; page should be seen (failed : 0s)</div><br/>
+<div "result">Given  your are in registraion page &quot;http:&#x2F;&#x2F;newtours.demoaut.com&#x2F;mercuryregister.php&quot; (skipped)</div><br/>
+<div "scenario">Scenario Outline: Check registraion with correct and incorrect password and confirm password field</div><br/>
+<div "result">And  Add correct data to registration form 5 (skipped)</div><br/>
+<div "result">When  I insert password &quot;&quot; and confirm password  &quot;&quot; (skipped)</div><br/>
 <div "result">And  I click submit (skipped)</div><br/>
 </div>
 </td>
-<td></td>
+<td><div><pre>cucumber.runtime.CucumberException: java.lang.NullPointerException
+	at cucumber.api.testng.TestNGCucumberRunner.runCukes(TestNGCucumberRunner.java:48)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.run_cukes(AbstractTestNGCucumberTests.java:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:230)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.run(AbstractTestNGCucumberTests.java:19)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:242)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:579)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NullPointerException
+	at stepDefinitions.LoginTest.i_am_in_newtours_home_page(LoginTest.java:20)
+	at ?.Given I am in newtours home page &quot;http://www.newtours.demoaut.com/&quot;(loginPageTest.feature:25)
+</pre></div><a href='#' onClick='toggleBox("stack-trace477533894", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace477533894'><pre>cucumber.runtime.CucumberException: java.lang.NullPointerException
+	at cucumber.api.testng.TestNGCucumberRunner.runCukes(TestNGCucumberRunner.java:48)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.run_cukes(AbstractTestNGCucumberTests.java:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper$1.runTestMethod(MethodInvocationHelper.java:230)
+	at cucumber.api.testng.AbstractTestNGCucumberTests.run(AbstractTestNGCucumberTests.java:19)
+	at org.testng.internal.MethodInvocationHelper.invokeHookable(MethodInvocationHelper.java:242)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:579)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: java.lang.NullPointerException
+	at stepDefinitions.LoginTest.i_am_in_newtours_home_page(LoginTest.java:20)
+	at ?.Given I am in newtours home page &quot;http://www.newtours.demoaut.com/&quot;(loginPageTest.feature:25)
+</pre></div></td>
 <td>0</td>
-<td>BDDGroupIID.BDDArtifactID.TestRunnerTestNG@4cf777e8</td></tr>
+<td>BDDGroupIID.BDDArtifactID.TestRunnerTestNG@29ca901e</td></tr>
 </table><p>
 </body>
 </html>
