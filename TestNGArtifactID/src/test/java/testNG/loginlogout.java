@@ -17,26 +17,23 @@ import org.testng.annotations.AfterSuite;
 
 public class loginlogout {
 	WebDriver driver;
- // @Test(dataProvider = "dp")
- // public void f(Integer n, String s) {
-//	  
-//		  
-//  }
-  @Test
-  public void testIncorrectData() {
-		driver.findElement(By.name("userName")).sendKeys("abcdef");
-		driver.findElement(By.name("password")).sendKeys("a");
-		driver.findElement(By.name("login")).click();
-		Assert.assertTrue(driver.findElement(By.linkText("SIGN-ON")).isDisplayed());
+  @BeforeClass
+  public void beforeClass() {
+	  System.setProperty("webdriver.chrome.driver",utility.PathList.chromeDriver );
+		
+		// Create an object to open any browser
+		// WebDriver driver = new FirefoxDriver();
+	    driver = new ChromeDriver();
+		// Open your website under test using webdriver
+		driver.get("http://newtours.demoaut.com/");
+
   }
-  @Test
-  public void testCorrectData() {
-		driver.findElement(By.name("userName")).sendKeys("a");
-		driver.findElement(By.name("password")).sendKeys("a");
-		driver.findElement(By.name("login")).click();
-		Assert.assertTrue(driver.findElement(By.linkText("SIGN-OFF")).isDisplayed());
-  }
-  @BeforeMethod
+   @AfterClass
+  public void afterClass() {
+		 driver.quit();
+  
+   
+   }@BeforeMethod
   public void beforeMethod() {
 	  try {
 		  driver.findElement(By.linkText("SIGN-ON")).click();  
@@ -45,7 +42,27 @@ public class loginlogout {
 	  }
 	  
 	
+  }// @Test(dataProvider = "dp")
+ // public void f(Integer n, String s) {
+//	  
+//		  
+//  }
+  @Test(dependsOnMethods="testCorrectData")
+  public void testIncorrectData() {
+		driver.findElement(By.name("userName")).sendKeys("abcdef");
+		driver.findElement(By.name("password")).sendKeys("a");
+		driver.findElement(By.name("login")).click();
+		Assert.assertTrue(driver.findElement(By.linkText("SIGN-ON")).isDisplayed());
   }
+  @Test()
+  public void testCorrectData() {
+		driver.findElement(By.name("userName")).sendKeys("a");
+		driver.findElement(By.name("password")).sendKeys("a");
+		driver.findElement(By.name("login")).click();
+		boolean check=driver.findElement(By.linkText("SIGN-OFF")).isDisplayed();
+		Assert.assertTrue(check);
+  }
+ 
 
   @AfterMethod
   public void afterMethod() {
@@ -59,22 +76,8 @@ public class loginlogout {
       new Object[] { 2, "b" },
     };
   }
-  @BeforeClass
-  public void beforeClass() {
-	  System.setProperty("webdriver.chrome.driver",utility.PathList.chromeDriver );
-		
-		// Create an object to open any browser
-		// WebDriver driver = new FirefoxDriver();
-	    driver = new ChromeDriver();
-		// Open your website under test using webdriver
-		driver.get("http://newtours.demoaut.com/");
 
-  }
-
-  @AfterClass
-  public void afterClass() {
-		 driver.quit();
-  }
+ 
 
   @BeforeTest
   public void beforeTest() {

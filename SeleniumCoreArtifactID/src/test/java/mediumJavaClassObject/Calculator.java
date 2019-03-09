@@ -41,7 +41,6 @@ public class Calculator {
 	}
 
 
-
 	private static int sub(int i, int j) {
 		// TODO Auto-generated method stub
 		int subresult= i - j ;
@@ -57,3 +56,4 @@ public class Calculator {
 	
 
 }
+

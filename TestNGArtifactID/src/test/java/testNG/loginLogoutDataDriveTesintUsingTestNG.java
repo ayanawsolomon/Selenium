@@ -27,6 +27,11 @@ public void beforeClass(){
 	
 }
 
+@AfterClass
+public void afterClass(){
+	driver.quit();
+}
+
 @BeforeMethod
 public void beforeTest(){
 //	  try {
@@ -46,10 +51,9 @@ public void loginLogoutTestWithCorrectCredencials(String name, String password){
 
 	// click loign
 	driver.findElement(By.name("login")).click();
-	title = driver.getTitle();
 	try{
 		driver.findElement(By.linkText("SIGN-OFF")).click();
-		Assert.assertTrue(1==1);
+		
 	}catch(Exception e){
 		Assert.fail();
 	}
@@ -59,12 +63,12 @@ public void loginLogoutTestWithCorrectCredencials(String name, String password){
 @DataProvider
   public Object[][] dpCorrectPassword() {
     return new Object[][] {
-    	  new Object[] { "a", "a" },
+    	  new Object[] { "a", "a"},
           new Object[] { "b", "b" },
           new Object[] { "sdfsdf", "sdfsdf" },
           new Object[] { "sdfsdf", "dsdfas" },
           new Object[] { "vfghfg", "fghfg" },
-          new Object[] { "b", "b" },
+      /*    new Object[] { "b", "b" },
           new Object[] { "jhkjhk", "hjg" },
           new Object[] { "b", "b" },
           new Object[] { "b", "b" },
@@ -76,7 +80,7 @@ public void loginLogoutTestWithCorrectCredencials(String name, String password){
           new Object[] { "b", "b" },
           new Object[] { "c", "c" },
           new Object[] { "d", "ddsf" },
-          new Object[] { "e", "e" },
+          new Object[] { "e", "e" },*/
       new Object[] { "f", "f" },
     };
   }
@@ -116,10 +120,6 @@ public void loginLogoutTestWtihIncorrectCredencials(String name, String password
 	
 
 
-@AfterClass
-public void afterClass(){
-	driver.quit();
-}
 
 }
 

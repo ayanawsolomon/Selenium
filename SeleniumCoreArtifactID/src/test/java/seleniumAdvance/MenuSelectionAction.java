@@ -20,11 +20,11 @@ System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
 		driver.get("http://localhost/test/testPage2.php");
-		WebElement menu = driver.findElement(By.id("menu"));
 		Actions action = new Actions(driver);
-		
+		WebElement menu = driver.findElement(By.id("menu"));
+
 		action.moveToElement(menu).build().perform();
-		action.moveByOffset(50, 100).perform();
+		action.moveByOffset(50, 200).perform();// pixel
 		Thread.sleep(4000);
 		action.click().perform();
 		

@@ -68,5 +68,16 @@ public class LoginTest {
 		
 	}
 	
+	
+	@Given("^open newtours page$")
+	public void open_newtours_page() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    driver.get("http://www.newtours.demoaut.com");
+	}
+	@Given("^type user name and password$")
+	public void type_user_name_and_password() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+
+	}
 		
 }

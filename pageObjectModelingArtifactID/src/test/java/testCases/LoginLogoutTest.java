@@ -11,6 +11,7 @@ import objectRepository.SignOnPage;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -60,6 +61,7 @@ public class LoginLogoutTest {
 	// write your code over here
 	 signOnPage=homePage.signOn();
 	  flightFinderPage=signOnPage.login(name, password);
+	 
 	  try{
 		  menuPage.signOff.click();
 		  Assert.assertTrue(true);

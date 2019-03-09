@@ -68,6 +68,9 @@ public class SeleniumCommands {
 		//driver.quit(); // is closing forcefully
 		//String pageSource =driver.getPageSource() // is to print page source 
 
+		
+		
+	
 	}
 
 }

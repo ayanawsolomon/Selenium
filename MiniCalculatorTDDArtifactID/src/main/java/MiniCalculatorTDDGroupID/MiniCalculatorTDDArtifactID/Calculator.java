@@ -5,7 +5,7 @@ public class Calculator {
 int rslt;
 	public int addition(int i, int j) {
 		// adding two numbers 
-		rslt = i + j ;
+		rslt = i + j + 10;
 		return rslt;
 		
 	}

@@ -37,12 +37,11 @@ Feature: Loing test for newtorus web, for exercise
     Then "SIGN-ON" link shoudl be seen
 @systemTest @inteTest
   Scenario: test gmail page
-    Givne I am on gmail home page "http://www.gmail.com"
-
-    When I insert Username ="xxxxx@gmail.com"
-    And I insert password ="xxxxx"
-    And Press loing button
-    Then I should get login success
+    * I am on gmail home page "http://www.gmail.com"
+    * I insert Username ="xxxxx@gmail.com"
+    * I insert password ="xxxxx"
+    * Press loing button
+    * I should get login success
 
   @tag1 @systest @inteTest
   Scenario Outline: Login test with different credencials

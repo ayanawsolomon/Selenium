@@ -32,6 +32,10 @@ public class TakeScreenShot {
 		
 		takeScreenShot(driver, "googleFail");
 		 }
+	
+	
+	
+	
 	public static void takeScreenShot(WebDriver driver, String fileName){
 		File src= ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		try {

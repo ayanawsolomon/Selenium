@@ -5,13 +5,15 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
+
 
 public class TestingAlerts {
 
 	public static void main(String[] args) {
 		// Testing alerts , confirm and prompt
 		// how to test calendar
-		System.setProperty("webdriver.gecko.driver", utility.PathList.firefoxDriver);
+	//	System.setProperty("webdriver.gecko.driver", utility.PathList.firefoxDriver);
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try
  
@@ -22,12 +24,14 @@ public class TestingAlerts {
 
 		String alertText = driver.switchTo().alert().getText();
 		System.out.println(alertText);
-		if(alertText.contains("Solomon")) {
+		/*if(alertText.contains("Solomon")) {
 			System.out.println("pass");
 		}else {
 			System.out.println("fail");
 		}
+		*/
 		
+		Assert.assertTrue(alertText.contains("solomon"));
 		driver.switchTo().alert().accept();
 		
 

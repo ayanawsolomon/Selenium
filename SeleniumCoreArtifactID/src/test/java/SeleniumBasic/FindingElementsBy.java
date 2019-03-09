@@ -16,7 +16,7 @@ public class FindingElementsBy {
 		
 	 System.setProperty("webdriver.chrome.driver", utility.PathList.chromeDriver);
 		WebDriver driver = new ChromeDriver();
-		//driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);	// wait will be applied for any element not available for the first try
 		driver.get("http://localhost/test/testPage.php"); // opening a website
 		driver.findElement(By.name("CustomerID")).sendKeys("11234");
 		driver.findElement(By.id("eml")).sendKeys("ayanawsolomon1@gmail.com");
