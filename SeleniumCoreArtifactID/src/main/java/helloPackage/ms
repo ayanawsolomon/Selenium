@@ -1,0 +1,340 @@
+'''
+Created on Mar 30, 2019
+
+@author: test
+'''
+import json
+import copy
+from collections import OrderedDict
+json_string = """
+{
+"MT768":{
+    "networkRules":{
+       "MT768>sequence1>2=222": {
+        "exclude":["MT768>sequence1>5", "MT768>sequence1>4"],
+        "include":["MT768>sequence1>4"]
+    
+        },
+        "MT768>sequence1>3=3333": {
+        "mustHave":["MT768>sequence1>2=222"],
+        "mustNotHave":["MT768>sequence1>1=111"],
+        "exclude":["MT768>sequence1>4"]
+
+        }
+    },
+    "sequence1":{
+    "info":{"status": "M","repeat":"T13", "missed":"T13"},
+    "1":{"field":"1","status": "M","repeat":"T13","missed":"T13","ACK": ["11", "111", "1111"],"NAC":["T13","NNNN", "MMMM"]},
+     "2":{"field":"2","status": "M","repeat":"T13","missed":"T13","ACK": ["22", "222", "2222"],"NAC":["T13","NNNN", "MMMM"]},
+     "5":{"field":"5","status": "M","repeat":"T13","missed":"T13","ACK": ["55", "555", "5555"],"NAC":["T13","NNNN", "MMMM"]},
+     "3":{"field":"3","status": "O","repeat":"T13","missed":"T13","ACK": ["33", "333", "3333"],"NAC":["T13","NNNN", "MMMM"]},
+     "4":{"field":"4","status": "M","repeat":"T13","missed":"T13","ACK": ["44", "444", "44444"],"NAC":["T13","NNNN", "MMMM"]}
+     }
+     },
+     
+     
+     
+     "MT769":{
+    "sequence1":{
+    "info":{"status": "M","repeat":"T13","missed":"T13"},
+     "1":{"field":"1","status": "M","repeat":"T13","missed":"T13","ACK": ["11", "1111", "1111"],"NAC":["T13","NNNN", "MMMM"]},
+     "2":{"field":"2","status": "M","repeat":"T13","missed":"T13","ACK": ["22", "222", "2222"],"NAC":["T13","NNNN", "MMMM"]},
+     "sequence1.1":{
+     "info":{"status": "O","repeat":"T13","missed":"T13"},
+     "3":{"field":"3","status": "M","repeat":"T13","missed":"T13","ACK": ["33", "333", "3333"],"NAC":["T13","NNNN", "MMMM"]},
+     "4":{"field":"4","status": "M","repeat":"T13","missed":"T13","ACK": ["44", "444", "4444"],"NAC":["T13","NNNN", "MMMM"]},
+     
+     "sequence1.1.1":{
+     "info":{"status": "M","repeat":"T89","missed":"T13"},
+     "a":{"field":"a","status": "O","repeat":"T13","missed":"T13","ACK": ["aa", "aaa", "aaaa"],"NAC":["T13","NNNN", "MMMM"]},
+     "b":{"field":"b","status": "M","repeat":"T13","missed":"T13","ACK": ["bb", "bbb", "bbbb"],"NAC":["T13","NNNN", "MMMM"]}
+     }
+     }
+     
+   
+     },
+     
+     "sequence2":{
+     "info":{"status": "O","repeat":"ACK", "missed":"T13"},
+     "5":{"field":"5","status": "M","repeat":"T13","missed":"T13","ACK": ["55", "555", "5555"],"NAC":["T13","NNNN", "MMMM"]},
+     "6":{"field":"6","status": "M","repeat":"T13","missed":"T13","ACK": ["66", "666", "6666"],"NAC":["T13","NNNN", "MMMM"]},
+     "7":{"field":"7","status": "O","repeat":"T13","missed":"T13","ACK": ["77", "777", "7777"],"NAC":["T13","NNNN", "MMMM"]}
+     }
+}
+}
+  
+"""
+mtsJson = json.loads(json_string)
+mtIds=mtsJson.keys()
+masterTestCase= OrderedDict()
+testCaseNumber=1
+
+
+def generateFieldLine(currentFieldPath, fieldJson):
+    fieldLine=()
+    # fieldKeys =fieldJson.keys()
+    field = fieldJson["field"]
+
+    status = fieldJson["status"]
+    if status == 'O':
+        xxxxx=""
+    elif status == 'M':
+        fieldLine = fieldJson
+
+    return fieldLine
+
+def generateMasterTestCase(fieldPath, fieldJson):
+    for fieldKey, fieldValue in fieldJson.items():
+       if fieldKey.startswith("sequence"):
+            fieldValue["info"]["field"]="sequence"
+            fieldValue["info"]["value"]="sequence"
+            masterTestCase["&"+fieldPath + ">" + fieldKey] = fieldValue["info"]
+            generateMasterTestCase(fieldPath + ">" + fieldKey, fieldValue)
+       elif  fieldKey!="info":  # info is information about json
+            fieldValue["value"] = fieldValue["ACK"][0]
+            masterTestCase[fieldPath + ">" + fieldKey] = fieldValue
+
+
+
+
+
+    # adding header
+
+
+def getAllFieldsOfASequence(sequencePathInTest, masterTestCase):
+    duplicatedFields={}
+    for fieldPath, fieldValue in masterTestCase.items():
+        if sequencePathInTest in fieldPath:
+            if fieldPath.startswith("&"):
+                duplicatedFields[fieldPath] = fieldValue
+            else:
+                completeLine = ":" + fieldValue["field"] + "::" + fieldValue["value"]
+                duplicatedFields[fieldPath]=completeLine
+
+    return  duplicatedFields
+
+
+def generateSequenceTestCases(sequencePathInTest, masterTestCase):
+    print("&::::::::::::::Begin  sequence Start::::::" + sequencePathInTest + "::::::::::::::::::::::::::::::::::::")
+
+    sequenceInfo=masterTestCase[sequencePathInTest]
+    draftTestCase = applyNetworkRules(sequencePathInTest, "sequence", masterTestCase, networkJson)
+    duplicatedFields=getAllFieldsOfASequence(sequencePathInTest[1:], draftTestCase)
+    tempDuplicatedFields= copy.deepcopy(duplicatedFields)
+    isDuplicateFieldsIngected = False
+    testCase = []
+    lineNumber = 1
+
+    for fieldPath, fieldJson in draftTestCase.items():
+        if fieldPath.startswith("&"):
+            testCase.append(fieldPath)
+
+        else:
+            completeLine = ":" + fieldJson["field"] + "::" + fieldJson["value"] + "   <CRLF> & (" + "0" * (3 - len(str(lineNumber))) + str(lineNumber) + ") "
+            testCase.append(completeLine)
+            lineNumber = lineNumber + 1
+
+
+
+        tempDuplicatedFields.pop(fieldPath, None)
+
+
+        if tempDuplicatedFields=={}  and isDuplicateFieldsIngected==False:
+            testCase.append("&************************************** duplicationg the above sequence starts here*************************")
+
+            for duplicatedFieldKey, duplicatedFieldValue in duplicatedFields.items():
+                if(duplicatedFieldKey.startswith("&")):
+                    testCase.append(duplicatedFieldKey)
+                    if duplicatedFieldKey == sequencePathInTest:
+                        sequenceInfo=duplicatedFieldValue
+                        testCase=prepareTestCaseHeader(testCase, fieldJsonInTest, testCaseNumber, lineNumber, None, sequenceInfo["repeat"])
+                else:
+                    completeLine = ":" + duplicatedFieldValue + "   <CRLF> & (" + "0" * (3 - len(str(lineNumber))) + str(lineNumber) + ") "
+                    testCase.append(completeLine)
+                    lineNumber = lineNumber + 1
+            isDuplicateFieldsIngected=True
+
+    for fieldValue  in testCase:
+        print(fieldValue)
+    print("&::::::::::::::End  Sequence part::::::" + sequencePathInTest + "::::::::::::::::::::::::::::::::::::")
+
+
+def prepareTestCaseHeader(testCase, fieldJsonInTest, testCaseNumber, lineNumber, fieldValue, ackNackCode):
+    completeLine = ":" + fieldJsonInTest["field"] + "::" + str(fieldValue) + "   <CRLF> & (" + "0" * (3 - len(str(lineNumber))) + str(lineNumber) + ") "
+    testCase.insert(0, "&TestCase=" + str(testCaseNumber) + ", LineNumber=" + str(lineNumber) + " ==>" + completeLine + ", ExpectedResponse=" + ackNackCode)
+    testCase.insert(1,"ANY     ANY     " + mtId[2:] + "      N   0   " + ackNackCode + "0" * (3 - len(str(lineNumber))) + str( lineNumber) + mtId + "   " + "0" * (3 - len(str(testCaseNumber))) + str(testCaseNumber))
+    testCase.insert(2, "<CRLF> & (000)")
+    if fieldValue !=None:
+        testCase.append(completeLine)
+    return testCase
+
+
+def generateFieldTestCases(fieldPathInTest, fieldJsonInTest, masterTestCase, networkJson, ackNac ):
+
+    fieldValues = fieldJsonInTest[ackNac]
+    for fieldValue in fieldValues[1:]:
+        draftTestCase=copy.deepcopy(masterTestCase)
+        draftTestCase[fieldPathInTest]["value"]=fieldValue
+        draftTestCase=applyNetworkRules(fieldPathInTest, fieldValue, draftTestCase, copy.deepcopy(networkJson))
+        if not draftTestCase:
+            continue # TODO some action must be taken if network filter return null value
+
+        testCase=[]
+        global testCaseNumber
+        testCaseNumber = testCaseNumber + 1
+
+        lineNumber = 1
+
+        for fieldPath, fieldJson in draftTestCase.items():
+            if (fieldPath.startswith("&")):
+                testCase.append(fieldPath)
+            elif(fieldPathInTest==fieldPath):
+                # ack value
+                if ackNac =="ACK":
+                    testCase=prepareTestCaseHeader(testCase, fieldJsonInTest, testCaseNumber, lineNumber, fieldValue, "ACK")
+                else:
+                    testCase=prepareTestCaseHeader(testCase, fieldJsonInTest, testCaseNumber, lineNumber, fieldValue, fieldValues[0])
+
+                lineNumber = lineNumber + 1
+
+            else:
+                completeLine=":" + fieldJson["field"] + "::" + fieldJson["value"]+"   <CRLF> & (" + "0"*(3- len(str(lineNumber))) + str(lineNumber) + ") "
+
+                testCase.append(completeLine)
+                lineNumber = lineNumber + 1
+
+
+
+
+
+        for line in testCase:
+            print(line)
+        print("&\n")
+
+
+def applyNetworkRules(fieldPathInTest, value, testCase, networkRules):
+
+
+    tempTestCase=copy.deepcopy(testCase)
+
+    exclude=include=mustHave=mustNotHave={}
+    tempFieldPathInTest=fieldPathInTest
+    exclude = include = mustHave = mustNotHave = None
+
+    # network fileter for pathes which are not underTest
+    if value=="sequence":
+        networkRuleInTest = networkRules.pop(fieldPathInTest, {})
+    else:
+        networkRuleInTest=networkRules.pop(fieldPathInTest +"="+value, {})
+
+    if networkRuleInTest :
+        excludes = networkRuleInTest.get("exclude", {})
+        includes = networkRuleInTest.get("include", {})
+        mustHaves = networkRuleInTest.get("mustHave", {})
+        mustNotHaves = networkRuleInTest.get("mustNotHave", {})
+
+        # make exclude paths
+        for testCaseKey in testCase.keys():
+            for excludePath in excludes:
+                if excludePath in testCaseKey:
+                    tempTestCase.pop(testCaseKey, {})
+
+        # include application
+        for includePath in includes:
+            if tempTestCase.get(includePath, {}) =={}:
+               print("needs some action ") # TODO path might be added instead of skipping this test case
+
+        # must have application
+        for mustHave in mustHaves:
+            mustHavePath, mustHaveValue =mustHave.split("=")
+            tempTestCase[mustHavePath]["value"] = mustHaveValue
+
+        # must not have application
+        for mustNotHave in mustNotHaves:
+            mustNotHavePath, mustNotHaveValue = mustNotHave.split("=")
+            if tempTestCase[mustNotHavePath]["value"] != mustNotHaveValue:
+                print("do something here ") # TODO might need to add the value instead of skipping this test case
+
+
+    # network fileter for pathes which are not underTest
+    testCase=copy.deepcopy(tempTestCase)
+    for networkRulePath, networkRulesValue in networkRules.items():
+        expectedFieldValue = actualFieldValue=value
+        if value == "sequence":
+            actualFieldValue = testCase.pop(networkRulePath, {})
+        else:
+            expectedNetworkKey, expectedFieldValue = networkRulePath.split("=")
+            actualFieldValue = testCase.pop(expectedNetworkKey, {})
+
+        # do filtering only if network filter key and value exist in the test cae as key and value
+        if actualFieldValue == expectedFieldValue:
+            excludes = networkRulesValue.get("exclude", {})
+            includes = networkRulesValue.get("include", {})
+            mustHaves = networkRulesValue.get("mustHave", {})
+            mustNotHaves = networkRulesValue.get("mustNotHave", {})
+
+            # make exclude paths
+            for testCaseKey in testCase.keys():
+                for excludePath in excludes:
+                    if excludePath in testCaseKey:
+                        tempTestCase.pop(testCaseKey, {})
+
+            # include application
+            for includePath in includes:
+                print("NOT implemented ") #TODO probably it might not need to implement it
+
+            # must have application
+            for mustHave in mustHaves:
+                mustHavePath, mustHaveValue = mustHave.split("=")
+                tempTestCase[mustHavePath]["value"] = mustHaveValue
+
+                # must not have application
+            for mustNotHave in mustNotHaves:
+                mustNotHavePath, mustNotHaveValue = mustNotHave.split("=")
+                if tempTestCase[mustNotHavePath]["value"] != mustNotHaveValue:
+                    print("needs some deciton ")  # TODO might/not need to add the value instead of skipping this test case
+
+
+    return tempTestCase
+
+
+            #if (fieldPath.startswith("&")):
+
+
+
+
+
+
+for mtId in mtIds:
+        print('&++++++++++++++++++++++++++++++++++++++++++++++++')
+        mtJson=mtsJson[mtId]
+        networkJson=mtJson.pop("networkRules", {})
+        sequenceIds = mtJson.keys()
+        masterTestCase.clear()
+        testCaseNumber=1
+        generateMasterTestCase(mtId, mtJson)
+
+        for fieldPathInTest, fieldJsonInTest in masterTestCase.items():
+            if fieldPathInTest.startswith("&"):
+                #generateSequenceTestCases(fieldPathInTest, masterTestCase)
+                continue
+
+        for fieldPathInTest, fieldJsonInTest in masterTestCase.items():
+            if fieldPathInTest.startswith("&"):
+                continue
+            generateFieldTestCases(fieldPathInTest, fieldJsonInTest, masterTestCase, networkJson, "ACK")
+
+        for fieldPathInTest, fieldJsonInTest in masterTestCase.items():
+            if fieldPathInTest.startswith("&"):
+                continue
+            #generateFieldTestCases(fieldPathInTest, fieldJsonInTest, masterTestCase, networkJson, "NAC")
+
+''' 
+ack values test
+missed test 
+repeat test
+include test
+exclude test
+Nac values test
+'''
+
