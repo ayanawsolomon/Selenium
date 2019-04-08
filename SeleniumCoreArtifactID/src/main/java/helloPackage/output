@@ -1,0 +1,1518 @@
+C:\Users\test\PycharmProjects\mt\venv\Scripts\python.exe C:/Users/test/PycharmProjects/mt/fieldTest/mtsFastMode.py
+
+
+
+&+++++++++++REMOVE FIELDS TEST CASES +++++++++++++++++++++++++++++++++++++
+&TestCase=1, LineNumber=1 ==>:5::55   <CRLF> & (001) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13001MT768   001
+<CRLF> & (000)
+&&MT768>sequence1
+&:1::11   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&:2::22   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&:3::33   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&:4::44   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&:5::55   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+
+
+
+&TestCase=2, LineNumber=1 ==>:2::22   <CRLF> & (001) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13001MT768   002
+<CRLF> & (000)
+&MT768>sequence1
+&:1::11   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+:2::22   <CRLF> & (001) 
+:3::33   <CRLF> & (002) 
+:4::44   <CRLF> & (003) 
+:5::55   <CRLF> & (004) 
+
+
+
+&TestCase=3, LineNumber=2 ==>:3::33   <CRLF> & (002) , ExpectedResponse=ACK
+ANY     ANY     768      N   0   ACK002MT768   003
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+&:2::22   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+:3::33   <CRLF> & (002) 
+:4::44   <CRLF> & (003) 
+:5::55   <CRLF> & (004) 
+
+
+
+&TestCase=4, LineNumber=4 ==>:5::55   <CRLF> & (004) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13004MT768   004
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+&:4::44   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+:5::55   <CRLF> & (004) 
+
+
+
+&TestCase=5, LineNumber=5 ==>:5::55   <CRLF> & (005) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13005MT768   005
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&:5::55   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+
+
+
+
+
+
+&+++++++++++REMOVE FIELDS TEST CASES +++++++++++++++++++++++++++++++++++++
+&TestCase=6, LineNumber=6 ==>:sequence::sequence   <CRLF> & (006) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13006MT768   006
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+&MT768>sequence1
+::1::11   <CRLF> & (006) 
+::2::22   <CRLF> & (007) 
+::3::33   <CRLF> & (008) 
+::4::44   <CRLF> & (009) 
+::5::55   <CRLF> & (010) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+
+
+
+&TestCase=7, LineNumber=2 ==>:1::11   <CRLF> & (002) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13002MT768   007
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+::1::11   <CRLF> & (002) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+:2::22   <CRLF> & (003) 
+:3::33   <CRLF> & (004) 
+:4::44   <CRLF> & (005) 
+:5::55   <CRLF> & (006) 
+
+
+
+&TestCase=8, LineNumber=3 ==>:2::22   <CRLF> & (003) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13003MT768   008
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+::2::22   <CRLF> & (003) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+:3::33   <CRLF> & (004) 
+:4::44   <CRLF> & (005) 
+:5::55   <CRLF> & (006) 
+
+
+
+&TestCase=9, LineNumber=4 ==>:3::33   <CRLF> & (004) , ExpectedResponse=ACK
+ANY     ANY     768      N   0   ACK004MT768   009
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+::3::33   <CRLF> & (004) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+:4::44   <CRLF> & (005) 
+:5::55   <CRLF> & (006) 
+
+
+
+&TestCase=10, LineNumber=5 ==>:4::44   <CRLF> & (005) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13005MT768   010
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+::4::44   <CRLF> & (005) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+:5::55   <CRLF> & (006) 
+
+
+
+&TestCase=11, LineNumber=6 ==>:5::55   <CRLF> & (006) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13006MT768   011
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+::5::55   <CRLF> & (006) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+
+
+
+
+
+
+&+++++++++++CHANGE FIELD VALUE FOR ACK MESSAGE +++++++++++++++++++++++++++++++++++++
+&TestCase=13, LineNumber=1 ==>:1::11   <CRLF> & (001) , ExpectedResponse=ACK
+ANY     ANY     768      N   0   ACK001MT768   013
+<CRLF> & (000)
+&MT768>sequence1
+:1::111   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&
+
+&TestCase=14, LineNumber=1 ==>:1::11   <CRLF> & (001) , ExpectedResponse=ACK
+ANY     ANY     768      N   0   ACK001MT768   014
+<CRLF> & (000)
+&MT768>sequence1
+:1::1111   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&
+
+needs some action 
+&TestCase=15, LineNumber=2 ==>:2::22   <CRLF> & (002) , ExpectedResponse=ACK
+ANY     ANY     768      N   0   ACK002MT768   015
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::222   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+&
+
+&TestCase=16, LineNumber=2 ==>:2::22   <CRLF> & (002) , ExpectedResponse=ACK
+ANY     ANY     768      N   0   ACK002MT768   016
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::2222   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&
+
+&TestCase=17, LineNumber=3 ==>:3::33   <CRLF> & (003) , ExpectedResponse=ACK
+ANY     ANY     768      N   0   ACK003MT768   017
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::333   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&
+
+do something here 
+&TestCase=18, LineNumber=3 ==>:3::33   <CRLF> & (003) , ExpectedResponse=ACK
+ANY     ANY     768      N   0   ACK003MT768   018
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::222   <CRLF> & (002) 
+:3::3333   <CRLF> & (003) 
+:5::55   <CRLF> & (004) 
+&
+
+&TestCase=19, LineNumber=4 ==>:4::44   <CRLF> & (004) , ExpectedResponse=ACK
+ANY     ANY     768      N   0   ACK004MT768   019
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::444   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&
+
+&TestCase=20, LineNumber=4 ==>:4::44   <CRLF> & (004) , ExpectedResponse=ACK
+ANY     ANY     768      N   0   ACK004MT768   020
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44444   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&
+
+&TestCase=21, LineNumber=5 ==>:5::55   <CRLF> & (005) , ExpectedResponse=ACK
+ANY     ANY     768      N   0   ACK005MT768   021
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::555   <CRLF> & (005) 
+&
+
+&TestCase=22, LineNumber=5 ==>:5::55   <CRLF> & (005) , ExpectedResponse=ACK
+ANY     ANY     768      N   0   ACK005MT768   022
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::5555   <CRLF> & (005) 
+&
+
+
+
+
+&+++++++++++CHANGE FIELD VALUE FOR NAC MESSAGE +++++++++++++++++++++++++++++++++++++
+&TestCase=23, LineNumber=1 ==>:1::11   <CRLF> & (001) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13001MT768   023
+<CRLF> & (000)
+&MT768>sequence1
+:1::NNNN   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&
+
+&TestCase=24, LineNumber=1 ==>:1::11   <CRLF> & (001) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13001MT768   024
+<CRLF> & (000)
+&MT768>sequence1
+:1::MMMM   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&
+
+&TestCase=25, LineNumber=2 ==>:2::22   <CRLF> & (002) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13002MT768   025
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::NNNN   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&
+
+&TestCase=26, LineNumber=2 ==>:2::22   <CRLF> & (002) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13002MT768   026
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::MMMM   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&
+
+&TestCase=27, LineNumber=3 ==>:3::33   <CRLF> & (003) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13003MT768   027
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::NNNN   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&
+
+&TestCase=28, LineNumber=3 ==>:3::33   <CRLF> & (003) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13003MT768   028
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::MMMM   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&
+
+&TestCase=29, LineNumber=4 ==>:4::44   <CRLF> & (004) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13004MT768   029
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::NNNN   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&
+
+&TestCase=30, LineNumber=4 ==>:4::44   <CRLF> & (004) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13004MT768   030
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::MMMM   <CRLF> & (004) 
+:5::55   <CRLF> & (005) 
+&
+
+&TestCase=31, LineNumber=5 ==>:5::55   <CRLF> & (005) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13005MT768   031
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::NNNN   <CRLF> & (005) 
+&
+
+&TestCase=32, LineNumber=5 ==>:5::55   <CRLF> & (005) , ExpectedResponse=T13
+ANY     ANY     768      N   0   T13005MT768   032
+<CRLF> & (000)
+&MT768>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+:5::MMMM   <CRLF> & (005) 
+&
+
+
+
+
+&+++++++++++REMOVE FIELDS TEST CASES +++++++++++++++++++++++++++++++++++++
+&TestCase=1, LineNumber=1 ==>:2::22   <CRLF> & (001) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13001MT769   001
+<CRLF> & (000)
+&MT769>sequence1
+&:1::11   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+:2::22   <CRLF> & (001) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (002) 
+:4::44   <CRLF> & (003) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (004) 
+:b::bb   <CRLF> & (005) 
+&MT769>sequence2
+:5::55   <CRLF> & (006) 
+:6::66   <CRLF> & (007) 
+:7::77   <CRLF> & (008) 
+
+
+
+&TestCase=2, LineNumber=2 ==>:3::33   <CRLF> & (002) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13002MT769   002
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+&:2::22   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (002) 
+:4::44   <CRLF> & (003) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (004) 
+:b::bb   <CRLF> & (005) 
+&MT769>sequence2
+:5::55   <CRLF> & (006) 
+:6::66   <CRLF> & (007) 
+:7::77   <CRLF> & (008) 
+
+
+
+&TestCase=3, LineNumber=3 ==>:5::55   <CRLF> & (003) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK003MT769   003
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&&MT769>sequence1>sequence1.1
+&:3::33   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&:4::44   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&&MT769>sequence1>sequence1.1>sequence1.1.1
+&:a::aa   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&:b::bb   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&MT769>sequence2
+:5::55   <CRLF> & (003) 
+:6::66   <CRLF> & (004) 
+:7::77   <CRLF> & (005) 
+
+
+
+&TestCase=4, LineNumber=3 ==>:4::44   <CRLF> & (003) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13003MT769   004
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+&:3::33   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+:4::44   <CRLF> & (003) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (004) 
+:b::bb   <CRLF> & (005) 
+&MT769>sequence2
+:5::55   <CRLF> & (006) 
+:6::66   <CRLF> & (007) 
+:7::77   <CRLF> & (008) 
+
+
+
+&TestCase=5, LineNumber=4 ==>:a::aa   <CRLF> & (004) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13004MT769   005
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+&:4::44   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (004) 
+:b::bb   <CRLF> & (005) 
+&MT769>sequence2
+:5::55   <CRLF> & (006) 
+:6::66   <CRLF> & (007) 
+:7::77   <CRLF> & (008) 
+
+
+
+&TestCase=6, LineNumber=5 ==>:5::55   <CRLF> & (005) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13005MT769   006
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&&MT769>sequence1>sequence1.1>sequence1.1.1
+&:a::aa   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&:b::bb   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&MT769>sequence2
+:5::55   <CRLF> & (005) 
+:6::66   <CRLF> & (006) 
+:7::77   <CRLF> & (007) 
+
+
+
+&TestCase=7, LineNumber=5 ==>:b::bb   <CRLF> & (005) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13005MT769   007
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+&:a::aa   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+:b::bb   <CRLF> & (005) 
+&MT769>sequence2
+:5::55   <CRLF> & (006) 
+:6::66   <CRLF> & (007) 
+:7::77   <CRLF> & (008) 
+
+
+
+&TestCase=8, LineNumber=6 ==>:5::55   <CRLF> & (006) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13006MT769   008
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+&:b::bb   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&MT769>sequence2
+:5::55   <CRLF> & (006) 
+:6::66   <CRLF> & (007) 
+:7::77   <CRLF> & (008) 
+
+
+
+&TestCase=9, LineNumber=7 ==>:7::77   <CRLF> & (007) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13007MT769   009
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&&MT769>sequence2
+&:5::55   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&:6::66   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+&:7::77   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+
+
+
+&TestCase=10, LineNumber=7 ==>:6::66   <CRLF> & (007) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13007MT769   010
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+&:5::55   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+:6::66   <CRLF> & (007) 
+:7::77   <CRLF> & (008) 
+
+
+
+&TestCase=11, LineNumber=8 ==>:7::77   <CRLF> & (008) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13008MT769   011
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+&:6::66   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+:7::77   <CRLF> & (008) 
+
+
+
+&TestCase=12, LineNumber=9 ==>:7::77   <CRLF> & (009) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13009MT769   012
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+&:7::77   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& 
+
+
+
+
+
+
+&+++++++++++REMOVE FIELDS TEST CASES +++++++++++++++++++++++++++++++++++++
+&TestCase=13, LineNumber=7 ==>:sequence::sequence   <CRLF> & (007) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13007MT769   013
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+&MT769>sequence1
+::1::11   <CRLF> & (007) 
+::2::22   <CRLF> & (008) 
+&MT769>sequence1>sequence1.1
+::3::33   <CRLF> & (009) 
+::4::44   <CRLF> & (010) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+::a::aa   <CRLF> & (011) 
+::b::bb   <CRLF> & (012) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+&MT769>sequence2
+:5::55   <CRLF> & (013) 
+:6::66   <CRLF> & (014) 
+:7::77   <CRLF> & (015) 
+
+
+
+&TestCase=14, LineNumber=2 ==>:1::11   <CRLF> & (002) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13002MT769   014
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+::1::11   <CRLF> & (002) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+:2::22   <CRLF> & (003) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (004) 
+:4::44   <CRLF> & (005) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (006) 
+:b::bb   <CRLF> & (007) 
+&MT769>sequence2
+:5::55   <CRLF> & (008) 
+:6::66   <CRLF> & (009) 
+:7::77   <CRLF> & (010) 
+
+
+
+&TestCase=15, LineNumber=3 ==>:2::22   <CRLF> & (003) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13003MT769   015
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+::2::22   <CRLF> & (003) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (004) 
+:4::44   <CRLF> & (005) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (006) 
+:b::bb   <CRLF> & (007) 
+&MT769>sequence2
+:5::55   <CRLF> & (008) 
+:6::66   <CRLF> & (009) 
+:7::77   <CRLF> & (010) 
+
+
+
+&TestCase=16, LineNumber=4 ==>:3::33   <CRLF> & (004) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13004MT769   016
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+::3::33   <CRLF> & (004) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+:4::44   <CRLF> & (005) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (006) 
+:b::bb   <CRLF> & (007) 
+&MT769>sequence2
+:5::55   <CRLF> & (008) 
+:6::66   <CRLF> & (009) 
+:7::77   <CRLF> & (010) 
+
+
+
+&TestCase=17, LineNumber=5 ==>:4::44   <CRLF> & (005) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13005MT769   017
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+::4::44   <CRLF> & (005) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (006) 
+:b::bb   <CRLF> & (007) 
+&MT769>sequence2
+:5::55   <CRLF> & (008) 
+:6::66   <CRLF> & (009) 
+:7::77   <CRLF> & (010) 
+
+
+
+&TestCase=18, LineNumber=7 ==>:sequence::sequence   <CRLF> & (007) , ExpectedResponse=T89
+ANY     ANY     769      N   0   T89007MT769   018
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+&MT769>sequence1>sequence1.1>sequence1.1.1
+::a::aa   <CRLF> & (007) 
+::b::bb   <CRLF> & (008) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+&MT769>sequence2
+:5::55   <CRLF> & (009) 
+:6::66   <CRLF> & (010) 
+:7::77   <CRLF> & (011) 
+
+
+
+&TestCase=19, LineNumber=10 ==>:sequence::sequence   <CRLF> & (010) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK010MT769   019
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+&MT769>sequence2
+::5::55   <CRLF> & (010) 
+::6::66   <CRLF> & (011) 
+::7::77   <CRLF> & (012) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+
+
+
+&TestCase=20, LineNumber=8 ==>:5::55   <CRLF> & (008) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13008MT769   020
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+::5::55   <CRLF> & (008) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+:6::66   <CRLF> & (009) 
+:7::77   <CRLF> & (010) 
+
+
+
+&TestCase=21, LineNumber=9 ==>:6::66   <CRLF> & (009) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13009MT769   021
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+::6::66   <CRLF> & (009) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+:7::77   <CRLF> & (010) 
+
+
+
+&TestCase=22, LineNumber=10 ==>:7::77   <CRLF> & (010) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13010MT769   022
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************
+::7::77   <CRLF> & (010) 
+&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************
+
+
+
+
+
+
+&+++++++++++CHANGE FIELD VALUE FOR ACK MESSAGE +++++++++++++++++++++++++++++++++++++
+&TestCase=24, LineNumber=1 ==>:1::11   <CRLF> & (001) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK001MT769   024
+<CRLF> & (000)
+&MT769>sequence1
+:1::1111   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=25, LineNumber=1 ==>:1::11   <CRLF> & (001) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK001MT769   025
+<CRLF> & (000)
+&MT769>sequence1
+:1::1111   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=26, LineNumber=2 ==>:2::22   <CRLF> & (002) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK002MT769   026
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::222   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=27, LineNumber=2 ==>:2::22   <CRLF> & (002) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK002MT769   027
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::2222   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=28, LineNumber=3 ==>:3::33   <CRLF> & (003) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK003MT769   028
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::333   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=29, LineNumber=3 ==>:3::33   <CRLF> & (003) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK003MT769   029
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::3333   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=30, LineNumber=4 ==>:4::44   <CRLF> & (004) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK004MT769   030
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::444   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=31, LineNumber=4 ==>:4::44   <CRLF> & (004) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK004MT769   031
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::4444   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=32, LineNumber=5 ==>:a::aa   <CRLF> & (005) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK005MT769   032
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aaa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=33, LineNumber=5 ==>:a::aa   <CRLF> & (005) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK005MT769   033
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aaaa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=34, LineNumber=6 ==>:b::bb   <CRLF> & (006) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK006MT769   034
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bbb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=35, LineNumber=6 ==>:b::bb   <CRLF> & (006) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK006MT769   035
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bbbb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=36, LineNumber=7 ==>:5::55   <CRLF> & (007) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK007MT769   036
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::555   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=37, LineNumber=7 ==>:5::55   <CRLF> & (007) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK007MT769   037
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::5555   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=38, LineNumber=8 ==>:6::66   <CRLF> & (008) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK008MT769   038
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::666   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=39, LineNumber=8 ==>:6::66   <CRLF> & (008) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK008MT769   039
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::6666   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=40, LineNumber=9 ==>:7::77   <CRLF> & (009) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK009MT769   040
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::777   <CRLF> & (009) 
+&
+
+&TestCase=41, LineNumber=9 ==>:7::77   <CRLF> & (009) , ExpectedResponse=ACK
+ANY     ANY     769      N   0   ACK009MT769   041
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::7777   <CRLF> & (009) 
+&
+
+
+
+
+&+++++++++++CHANGE FIELD VALUE FOR NAC MESSAGE +++++++++++++++++++++++++++++++++++++
+&TestCase=42, LineNumber=1 ==>:1::11   <CRLF> & (001) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13001MT769   042
+<CRLF> & (000)
+&MT769>sequence1
+:1::NNNN   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=43, LineNumber=1 ==>:1::11   <CRLF> & (001) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13001MT769   043
+<CRLF> & (000)
+&MT769>sequence1
+:1::MMMM   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=44, LineNumber=2 ==>:2::22   <CRLF> & (002) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13002MT769   044
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::NNNN   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=45, LineNumber=2 ==>:2::22   <CRLF> & (002) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13002MT769   045
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::MMMM   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=46, LineNumber=3 ==>:3::33   <CRLF> & (003) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13003MT769   046
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::NNNN   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=47, LineNumber=3 ==>:3::33   <CRLF> & (003) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13003MT769   047
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::MMMM   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=48, LineNumber=4 ==>:4::44   <CRLF> & (004) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13004MT769   048
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::NNNN   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=49, LineNumber=4 ==>:4::44   <CRLF> & (004) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13004MT769   049
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::MMMM   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=50, LineNumber=5 ==>:a::aa   <CRLF> & (005) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13005MT769   050
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::NNNN   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=51, LineNumber=5 ==>:a::aa   <CRLF> & (005) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13005MT769   051
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::MMMM   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=52, LineNumber=6 ==>:b::bb   <CRLF> & (006) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13006MT769   052
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::NNNN   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=53, LineNumber=6 ==>:b::bb   <CRLF> & (006) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13006MT769   053
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::MMMM   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=54, LineNumber=7 ==>:5::55   <CRLF> & (007) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13007MT769   054
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::NNNN   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=55, LineNumber=7 ==>:5::55   <CRLF> & (007) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13007MT769   055
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::MMMM   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=56, LineNumber=8 ==>:6::66   <CRLF> & (008) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13008MT769   056
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::NNNN   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=57, LineNumber=8 ==>:6::66   <CRLF> & (008) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13008MT769   057
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::MMMM   <CRLF> & (008) 
+:7::77   <CRLF> & (009) 
+&
+
+&TestCase=58, LineNumber=9 ==>:7::77   <CRLF> & (009) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13009MT769   058
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::NNNN   <CRLF> & (009) 
+&
+
+&TestCase=59, LineNumber=9 ==>:7::77   <CRLF> & (009) , ExpectedResponse=T13
+ANY     ANY     769      N   0   T13009MT769   059
+<CRLF> & (000)
+&MT769>sequence1
+:1::11   <CRLF> & (001) 
+:2::22   <CRLF> & (002) 
+&MT769>sequence1>sequence1.1
+:3::33   <CRLF> & (003) 
+:4::44   <CRLF> & (004) 
+&MT769>sequence1>sequence1.1>sequence1.1.1
+:a::aa   <CRLF> & (005) 
+:b::bb   <CRLF> & (006) 
+&MT769>sequence2
+:5::55   <CRLF> & (007) 
+:6::66   <CRLF> & (008) 
+:7::MMMM   <CRLF> & (009) 
+&
+
+
+Process finished with exit code 0

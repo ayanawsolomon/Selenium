@@ -1,0 +1,430 @@
+'''
+Created on Mar 30, 2019
+
+@author: test
+'''
+import json
+import copy
+from collections import OrderedDict
+json_string = """
+{
+"MT768":{
+    "networkRules":{
+       "MT768>sequence1>2=222": {
+        "exclude":["MT768>sequence1>5", "MT768>sequence1>4"],
+        "include":["MT768>sequence1>4"]
+    
+        },
+        "MT768>sequence1>3=3333": {
+        "mustHave":["MT768>sequence1>2=222"],
+        "mustNotHave":["MT768>sequence1>1=111"],
+        "exclude":["MT768>sequence1>4"]
+
+        }
+    },
+    "sequence1":{
+    "info":{"status": "M","repeat":"T13", "remove":"T13"},
+    "1":{"field":"1","status": "M","repeat":"T13","remove":"T13","ACK": ["11", "111", "1111"],"NAC":["T13","NNNN", "MMMM"]},
+     "2":{"field":"2","status": "O","repeat":"T13","remove":"ACK", "ACK": ["22", "222", "2222"],"NAC":["T13","NNNN", "MMMM"]},
+     "3":{"field":"3","status": "M","repeat":"ACK","ACK": ["33", "333", "3333"],"NAC":["T13","NNNN", "MMMM"]},
+     "4":{"field":"4","status": "M","repeat":"T13","remove":"T13","ACK": ["44", "444", "44444"],"NAC":["T13","NNNN", "MMMM"]},
+     "5":{"field":"5","status": "M","repeat":"T13","remove":"T13","ACK": ["55", "555", "5555"],"NAC":["T13","NNNN", "MMMM"]}
+}
+     },
+     
+     
+     
+     "MT769":{
+    "sequence1":{
+    "info":{"status": "M","repeat":"T13"},
+     "1":{"field":"1","status": "M","repeat":"T13","remove":"T13","ACK": ["11", "1111", "1111"],"NAC":["T13","NNNN", "MMMM"]},
+     "2":{"field":"2","status": "M","repeat":"T13","remove":"T13","ACK": ["22", "222", "2222"],"NAC":["T13","NNNN", "MMMM"]},
+     "sequence1.1":{
+     "info":{"status": "O","remove":"ACK"},
+     "3":{"field":"3","status": "M","repeat":"T13","remove":"T13","ACK": ["33", "333", "3333"],"NAC":["T13","NNNN", "MMMM"]},
+     "4":{"field":"4","status": "M","repeat":"T13","remove":"T13","ACK": ["44", "444", "4444"],"NAC":["T13","NNNN", "MMMM"]},
+     
+     "sequence1.1.1":{
+     "info":{"status": "M","repeat":"T89","remove":"T13"},
+     "a":{"field":"a","status": "O","remove":"T13","ACK": ["aa", "aaa", "aaaa"],"NAC":["T13","NNNN", "MMMM"]},
+     "b":{"field":"b","status": "M", "remove":"T13","ACK": ["bb", "bbb", "bbbb"],"NAC":["T13","NNNN", "MMMM"]}
+     }
+     }
+     
+   
+     },
+     
+     "sequence2":{
+     "info":{"status": "O","repeat":"ACK", "remove":"T13"},
+     "5":{"field":"5","status": "M","repeat":"T13","remove":"T13","ACK": ["55", "555", "5555"],"NAC":["T13","NNNN", "MMMM"]},
+     "6":{"field":"6","status": "M","repeat":"T13","remove":"T13","ACK": ["66", "666", "6666"],"NAC":["T13","NNNN", "MMMM"]},
+     "7":{"field":"7","status": "O","repeat":"T13","remove":"T13","ACK": ["77", "777", "7777"],"NAC":["T13","NNNN", "MMMM"]}
+     }
+}
+}
+  
+"""
+mtsJson = json.loads(json_string)
+mtIds=mtsJson.keys()
+masterTestCase= OrderedDict()
+testCaseNumber=1
+
+
+def generateFieldLine(currentFieldPath, fieldJson):
+    fieldLine=()
+    # fieldKeys =fieldJson.keys()
+    field = fieldJson["field"]
+
+    status = fieldJson["status"]
+    if status == 'O':
+        xxxxx=""
+    elif status == 'M':
+        fieldLine = fieldJson
+
+    return fieldLine
+
+def generateMasterTestCase(fieldPath, fieldJson):
+    for fieldKey, fieldValue in fieldJson.items():
+       if fieldKey.startswith("sequence"):
+            fieldValue["info"]["field"]="sequence"
+            fieldValue["info"]["value"]="sequence"
+            masterTestCase["&"+fieldPath + ">" + fieldKey] = fieldValue["info"]
+            generateMasterTestCase(fieldPath + ">" + fieldKey, fieldValue)
+       elif  fieldKey!="info":  # info is information about json
+            fieldValue["value"] = fieldValue["ACK"][0]
+            masterTestCase[fieldPath + ">" + fieldKey] = fieldValue
+
+
+
+
+
+    # adding header
+
+
+def getFieldsToRepeat(repeatPathInTest, masterTestCase):
+    repeatFields={}
+
+    if repeatPathInTest.startswith("&"):
+        repeatPathInTest = repeatPathInTest[1:]
+
+    for fieldPath, fieldValue in masterTestCase.items():
+        if repeatPathInTest in fieldPath:
+            if fieldPath.startswith("&"):
+                repeatFields[fieldPath] = fieldValue
+            else:
+                completeLine = ":" + fieldValue["field"] + "::" + fieldValue["value"]
+                repeatFields[fieldPath]=completeLine
+
+    return  repeatFields
+
+
+def generateRemoveFieldsTestCases(repeatPathInTest, masterTestCase):
+    repeatStartPathInfo = masterTestCase[repeatPathInTest]
+    expectedRemoveAckNac = repeatStartPathInfo.get("remove", None)
+    global testCaseNumber
+
+
+    # sckip duplicate test if remove ack/Nack value is not set in input json field
+    if expectedRemoveAckNac == None:
+        return
+
+    draftTestCase = setNetworkRules(repeatPathInTest, repeatStartPathInfo.get("value", None), masterTestCase, networkJson)
+    repeatFields=getFieldsToRepeat(repeatPathInTest, draftTestCase)
+
+    # halt test case if no repeat fields
+    if repeatFields =={}:
+        return
+
+    # comment out the selected fields and validate
+    tempRepeatfields = copy.deepcopy(repeatFields)
+    isCommentOutStarted = False
+    isExpectedHeaderSet = False
+    commentOutFailLine=-1;
+    commentOutFailInfo=""
+
+    testCase = []
+    lineNumber = 1
+
+    for fieldPath, fieldJson in draftTestCase.items():
+        # if field is in the repeat list then comment it out
+
+        if tempRepeatfields.get(fieldPath, None)==None:
+            if fieldPath.startswith("&"):
+                testCase.append( fieldPath)
+            else:
+                # add the expected test header if line commentout already started and if header has not been set
+                if isCommentOutStarted and not isExpectedHeaderSet :
+                    testCase = setExpectedHeader(testCase, fieldJson, testCaseNumber, lineNumber, expectedRemoveAckNac)
+                    isExpectedHeaderSet = True
+
+                completeLine = ":" + fieldJson["field"] + "::" + fieldJson["value"] + "   <CRLF> & (" + "0" * (3 - len(str(lineNumber))) + str(lineNumber) + ") "
+                testCase.append(completeLine)
+                lineNumber = lineNumber + 1
+
+
+        else:
+            # comment the filed
+            if fieldPath.startswith("&"):
+                testCase.append("&" + fieldPath)
+            else:
+
+                completeLine = "&:" + fieldJson["field"] + "::" + fieldJson["value"] + "   <CRLF> & <<======&&&&&&&&&&&&&&&&&&&&&&&&&&&  Commented out  &&&&&&&&&&&&&&& "
+                testCase.append(completeLine)
+
+                if not isCommentOutStarted:
+                    isCommentOutStarted = True
+
+    # add header if the whole field get commented out or the last field get commented out
+    if isCommentOutStarted and not isExpectedHeaderSet:
+        testCase = setExpectedHeader(testCase, fieldJson, testCaseNumber, lineNumber, expectedRemoveAckNac)
+        isExpectedHeaderSet = True
+
+    # print test case
+    testCaseNumber = testCaseNumber + 1
+    for fieldValue in testCase:
+        print(fieldValue)
+    print("\n\n")
+
+
+
+def generateRepeatFieldsTestCases(repeatPathInTest, masterTestCase):
+    repeatStartPathInfo = masterTestCase[repeatPathInTest]
+    expectedRepeatAckNac = repeatStartPathInfo.get("repeat", None)
+    global testCaseNumber
+
+
+    # sckip duplicate test if repeat ack/Nack value is not set in input json field
+    if expectedRepeatAckNac == None:
+        return
+
+    draftTestCase = setNetworkRules(repeatPathInTest, repeatStartPathInfo.get("value", None), masterTestCase, networkJson)
+    repeatFields=getFieldsToRepeat(repeatPathInTest, draftTestCase)
+
+    # halt test case if no repeat fields
+    if repeatFields =={}:
+        return
+
+    # repeat out the selected fields and validate
+    tempRepeatfields= copy.deepcopy(repeatFields)
+    isDuplicateFieldsInjected = False
+    testCase = []
+    lineNumber = 1
+
+    for fieldPath, fieldJson in draftTestCase.items():
+        if fieldPath.startswith("&"):
+            testCase.append(fieldPath)
+
+        else:
+            completeLine = ":" + fieldJson["field"] + "::" + fieldJson["value"] + "   <CRLF> & (" + "0" * (3 - len(str(lineNumber))) + str(lineNumber) + ") "
+            testCase.append(completeLine)
+            lineNumber = lineNumber + 1
+
+
+
+        tempRepeatfields.pop(fieldPath, None)
+
+
+        if tempRepeatfields=={}  and isDuplicateFieldsInjected==False:
+            testCase.append("&>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> duplicationg starts here*************************")
+
+            for repeatFieldKey, repeatFieldValue in repeatFields.items():
+                if(repeatFieldKey.startswith("&")):
+                    testCase.append(repeatFieldKey)
+                    if repeatFieldKey == repeatPathInTest:
+                        testCase= setExpectedHeader(testCase, fieldJsonInTest, testCaseNumber, lineNumber, expectedRepeatAckNac)
+                else:
+                    if repeatFieldKey == repeatPathInTest:
+                        testCase = setExpectedHeader(testCase, fieldJsonInTest, testCaseNumber, lineNumber, expectedRepeatAckNac)
+
+                    completeLine = ":" + repeatFieldValue + "   <CRLF> & (" + "0" * (3 - len(str(lineNumber))) + str(lineNumber) + ") "
+                    testCase.append(completeLine)
+                    lineNumber = lineNumber + 1
+            isDuplicateFieldsInjected=True
+            testCase.append("&<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< duplicationg End here*************************")
+
+
+    testCaseNumber= testCaseNumber +1
+    for fieldValue  in testCase:
+        print(fieldValue)
+    print("\n\n")
+
+
+
+def setExpectedHeader(testCase, fieldJsonInTest, testCaseNumber, lineNumber, ackNackCode):
+    completeLine = ":" + fieldJsonInTest.get("field", "None") + "::" + fieldJsonInTest.get("value", "None") + "   <CRLF> & (" + "0" * (3 - len(str(lineNumber))) + str(lineNumber) + ") "
+    testCase.insert(0, "&TestCase=" + str(testCaseNumber) + ", LineNumber=" + str(lineNumber) + " ==>" + completeLine + ", ExpectedResponse=" + ackNackCode)
+    testCase.insert(1,"ANY     ANY     " + mtId[2:] + "      N   0   " + ackNackCode + "0" * (3 - len(str(lineNumber))) + str( lineNumber) + mtId + "   " + "0" * (3 - len(str(testCaseNumber))) + str(testCaseNumber))
+    testCase.insert(2, "<CRLF> & (000)")
+    return testCase
+
+
+def generateFieldTestCases(fieldPathInTest, fieldJsonInTest, masterTestCase, networkJson, ackNac ):
+
+    fieldValues = fieldJsonInTest[ackNac]
+    for fieldValue in fieldValues[1:]:
+        draftTestCase=copy.deepcopy(masterTestCase)
+        draftTestCase[fieldPathInTest]["value"]=fieldValue
+        draftTestCase=setNetworkRules(fieldPathInTest, fieldValue, draftTestCase, copy.deepcopy(networkJson))
+        if not draftTestCase:
+            continue # TODO some action must be taken if network filter return null value
+
+        testCase=[]
+        global testCaseNumber
+        testCaseNumber = testCaseNumber + 1
+
+        lineNumber = 1
+
+        for fieldPath, fieldJson in draftTestCase.items():
+            if (fieldPath.startswith("&")):
+                testCase.append(fieldPath)
+            elif(fieldPathInTest==fieldPath):
+
+                # get NAC error code if message is not ACK
+                expectedAckNac="ACK"
+                if ackNac =="NAC":
+                    expectedAckNac = fieldValues[0]
+
+                testCase= setExpectedHeader(testCase, fieldJsonInTest, testCaseNumber, lineNumber, expectedAckNac)
+
+                completeLine = ":" + fieldJson["field"] + "::" + fieldJson["value"] + "   <CRLF> & (" + "0" * (3 - len(str(lineNumber))) + str(lineNumber) + ") "
+                testCase.append(completeLine)
+
+                lineNumber = lineNumber + 1
+
+            else:
+                completeLine=":" + fieldJson["field"] + "::" + fieldJson["value"]+"   <CRLF> & (" + "0"*(3- len(str(lineNumber))) + str(lineNumber) + ") "
+                testCase.append(completeLine)
+                lineNumber = lineNumber + 1
+
+
+
+
+
+        for line in testCase:
+            print(line)
+        print("&\n")
+
+
+def setNetworkRules(fieldPathInTest, value, testCase, networkRules):
+
+
+    tempTestCase=copy.deepcopy(testCase)
+
+    exclude=include=mustHave=mustNotHave={}
+    tempFieldPathInTest=fieldPathInTest
+    exclude = include = mustHave = mustNotHave = None
+
+    # network fileter for pathes which are not underTest
+    if value=="sequence":
+        networkRuleInTest = networkRules.pop(fieldPathInTest, {})
+    else:
+        networkRuleInTest=networkRules.pop(fieldPathInTest +"="+value, {})
+
+    if networkRuleInTest :
+        excludes = networkRuleInTest.get("exclude", {})
+        includes = networkRuleInTest.get("include", {})
+        mustHaves = networkRuleInTest.get("mustHave", {})
+        mustNotHaves = networkRuleInTest.get("mustNotHave", {})
+
+        # make exclude paths
+        for testCaseKey in testCase.keys():
+            for excludePath in excludes:
+                if excludePath in testCaseKey:
+                    tempTestCase.pop(testCaseKey, {})
+
+        # include application
+        for includePath in includes:
+            if tempTestCase.get(includePath, {}) =={}:
+               print("needs some action ") # TODO path might be added instead of skipping this test case
+
+        # must have application
+        for mustHave in mustHaves:
+            mustHavePath, mustHaveValue =mustHave.split("=")
+            tempTestCase[mustHavePath]["value"] = mustHaveValue
+
+        # must not have application
+        for mustNotHave in mustNotHaves:
+            mustNotHavePath, mustNotHaveValue = mustNotHave.split("=")
+            if tempTestCase[mustNotHavePath]["value"] != mustNotHaveValue:
+                print("do something here ") # TODO might need to add the value instead of skipping this test case
+
+
+    # network fileter for pathes which are not underTest
+    testCase=copy.deepcopy(tempTestCase)
+    for networkRulePath, networkRulesValue in networkRules.items():
+        expectedFieldValue = actualFieldValue=value
+        if value == "sequence":
+            actualFieldValue = testCase.pop(networkRulePath, {})
+        else:
+            expectedNetworkKey, expectedFieldValue = networkRulePath.split("=")
+            actualFieldValue = testCase.pop(expectedNetworkKey, {})
+
+        # do filtering only if network filter key and value exist in the test cae as key and value
+        if actualFieldValue == expectedFieldValue:
+            excludes = networkRulesValue.get("exclude", {})
+            includes = networkRulesValue.get("include", {})
+            mustHaves = networkRulesValue.get("mustHave", {})
+            mustNotHaves = networkRulesValue.get("mustNotHave", {})
+
+            # make exclude paths
+            for testCaseKey in testCase.keys():
+                for excludePath in excludes:
+                    if excludePath in testCaseKey:
+                        tempTestCase.pop(testCaseKey, {})
+
+            # include application
+            for includePath in includes:
+                print("NOT implemented ") #TODO probably it might not need to implement it
+
+            # must have application
+            for mustHave in mustHaves:
+                mustHavePath, mustHaveValue = mustHave.split("=")
+                tempTestCase[mustHavePath]["value"] = mustHaveValue
+
+                # must not have application
+            for mustNotHave in mustNotHaves:
+                mustNotHavePath, mustNotHaveValue = mustNotHave.split("=")
+                if tempTestCase[mustNotHavePath]["value"] != mustNotHaveValue:
+                    print("needs some deciton ")  # TODO might/not need to add the value instead of skipping this test case
+
+
+    return tempTestCase
+
+
+            #if (fieldPath.startswith("&")):
+
+
+
+
+
+
+for mtId in mtIds:
+        mtJson=mtsJson[mtId]
+        networkJson=mtJson.pop("networkRules", {})
+        sequenceIds = mtJson.keys()
+        masterTestCase.clear()
+        testCaseNumber=1
+        generateMasterTestCase(mtId, mtJson)
+
+        print('\n\n\n&+++++++++++REMOVE FIELDS TEST CASES +++++++++++++++++++++++++++++++++++++')
+        for fieldPathInTest, fieldJsonInTest in masterTestCase.items():
+            generateRemoveFieldsTestCases(fieldPathInTest, masterTestCase)
+            continue
+
+        print('\n\n\n&+++++++++++REMOVE FIELDS TEST CASES +++++++++++++++++++++++++++++++++++++')
+        for fieldPathInTest, fieldJsonInTest in masterTestCase.items():
+            generateRepeatFieldsTestCases(fieldPathInTest, masterTestCase)
+            continue
+
+        print('\n\n\n&+++++++++++CHANGE FIELD VALUE FOR ACK MESSAGE +++++++++++++++++++++++++++++++++++++')
+        for fieldPathInTest, fieldJsonInTest in masterTestCase.items():
+            if fieldPathInTest.startswith("&"):
+                continue
+            generateFieldTestCases(fieldPathInTest, fieldJsonInTest, masterTestCase, networkJson, "ACK")
+
+        print('\n\n\n&+++++++++++CHANGE FIELD VALUE FOR NAC MESSAGE +++++++++++++++++++++++++++++++++++++')
+        for fieldPathInTest, fieldJsonInTest in masterTestCase.items():
+            if fieldPathInTest.startswith("&"):
+                continue
+            generateFieldTestCases(fieldPathInTest, fieldJsonInTest, masterTestCase, networkJson, "NAC")
+
