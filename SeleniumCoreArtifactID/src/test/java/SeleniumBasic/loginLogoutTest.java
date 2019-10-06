@@ -5,7 +5,6 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 
 public class loginLogoutTest {
@@ -27,6 +26,7 @@ public class loginLogoutTest {
 		// go through each user name and password, type on newtours page and assert if loign is successfull or not
 		for(int abv = 0; abv <=3; abv++){
 			driver.get("http://newtours.demoaut.com/");
+			// this ys my first comment 
 		driver.findElement(By.name("userName")).sendKeys(userName[abv]);
 		driver.findElement(By.name("password")).sendKeys(password[abv]);
 		
